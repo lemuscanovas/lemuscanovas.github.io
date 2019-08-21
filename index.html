@@ -170,7 +170,7 @@
 <a class="sourceLine" id="cb2-12" title="12"><span class="co"># about the number of PCA to select in the procedure. For this reason,</span></a>
 <a class="sourceLine" id="cb2-13" title="13"><span class="co"># we use pca_decision</span></a>
 <a class="sourceLine" id="cb2-14" title="14">info_pca_mslp &lt;-<span class="st"> </span><span class="kw"><a href="reference/pca_decision.html">pca_decision</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data)</a></code></pre></div>
-<p>A scree plot is represented to select the number of PCA to retain. We could decide 6 PCA in a quick inspection. We can spend more time analyzing the pca results looking at <code>info_clas$summary</code> <img src="lemuscanovas.github.io/img/scree_test.png"></p>
+<p>A scree plot is represented to select the number of PCA to retain. We could decide 6 PCA in a quick inspection. We can spend more time analyzing the pca results looking at <code>info_clas$summary</code> <img src="img/scree_test.png"></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># Once we have decided on the number of components, we will proceed </span></a>
 <a class="sourceLine" id="cb3-2" title="2"><span class="co"># with the synoptic classification:</span></a>
 <a class="sourceLine" id="cb3-3" title="3">mslp_s_clas &lt;-<span class="st"> </span><span class="kw"><a href="reference/synoptclas.html">synoptclas</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data, <span class="dt">ncomp =</span>  <span class="dv">6</span>) </a>
