@@ -57,37 +57,62 @@
       
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="synoptreg-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#synoptreg-" class="anchor"></a>synoptReg <img src="img/logo.png" align="right" alt="" width="120">
+<a href="#synoptreg-" class="anchor"></a>synoptReg <img src="docs/img/logo.png" align="right" alt="" width="140">
 </h1></div>
+</div>
+<div id="synoptreg-synoptic-climate-classification-and-spatial-regionalization-of-environmental-data" class="section level1">
+<h1 class="hasAnchor">
+<a href="#synoptreg-synoptic-climate-classification-and-spatial-regionalization-of-environmental-data" class="anchor"></a><code>synoptReg</code>: Synoptic Climate Classification and Spatial Regionalization of Environmental Data</h1>
 
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
 <p><strong>synoptReg</strong> is an open source package for computing synoptic climate classifications and spatial regionalizations of environmental data.</p>
 </div>
-<div id="news" class="section level2">
+<div id="last-news" class="section level2">
 <h2 class="hasAnchor">
-<a href="#news" class="anchor"></a>News!</h2>
+<a href="#last-news" class="anchor"></a>Last news:</h2>
 <p><strong>Paper published!</strong></p>
-<p>If you use the synoptReg package, please cite:</p>
-<p><strong><em>Lemus-Canovas, M., Lopez-Bustins, J.A., Martin-Vide, J., Royé, D.</em></strong>, 2019. <em>synoptReg: An R package for computing a synoptic climate classification and a spatial regionalization of environmental data</em>. Environmental Modelling &amp; Software, Vol. 118,114-119pp, ISSN 1364-8152, <a href="https://doi.org/10.1016/j.envsoft.2019.04.006" class="uri">https://doi.org/10.1016/j.envsoft.2019.04.006</a>.*</p>
-<p><strong>Version 0.2.2 was updated to CRAN!</strong></p>
-<p><em>new releases of version 0.2.2:</em></p>
+<p>If you use the <code>synoptReg</code> package, please cite:</p>
 <ul>
-<li>the <code>tidy_cuttime_nc</code> function has been rewritten. The <code>only_convert</code> argument has been removed, and the <code>initial_year</code> and <code>end_year</code> arguments have been replaced by <code>year_range</code>.</li>
+<li>
+<strong><em>Lemus-Canovas, M., Lopez-Bustins, J.A., Martin-Vide, J., Royé, D.</em></strong>, 2019. <em>synoptReg: An R package for computing a synoptic climate classification and a spatial regionalization of environmental data</em>. Environmental Modelling &amp; Software, Vol. 118,114-119pp, ISSN 1364-8152, <a href="https://doi.org/10.1016/j.envsoft.2019.04.006" class="uri">https://doi.org/10.1016/j.envsoft.2019.04.006</a>.*</li>
 </ul>
-<p><strong>Version 0.3.0 updated to GitHub:</strong></p>
-<p><em>new releases of version 0.3.0:</em></p>
+<hr>
+<p>Contents:</p>
 <ul>
-<li>A new function called <code>download_ncep</code> was developed in order two download reanalysis data form NCEP/NCAR.</li>
-<li>We have added the argument <code>option</code> to <code>raster_clas</code> function in the same way as in the <code>raster_ct2env</code>.</li>
+<li><a href="#why-this-package">Why this package</a></li>
+<li>
+<a href="#how-it-works">How it works</a>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#functions-provided">Functions provided</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul>
+</li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<hr>
+</div>
+<div id="why-this-package" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-this-package" class="anchor"></a>Why this package</h2>
+<p>The interaction between the troposphere and the environment is well known, and how this can condition human activities on some occasions. These situations can occur with an anticyclonic block that causes an increase in the concentration of NO2; or when a low-pressure area causes abundant rainfall over an urban area, etc. This package is intended to be a roadmap for territorial management on a regional scale and to anticipate the management of adverse situations for the population, due to pollution, as well as extreme weather conditions. In short, <code>synoptReg</code> allows to:</p>
+<ul>
+<li>Compute an objective <strong>synoptic classification</strong> to obtain the main atmospheric patterns, the so-called weather types, of a given region.</li>
+<li>Represent the <strong>impact of each weather type</strong> on an environmental variable (continuous): precipitation, temperature, pollutants, …</li>
+<li>Define a <strong>categorical regionalization</strong> of this environmental variable. Each region will be independent and with specific characteristics.</li>
 </ul>
 </div>
-<div id="installation" class="section level2">
+<div id="how-it-works" class="section level2">
 <h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<a href="#how-it-works" class="anchor"></a>How it works</h2>
+<div id="installation" class="section level3">
+<h3 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h3>
 <p><img src="https://placehold.it/15/1589F0/000000?text=+" alt="#1589F0"><strong>Now also in CRAN!</strong></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># To install the CRAN version (0.2.1):</span></a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"synoptReg"</span>)</a>
@@ -96,9 +121,9 @@
 <a class="sourceLine" id="cb1-5" title="5"><span class="co"># install.packages("devtools")</span></a>
 <a class="sourceLine" id="cb1-6" title="6">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"lemuscanovas/synoptReg"</span>)</a></code></pre></div>
 </div>
-<div id="functions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#functions" class="anchor"></a>Functions</h2>
+<div id="functions-provided" class="section level3">
+<h3 class="hasAnchor">
+<a href="#functions-provided" class="anchor"></a>Functions provided</h3>
 <p>synoptReg has two functions related to read and format data:</p>
 <ul>
 <li>
@@ -128,9 +153,9 @@
 <code>regionalization</code> Performs an unspervised clustering of the RasterStack object.</li>
 </ul>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
+<div id="usage" class="section level3">
+<h3 class="hasAnchor">
+<a href="#usage" class="anchor"></a>Usage</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(synoptReg)</a>
 <a class="sourceLine" id="cb2-2" title="2"></a>
 <a class="sourceLine" id="cb2-3" title="3"><span class="co"># First of all, you need a NetCDF containing an atmospheric variable.</span></a>
@@ -145,7 +170,7 @@
 <a class="sourceLine" id="cb2-12" title="12"><span class="co"># about the number of PCA to select in the procedure. For this reason,</span></a>
 <a class="sourceLine" id="cb2-13" title="13"><span class="co"># we use pca_decision</span></a>
 <a class="sourceLine" id="cb2-14" title="14">info_pca_mslp &lt;-<span class="st"> </span><span class="kw"><a href="reference/pca_decision.html">pca_decision</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data)</a></code></pre></div>
-<p>A scree plot is represented to select the number of PCA to retain. We could decide 6 PCA in a quick inspection. We can spend more time analyzing the pca results looking at <code>info_clas$summary</code> <img src="img/scree_test.png"></p>
+<p>A scree plot is represented to select the number of PCA to retain. We could decide 6 PCA in a quick inspection. We can spend more time analyzing the pca results looking at <code>info_clas$summary</code> <img src="lemuscanovas.github.io/img/scree_test.png"></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># Once we have decided on the number of components, we will proceed </span></a>
 <a class="sourceLine" id="cb3-2" title="2"><span class="co"># with the synoptic classification:</span></a>
 <a class="sourceLine" id="cb3-3" title="3">mslp_s_clas &lt;-<span class="st"> </span><span class="kw"><a href="reference/synoptclas.html">synoptclas</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data, <span class="dt">ncomp =</span>  <span class="dv">6</span>) </a>
@@ -186,7 +211,7 @@
 <a class="sourceLine" id="cb3-38" title="38">       <span class="dt">scales=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">draw =</span> <span class="ot">TRUE</span>),</a>
 <a class="sourceLine" id="cb3-39" title="39">       <span class="dt">labels=</span><span class="ot">TRUE</span>) </a>
 <a class="sourceLine" id="cb3-40" title="40"><span class="kw">grid.text</span>(<span class="st">"MDP (mm)"</span>, <span class="dt">x=</span><span class="kw">unit</span>(<span class="fl">0.900</span>,<span class="st">"npc"</span>), <span class="dt">y=</span><span class="kw">unit</span>(<span class="fl">0.50</span>, <span class="st">"npc"</span>), <span class="dt">rot =</span> <span class="dv">-90</span>, <span class="dt">gp=</span><span class="kw">gpar</span>(<span class="dt">fontsize=</span><span class="dv">7</span>))</a></code></pre></div>
-<p><img src="img/cwt3.png" height="450"></p>
+<p><img src="lemuscanovas.github.io/img/cwt3.png" height="450"></p>
 <p>As you see, the synoptic classification is displayed!</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="co"># Now we would like to know how the precipitation is spatialy </span></a>
 <a class="sourceLine" id="cb4-2" title="2"><span class="co"># distributed over the Balearic Islands (Spain) when the CT 3</span></a>
@@ -216,7 +241,7 @@
 <a class="sourceLine" id="cb5-19" title="19">       <span class="dt">scales=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">draw =</span> <span class="ot">TRUE</span>),</a>
 <a class="sourceLine" id="cb5-20" title="20">       <span class="dt">labels=</span><span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb5-21" title="21"><span class="kw">grid.text</span>(<span class="st">"MDP (mm)"</span>, <span class="dt">x=</span><span class="kw">unit</span>(<span class="fl">0.900</span>,<span class="st">"npc"</span>), <span class="dt">y=</span><span class="kw">unit</span>(<span class="fl">0.50</span>, <span class="st">"npc"</span>), <span class="dt">rot =</span> <span class="dv">-90</span>, <span class="dt">gp=</span><span class="kw">gpar</span>(<span class="dt">fontsize=</span><span class="dv">7</span>))</a></code></pre></div>
-<p><img src="img/cwt_env3.png" height="400"></p>
+<p><img src="docs/img/cwt_env3.png" height="400"></p>
 <p><strong>Important</strong>: be careful with option = 2. You can decide between 1 and 2. It is referred to lon and lat structure in the NetCDF file. So, if 1 is wrong, try 2.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co"># Let's to establish a spatial regionalisation based on the 12 precipitation</span></a>
 <a class="sourceLine" id="cb6-2" title="2"><span class="co"># maps derived from the synoptic classification. In order to obtain a</span></a>
@@ -224,21 +249,23 @@
 <a class="sourceLine" id="cb6-4" title="4"><span class="co"># In addition, if we work with larger areas, we can use aggregate and focal</span></a>
 <a class="sourceLine" id="cb6-5" title="5"><span class="co"># to make the posterior regions with "regionalisation" function more continuous.</span></a>
 <a class="sourceLine" id="cb6-6" title="6">pca_precp &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_pca.html">raster_pca</a></span>(raster_env)</a></code></pre></div>
-<p><img src="img/precp_pca.png" height="600"> Now, we observe the spatial patterns of the precipitaiton over the Balearic Islands.</p>
+<p><img src="docs/img/precp_pca.png" height="600"> Now, we observe the spatial patterns of the precipitaiton over the Balearic Islands.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="co"># Nevertheless, we want a final map with the precipitation regions/regimes of our</span></a>
 <a class="sourceLine" id="cb7-2" title="2"><span class="co"># study area. You can use a for loop to find the ideal number of regions. In this</span></a>
 <a class="sourceLine" id="cb7-3" title="3"><span class="co"># case we have applied the regionalization with 4 centers (regions).</span></a>
 <a class="sourceLine" id="cb7-4" title="4">precp_region &lt;-<span class="st"> </span><span class="kw"><a href="reference/regionalization.html">regionalization</a></span>(pca_precp<span class="op">$</span>rasterPCA, <span class="dt">centers =</span> <span class="dv">4</span>)</a>
 <a class="sourceLine" id="cb7-5" title="5">raster<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/raster/topics/plot">plot</a></span>(precp_region<span class="op">$</span>regionalization, <span class="dt">legend =</span> F, </a>
 <a class="sourceLine" id="cb7-6" title="6">             <span class="dt">col =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"orange"</span>, <span class="st">"green4"</span>, <span class="st">"darkred"</span>,<span class="st">"lightblue"</span>))</a></code></pre></div>
-<p><img src="img/regionalisation.png" height="300"></p>
+<p><img src="docs/img/regionalisation.png" height="300"></p>
 </div>
-<div id="any-doubt" class="section level2">
+</div>
+<div id="contact" class="section level2">
 <h2 class="hasAnchor">
-<a href="#any-doubt" class="anchor"></a>Any doubt?</h2>
-<p>Feel free to contact me: <a href="mailto:mlemus@ub.edu" class="email">mlemus@ub.edu</a></p>
+<a href="#contact" class="anchor"></a>Contact</h2>
+<p>Feel free to contact me at: <a href="mailto:mlemus@ub.edu" class="email">mlemus@ub.edu</a></p>
 </div>
 </div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
