@@ -156,7 +156,7 @@
 <p>First of all, we can download the synoptic data, in this case, we download the sea level pressure varible using the <code>download_ncep</code> function:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(synoptReg)</a>
 <a class="sourceLine" id="cb2-2" title="2"></a>
-<a class="sourceLine" id="cb2-3" title="3">slp &lt;-<span class="st"> </span><span class="kw">download_ncep</span>(<span class="dt">var =</span> <span class="st">"slp"</span>, </a>
+<a class="sourceLine" id="cb2-3" title="3">slp &lt;-<span class="st"> </span><span class="kw"><a href="reference/download_ncep.html">download_ncep</a></span>(<span class="dt">var =</span> <span class="st">"slp"</span>, </a>
 <a class="sourceLine" id="cb2-4" title="4">                     <span class="dt">level =</span> <span class="st">"surface"</span>,</a>
 <a class="sourceLine" id="cb2-5" title="5">                     <span class="dt">year_range =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">2000</span>,<span class="dv">2009</span>),</a>
 <a class="sourceLine" id="cb2-6" title="6">                     <span class="dt">lat_range =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">30</span>,<span class="dv">60</span>),</a>
@@ -164,18 +164,18 @@
 <a class="sourceLine" id="cb2-8" title="8"></a>
 <a class="sourceLine" id="cb2-9" title="9"><span class="co"># The object returned (slp) is a list.                     </span></a></code></pre></div>
 <p>Now we need to convert our mslp data into S-mode data frame to compute the synoptic classification. To do this step, we use the <code>tidy_cuttime_nc</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">mslp_smode &lt;-<span class="st"> </span><span class="kw">tidy_cuttime_nc</span>(<span class="dt">datalist =</span> slp)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">mslp_smode &lt;-<span class="st"> </span><span class="kw"><a href="reference/tidy_cuttime_nc.html">tidy_cuttime_nc</a></span>(<span class="dt">datalist =</span> slp)</a></code></pre></div>
 <p>Before computing the synoptic classification, you need to decide the number of components to retain. The scree test facilitates this decision (<code>pca_decision</code>). Nevertheless, the final decision about the number of PCs to retain is yours.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">info_pca_mslp &lt;-<span class="st"> </span><span class="kw">pca_decision</span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">info_pca_mslp &lt;-<span class="st"> </span><span class="kw"><a href="reference/pca_decision.html">pca_decision</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data)</a></code></pre></div>
 <p>In a quick inspection, we have decided to retain 6 PC. We can spend more time analyzing the PCA results inspecting the <code>info_clas$summary</code>.</p>
 <center><img src="img/scree_test.png" width="550"></center>
 <p>The next step is computing the synoptic classification:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">synclas &lt;-<span class="st"> </span><span class="kw">synoptclas</span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data, </a>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">synclas &lt;-<span class="st"> </span><span class="kw"><a href="reference/synoptclas.html">synoptclas</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data, </a>
 <a class="sourceLine" id="cb5-2" title="2">                      <span class="dt">ncomp =</span>  <span class="dv">6</span>) </a>
 <a class="sourceLine" id="cb5-3" title="3">synclas<span class="op">$</span>clas <span class="co"># classified days.</span></a></code></pre></div>
 <p>If you do a short research exploration on the resulting object, you obtain some interesting stats about the classification procedure. For example,yearly or monthly temporal series can be obtained.</p>
 <p>To represent the synoptic classification, we will use the raster_clas function to convert our classification into a raster object.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">synclas_raster &lt;-<span class="st"> </span><span class="kw">raster_clas</span>(<span class="dt">longitude =</span> slp<span class="op">$</span>lon,</a>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">synclas_raster &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_clas.html">raster_clas</a></span>(<span class="dt">longitude =</span> slp<span class="op">$</span>lon,</a>
 <a class="sourceLine" id="cb6-2" title="2">                              <span class="dt">latitude =</span> slp<span class="op">$</span>lat,</a>
 <a class="sourceLine" id="cb6-3" title="3">                              <span class="dt">grouped_data =</span> synclas<span class="op">$</span>grouped_data,</a>
 <a class="sourceLine" id="cb6-4" title="4">                              <span class="dt">option =</span> <span class="dv">2</span>)</a></code></pre></div>
@@ -224,10 +224,10 @@
 <center><img src="img/classification.png" width="800"></center>
 <p>Now we would like to know how the precipitation is spatialy distributed over the Balearic Islands (Spain) for each weather type. To do it, we need to read our <code>precp_grid</code> data and reformat with <code>tidy_cuttime_nc</code>.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(precp_grid) </a>
-<a class="sourceLine" id="cb9-2" title="2">precp_grid_s &lt;-<span class="st"> </span><span class="kw">tidy_cuttime_nc</span>(<span class="dt">datalist =</span> precp_grid)</a></code></pre></div>
+<a class="sourceLine" id="cb9-2" title="2">precp_grid_s &lt;-<span class="st"> </span><span class="kw"><a href="reference/tidy_cuttime_nc.html">tidy_cuttime_nc</a></span>(<span class="dt">datalist =</span> precp_grid)</a></code></pre></div>
 <p><strong>Important</strong>: Note that mslp data and precp_grid data must share the same time series (2000-01-01 to 2009-12-31). It is very important!</p>
 <p>Now, we compute the mean precipitation by CT and convert to a raster object by means of the <code>raster_ct2env</code>:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">raster_env &lt;-<span class="st"> </span><span class="kw">raster_ct2env</span>(precp_grid<span class="op">$</span>lon, </a>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">raster_env &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_ct2env.html">raster_ct2env</a></span>(precp_grid<span class="op">$</span>lon, </a>
 <a class="sourceLine" id="cb10-2" title="2">                            precp_grid<span class="op">$</span>lat, </a>
 <a class="sourceLine" id="cb10-3" title="3">                            synclas<span class="op">$</span>clas,</a>
 <a class="sourceLine" id="cb10-4" title="4">                            <span class="dt">grid_data =</span> precp_grid_s<span class="op">$</span>smode_data,</a>
@@ -265,14 +265,14 @@
 <a class="sourceLine" id="cb11-25" title="25">                     <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>())</a></code></pre></div>
 <center><img src="img/precipitation.png" width="800"></center>
 <p>Once we have showed how the precipitation is spatially distributed in the Balearic Islands, we can perform a categorical regionalisation to extract the main precipitation regions/regimes of this area. To do this, we use the <code>raster_pca</code> over the <code>raster_env</code> to get the main spatial patterns. In addition, if we work with larger or mountainous areas, we can use the <code>aggregate</code> and <code>focal</code> arguments inside the <code>raster_pca</code> function in order to get a more continuous regionalisation.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">pca_precp &lt;-<span class="st"> </span><span class="kw">raster_pca</span>(raster_env)</a>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">pca_precp &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_pca.html">raster_pca</a></span>(raster_env)</a>
 <a class="sourceLine" id="cb12-2" title="2"></a>
 <a class="sourceLine" id="cb12-3" title="3"><span class="co"># For a quick inspection:</span></a>
 <a class="sourceLine" id="cb12-4" title="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(pca_precp<span class="op">$</span>rasterPCA)</a></code></pre></div>
 <p>Nevertheless, we would like to obtain a final map showing the precipitation regions/regimes of our study area. You can use a <code>for</code> loop to find the ideal number of regions. In this case, we have applied a regionalization with 4 centers (regions).</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co"># Regionalization </span></a>
 <a class="sourceLine" id="cb13-2" title="2"></a>
-<a class="sourceLine" id="cb13-3" title="3">precp_region &lt;-<span class="st"> </span><span class="kw">regionalization</span>(pca_precp<span class="op">$</span>rasterPCA, </a>
+<a class="sourceLine" id="cb13-3" title="3">precp_region &lt;-<span class="st"> </span><span class="kw"><a href="reference/regionalization.html">regionalization</a></span>(pca_precp<span class="op">$</span>rasterPCA, </a>
 <a class="sourceLine" id="cb13-4" title="4">                                <span class="dt">centers =</span> <span class="dv">4</span>)</a>
 <a class="sourceLine" id="cb13-5" title="5"></a>
 <a class="sourceLine" id="cb13-6" title="6">precp_region_df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/as.data.frame">as.data.frame</a></span>(precp_region<span class="op">$</span>regionalization, </a>
@@ -315,7 +315,14 @@
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div class="license">
+    <div class="links">
+<h2>Links</h2>
+<ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=synoptReg">https://​cloud.r-project.org/​package=synoptReg</a>
+</li>
+</ul>
+</div>
+<div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
 <li>GPL (&gt;= 3)</li>
@@ -325,7 +332,7 @@
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Marc Lemus-Canovas <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-0925-3827" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
-<li>Dominic Royé <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-0925-3827" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
+<li>Dominic Royé <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-5516-6396" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
 </ul>
 </div>
 
