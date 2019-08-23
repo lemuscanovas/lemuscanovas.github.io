@@ -45,6 +45,9 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="news/index.html">Changelog</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
 </div>
@@ -100,7 +103,7 @@
 <div id="why-this-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#why-this-package" class="anchor"></a>Why this package</h2>
-<p>The interaction between the troposphere and the environment is well known, and how this can condition human activities on some occasions. These situations can occur with an anticyclonic block that causes an increase in the concentration of NO2; or when a low-pressure area causes abundant rainfall over an urban area, etc. This package is intended to be a roadmap for territorial management on a regional scale and to anticipate the management of adverse situations for the population, due to pollution, as well as extreme weather conditions. In short, <code>synoptReg</code> allows to:</p>
+<p>The interaction between the troposphere and the environment is well known, and how this can condition human activities on some occasions. These situations can occur with an anticyclonic block that causes an increase in the concentration of NO<sub>2</sub>; or when a low-pressure area causes abundant rainfall over urban areas, etc. This package is intended to be a roadmap for territorial management on a regional scale and to anticipate the management of adverse situations for the population, due to pollution, as well as extreme weather conditions. In short, <code>synoptReg</code> allows to:</p>
 <ul>
 <li>Compute an objective <strong>synoptic classification</strong> to obtain the main atmospheric patterns, the so-called weather types, of a given region.</li>
 <li>Represent the <strong>impact of each weather type</strong> on an environmental variable (continuous): precipitation, temperature, pollutants, …</li>
@@ -130,7 +133,7 @@
 <li>
 <code>read_nc</code> reads a NetCDF file to extract the atmospheric or environmental variable, longitudes, latitudes and dates. A continuous NetCDF without date gaps is required.</li>
 <li>
-<code>tidy_cuttime_nc</code> formats the 3D-array output from \code{read_nc} function to an S-mode dataframe (variables = grid points, observations = days). Optionally, you can set the time period between specific years and/or decide if you want work with the full year or only with 3 - month season.</li>
+<code>tidy_cuttime_nc</code> formats the 3D-array output from <code>read_nc</code> function to an S-mode dataframe (variables = grid points, observations = days). Optionally, you can set the time period between specific years and/or decide if you want work with the full year or only with 3 - month season.</li>
 </ul>
 <p>synoptReg also has two functions to perform the PCA approach to compute the synoptic classification:</p>
 <ul>
@@ -138,6 +141,8 @@
 <code>pca_decision</code> plots the explained variance against the number of the principal component. In addition, it returns all the information about the PCA performance.</li>
 <li>
 <code>synoptclas</code> establishes a synoptic classification based on any atmospheric variable (i.e. mean sea level pressure, geoptential height at 500 hPa, etc).</li>
+<li>
+<code>classjen</code> computes the Jenkinson and Collison objective classification (Lamb based). <span style="color:red"><em>Under developement</em></span>.</li>
 </ul>
 <p>There are two functions to rasterize the results in order to get a cool visualization of the aftermentioned synoptic classification:</p>
 <ul>
@@ -162,7 +167,7 @@
 <a class="sourceLine" id="cb2-2" title="2"></a>
 <a class="sourceLine" id="cb2-3" title="3">slp &lt;-<span class="st"> </span><span class="kw"><a href="reference/download_ncep.html">download_ncep</a></span>(<span class="dt">var =</span> <span class="st">"slp"</span>, </a>
 <a class="sourceLine" id="cb2-4" title="4">                     <span class="dt">level =</span> <span class="st">"surface"</span>,</a>
-<a class="sourceLine" id="cb2-5" title="5">                     <span class="dt">year_range =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">2014</span>,<span class="dv">2018</span>),</a>
+<a class="sourceLine" id="cb2-5" title="5">                     <span class="dt">year_range =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">2000</span>,<span class="dv">2009</span>),</a>
 <a class="sourceLine" id="cb2-6" title="6">                     <span class="dt">lat_range =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">30</span>,<span class="dv">60</span>),</a>
 <a class="sourceLine" id="cb2-7" title="7">                     <span class="dt">lon_range =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="op">-</span><span class="dv">10</span>,<span class="dv">30</span>))</a>
 <a class="sourceLine" id="cb2-8" title="8"></a>
@@ -172,7 +177,7 @@
 <p>Before computing the synoptic classification, you need to decide the number of components to retain. The scree test facilitates this decision (<code>pca_decision</code>). Nevertheless, the final decision about the number of PCs to retain is yours.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">info_pca_mslp &lt;-<span class="st"> </span><span class="kw"><a href="reference/pca_decision.html">pca_decision</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data)</a></code></pre></div>
 <p>In a quick inspection, we have decided to retain 6 PC. We can spend more time analyzing the PCA results inspecting the <code>info_clas$summary</code>.</p>
-<p><img src="img/scree_test.png"></p>
+<center><img src="img/scree_test.png" width="550"></center>
 <p>The next step is computing the synoptic classification:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">synclas &lt;-<span class="st"> </span><span class="kw"><a href="reference/synoptclas.html">synoptclas</a></span>(<span class="dt">smode_data =</span> mslp_smode<span class="op">$</span>smode_data, </a>
 <a class="sourceLine" id="cb5-2" title="2">                      <span class="dt">ncomp =</span>  <span class="dv">6</span>) </a>
@@ -185,30 +190,32 @@
 <a class="sourceLine" id="cb6-4" title="4">                              <span class="dt">option =</span> <span class="dv">2</span>)</a></code></pre></div>
 <p><strong>Important</strong>: be careful with option = 2. You can decide between 1 and 2. It is referred to lon and lat structure in the NetCDF file. So, if 1 is wrong, try 2.</p>
 <p>This <code>RasterStack</code> can be plotted by many visualization packages. In this case we will use <code>ggplot2</code> (and other packages).</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="co"># install.packages("tidyr") # gather function</span></a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="co"># install.packages("ggplot2") # visualization</span></a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="co"># install.packages("dplyr") # data manipulation</span></a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="co"># install.packages("metR") # isolines labels</span></a>
-<a class="sourceLine" id="cb7-5" title="5"><span class="co"># install.packages("rnaturalearth") # basemap</span></a>
-<a class="sourceLine" id="cb7-6" title="6"></a>
-<a class="sourceLine" id="cb7-7" title="7"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(tidyr)</a>
-<a class="sourceLine" id="cb7-8" title="8"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
-<a class="sourceLine" id="cb7-9" title="9"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dplyr)</a>
-<a class="sourceLine" id="cb7-10" title="10"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(metR)</a>
-<a class="sourceLine" id="cb7-11" title="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rnaturalearth)</a>
-<a class="sourceLine" id="cb7-12" title="12"></a>
-<a class="sourceLine" id="cb7-13" title="13"><span class="co"># Manipulating the RasterStack to provide a ggplot visualization</span></a>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="co"># install.packages("raster")</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="co"># install.packages("tidyr") # gather function</span></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="co"># install.packages("ggplot2") # visualization</span></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="co"># install.packages("dplyr") # data manipulation</span></a>
+<a class="sourceLine" id="cb7-5" title="5"><span class="co"># install.packages("metR") # isolines labels</span></a>
+<a class="sourceLine" id="cb7-6" title="6"><span class="co"># install.packages("rnaturalearth") # basemap</span></a>
+<a class="sourceLine" id="cb7-7" title="7"></a>
+<a class="sourceLine" id="cb7-8" title="8"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(raster)</a>
+<a class="sourceLine" id="cb7-9" title="9"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(tidyr)</a>
+<a class="sourceLine" id="cb7-10" title="10"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
+<a class="sourceLine" id="cb7-11" title="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dplyr)</a>
+<a class="sourceLine" id="cb7-12" title="12"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(metR)</a>
+<a class="sourceLine" id="cb7-13" title="13"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rnaturalearth)</a>
 <a class="sourceLine" id="cb7-14" title="14"></a>
-<a class="sourceLine" id="cb7-15" title="15">synclas_df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/as.data.frame">as.data.frame</a></span>(synclas_raster, <span class="dt">xy =</span> T)</a>
+<a class="sourceLine" id="cb7-15" title="15"><span class="co"># Manipulating the RasterStack to provide a ggplot visualization</span></a>
 <a class="sourceLine" id="cb7-16" title="16"></a>
-<a class="sourceLine" id="cb7-17" title="17">synclas_gather_df &lt;-<span class="st"> </span><span class="kw">gather</span>(<span class="dt">data =</span> synclas_df,</a>
-<a class="sourceLine" id="cb7-18" title="18">                            <span class="dt">key =</span> <span class="st">"key"</span>,</a>
-<a class="sourceLine" id="cb7-19" title="19">                            <span class="dt">value =</span> <span class="st">"value"</span>,</a>
-<a class="sourceLine" id="cb7-20" title="20">                            CT1<span class="op">:</span>CT10) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">value =</span> value<span class="op">/</span><span class="dv">100</span>) <span class="co">#conversion to hPa</span></a>
-<a class="sourceLine" id="cb7-21" title="21">                            </a>
-<a class="sourceLine" id="cb7-22" title="22">synclas_gather_df<span class="op">$</span>key &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">factor</a></span>(synclas_gather_df<span class="op">$</span>key, <span class="dt">levels=</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(<span class="st">"CT"</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>))</a></code></pre></div>
+<a class="sourceLine" id="cb7-17" title="17">synclas_df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/as.data.frame">as.data.frame</a></span>(synclas_raster, <span class="dt">xy =</span> T)</a>
+<a class="sourceLine" id="cb7-18" title="18"></a>
+<a class="sourceLine" id="cb7-19" title="19">synclas_gather_df &lt;-<span class="st"> </span><span class="kw">gather</span>(<span class="dt">data =</span> synclas_df,</a>
+<a class="sourceLine" id="cb7-20" title="20">                            <span class="dt">key =</span> <span class="st">"key"</span>,</a>
+<a class="sourceLine" id="cb7-21" title="21">                            <span class="dt">value =</span> <span class="st">"value"</span>,</a>
+<a class="sourceLine" id="cb7-22" title="22">                            CT1<span class="op">:</span>CT10) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">value =</span> value<span class="op">/</span><span class="dv">100</span>) <span class="co">#conversion to hPa</span></a>
+<a class="sourceLine" id="cb7-23" title="23">                            </a>
+<a class="sourceLine" id="cb7-24" title="24">synclas_gather_df<span class="op">$</span>key &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">factor</a></span>(synclas_gather_df<span class="op">$</span>key, <span class="dt">levels=</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(<span class="st">"CT"</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>))</a></code></pre></div>
 <p>After a brief manipulation, we can display the synoptic classification:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co"># visualización</span></a>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co"># Visualización</span></a>
 <a class="sourceLine" id="cb8-2" title="2">map_bg &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"europe"</span>,<span class="st">"africa"</span>),<span class="dt">returnclass =</span> <span class="st">"sf"</span>)</a>
 <a class="sourceLine" id="cb8-3" title="3"></a>
 <a class="sourceLine" id="cb8-4" title="4">syn_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
@@ -223,53 +230,72 @@
 <a class="sourceLine" id="cb8-13" title="13">                     <span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),</a>
 <a class="sourceLine" id="cb8-14" title="14">                     <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>())</a>
 <a class="sourceLine" id="cb8-15" title="15"></a>
-<a class="sourceLine" id="cb8-16" title="16">syn_plot <span class="op">+</span><span class="st"> </span><span class="kw">geom_text_contour</span>(<span class="dt">data=</span> synclas_gather_df,<span class="kw">aes</span>(x,y,<span class="dt">z =</span> value), </a>
-<a class="sourceLine" id="cb8-17" title="17">                             <span class="dt">stroke =</span> <span class="fl">0.15</span>,<span class="dt">binwidth =</span> <span class="dv">4</span>)</a></code></pre></div>
-<p><img src="img/classification.png" height="400"></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="co"># Now we would like to know how the precipitation is spatialy </span></a>
-<a class="sourceLine" id="cb9-2" title="2"><span class="co"># distributed over the Balearic Islands (Spain) when the CT 3</span></a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="co"># occurs. To do it, we need to read our precp_grid data and </span></a>
-<a class="sourceLine" id="cb9-4" title="4"><span class="co"># reformat with tidy_cuttime_nc.</span></a>
-<a class="sourceLine" id="cb9-5" title="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(precp_grid) </a>
-<a class="sourceLine" id="cb9-6" title="6">precp_grid_s &lt;-<span class="st"> </span><span class="kw"><a href="reference/tidy_cuttime_nc.html">tidy_cuttime_nc</a></span>(<span class="dt">datalist =</span> precp_grid)</a></code></pre></div>
+<a class="sourceLine" id="cb8-16" title="16">syn_plot <span class="op">+</span><span class="st"> </span><span class="kw">geom_text_contour</span>(<span class="dt">data=</span> synclas_gather_df,<span class="kw">aes</span>(x,y,<span class="dt">z =</span> value), <span class="dt">stroke =</span> <span class="fl">0.15</span>,<span class="dt">binwidth =</span> <span class="dv">4</span>)</a></code></pre></div>
+<center><img src="img/classification.png" width="800"></center>
+<p>Now we would like to know how the precipitation is spatialy distributed over the Balearic Islands (Spain) for each weather type. To do it, we need to read our precp_grid data and reformat with tidy_cuttime_nc.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(precp_grid) </a>
+<a class="sourceLine" id="cb9-2" title="2">precp_grid_s &lt;-<span class="st"> </span><span class="kw"><a href="reference/tidy_cuttime_nc.html">tidy_cuttime_nc</a></span>(<span class="dt">datalist =</span> precp_grid)</a></code></pre></div>
 <p><strong>Important</strong>: Note that mslp data and precp_grid data must share the same time series (2000-01-01 to 2009-12-31). It is very important!</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="co"># Now, we use the function raster_cwt2env to get the precipitation raster</span></a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="co"># based on CWT 3:</span></a>
-<a class="sourceLine" id="cb10-3" title="3">raster_env &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_ct2env.html">raster_ct2env</a></span>(precp_grid<span class="op">$</span>lon, precp_grid<span class="op">$</span>lat, mslp_s_clas<span class="op">$</span>clas, </a>
-<a class="sourceLine" id="cb10-4" title="4">                            <span class="dt">grid_data =</span> precp_grid_s<span class="op">$</span>smode_data, <span class="dt">option =</span> <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb10-5" title="5"><span class="co"># And then, we can plot this raster:</span></a>
-<a class="sourceLine" id="cb10-6" title="6">raster_env3 &lt;-<span class="st"> </span>raster_env<span class="op">$</span>CT3</a>
-<a class="sourceLine" id="cb10-7" title="7"></a>
-<a class="sourceLine" id="cb10-8" title="8"><span class="kw">spplot</span>(raster_env3<span class="op">/</span><span class="dv">10</span>,</a>
-<a class="sourceLine" id="cb10-9" title="9">       <span class="dt">sp.layout =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(limit, <span class="dt">first =</span> <span class="ot">FALSE</span>),</a>
-<a class="sourceLine" id="cb10-10" title="10">       <span class="dt">names.attr=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(raster_env3),</a>
-<a class="sourceLine" id="cb10-11" title="11">       <span class="dt">at =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Round">round</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Extremes">min</a></span>(<span class="kw">minValue</span>(raster_env3<span class="op">/</span><span class="dv">10</span>))),<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Round">round</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Extremes">max</a></span>(<span class="kw">maxValue</span>(raster_env3))<span class="op">+</span><span class="fl">0.5</span>),<span class="fl">0.2</span>),</a>
-<a class="sourceLine" id="cb10-12" title="12">       <span class="co"># zlim = c(round(min(minValue(raster_env3))),round(max(maxValue(raster_env3)))),</span></a>
-<a class="sourceLine" id="cb10-13" title="13">       <span class="dt">col.regions=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rev">rev</a></span>(colorRamps<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorRamps/topics/matlab.like">matlab.like2</a></span>(<span class="dv">100</span>)),</a>
-<a class="sourceLine" id="cb10-14" title="14">       <span class="dt">par.settings =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">strip.background=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">col=</span><span class="st">"white"</span>), <span class="dt">fontsize =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">text =</span> <span class="dv">8</span>)),</a>
-<a class="sourceLine" id="cb10-15" title="15">       <span class="dt">contour=</span><span class="ot">FALSE</span>,</a>
-<a class="sourceLine" id="cb10-16" title="16">       <span class="dt">colorkey =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb10-17" title="17">       <span class="dt">col=</span><span class="st">'black'</span>,</a>
-<a class="sourceLine" id="cb10-18" title="18">       <span class="dt">pretty=</span><span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb10-19" title="19">       <span class="dt">scales=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">draw =</span> <span class="ot">TRUE</span>),</a>
-<a class="sourceLine" id="cb10-20" title="20">       <span class="dt">labels=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb10-21" title="21"><span class="kw">grid.text</span>(<span class="st">"MDP (mm)"</span>, <span class="dt">x=</span><span class="kw">unit</span>(<span class="fl">0.900</span>,<span class="st">"npc"</span>), <span class="dt">y=</span><span class="kw">unit</span>(<span class="fl">0.50</span>, <span class="st">"npc"</span>), <span class="dt">rot =</span> <span class="dv">-90</span>, <span class="dt">gp=</span><span class="kw">gpar</span>(<span class="dt">fontsize=</span><span class="dv">7</span>))</a></code></pre></div>
-<p><img src="img/cwt_env3.png" height="400"></p>
-<p><strong>Important</strong>: be careful with option = 2. You can decide between 1 and 2. It is referred to lon and lat structure in the NetCDF file. So, if 1 is wrong, try 2.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co"># Let's to establish a spatial regionalisation based on the 12 precipitation</span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="co"># maps derived from the synoptic classification. In order to obtain a</span></a>
-<a class="sourceLine" id="cb11-3" title="3"><span class="co"># schematic regionalisation, we apply a "raster_pca" over our raster stack</span></a>
-<a class="sourceLine" id="cb11-4" title="4"><span class="co"># In addition, if we work with larger areas, we can use aggregate and focal</span></a>
-<a class="sourceLine" id="cb11-5" title="5"><span class="co"># to make the posterior regions with "regionalisation" function more continuous.</span></a>
-<a class="sourceLine" id="cb11-6" title="6">pca_precp &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_pca.html">raster_pca</a></span>(raster_env)</a></code></pre></div>
-<p><img src="img/precp_pca.png" height="600"> Now, we observe the spatial patterns of the precipitaiton over the Balearic Islands.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="co"># Nevertheless, we want a final map with the precipitation regions/regimes of our</span></a>
-<a class="sourceLine" id="cb12-2" title="2"><span class="co"># study area. You can use a for loop to find the ideal number of regions. In this</span></a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="co"># case we have applied the regionalization with 4 centers (regions).</span></a>
-<a class="sourceLine" id="cb12-4" title="4">precp_region &lt;-<span class="st"> </span><span class="kw"><a href="reference/regionalization.html">regionalization</a></span>(pca_precp<span class="op">$</span>rasterPCA, <span class="dt">centers =</span> <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb12-5" title="5">raster<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/raster/topics/plot">plot</a></span>(precp_region<span class="op">$</span>regionalization, <span class="dt">legend =</span> F, </a>
-<a class="sourceLine" id="cb12-6" title="6">             <span class="dt">col =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"orange"</span>, <span class="st">"green4"</span>, <span class="st">"darkred"</span>,<span class="st">"lightblue"</span>))</a></code></pre></div>
-<p><img src="img/regionalisation.png" height="300"></p>
+<p>Now, we compute the mean precipitation by CT and convert to a raster object by means of the <code>raster_ct2env</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">raster_env &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_ct2env.html">raster_ct2env</a></span>(precp_grid<span class="op">$</span>lon, </a>
+<a class="sourceLine" id="cb10-2" title="2">                            precp_grid<span class="op">$</span>lat, </a>
+<a class="sourceLine" id="cb10-3" title="3">                            synclas<span class="op">$</span>clas,</a>
+<a class="sourceLine" id="cb10-4" title="4">                            <span class="dt">grid_data =</span> precp_grid_s<span class="op">$</span>smode_data,</a>
+<a class="sourceLine" id="cb10-5" title="5">                            <span class="dt">option =</span> <span class="dv">2</span>)</a></code></pre></div>
+<p>Time to plot the <code>raster_env</code> object:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co"># Manipulation</span></a>
+<a class="sourceLine" id="cb11-2" title="2"></a>
+<a class="sourceLine" id="cb11-3" title="3">raster_env_df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/as.data.frame">as.data.frame</a></span>(raster_env, <span class="dt">xy =</span> T)</a>
+<a class="sourceLine" id="cb11-4" title="4">raster_env_gather_df &lt;-<span class="st"> </span><span class="kw">gather</span>(<span class="dt">data =</span> raster_env_df,</a>
+<a class="sourceLine" id="cb11-5" title="5">                            <span class="dt">key =</span> <span class="st">"key"</span>,</a>
+<a class="sourceLine" id="cb11-6" title="6">                            <span class="dt">value =</span> <span class="st">"value"</span>,</a>
+<a class="sourceLine" id="cb11-7" title="7">                            CT1<span class="op">:</span>CT12) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-8" title="8"><span class="st">                </span><span class="kw">mutate</span>(<span class="dt">value =</span> value<span class="op">/</span><span class="dv">10</span>) <span class="co">#conversion to mm</span></a>
+<a class="sourceLine" id="cb11-9" title="9"></a>
+<a class="sourceLine" id="cb11-10" title="10">raster_env_gather_df<span class="op">$</span>key &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">factor</a></span>(raster_env_gather_df<span class="op">$</span>key, <span class="dt">levels=</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(<span class="st">"CT"</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>))</a>
+<a class="sourceLine" id="cb11-11" title="11"></a>
+<a class="sourceLine" id="cb11-12" title="12"><span class="co"># Visualization</span></a>
+<a class="sourceLine" id="cb11-13" title="13"></a>
+<a class="sourceLine" id="cb11-14" title="14"><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb11-15" title="15"><span class="st">  </span><span class="kw">geom_tile</span>(<span class="dt">data=</span>raster_env_gather_df, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y,<span class="dt">fill=</span>value)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb11-16" title="16"><span class="st">  </span><span class="kw">scale_fill_gradientn</span>(<span class="dt">colours =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rev">rev</a></span>(colorRamps<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/colorRamps/topics/matlab.like">matlab.like2</a></span>(<span class="dv">100</span>)), </a>
+<a class="sourceLine" id="cb11-17" title="17">  <span class="dt">name =</span> <span class="st">"rainfall (mm)"</span>,<span class="dt">na.value=</span><span class="st">"transparent"</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb11-18" title="18"><span class="st">  </span><span class="kw">scale_colour_gradient</span>(<span class="dt">guide =</span> <span class="st">'none'</span>) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>key, <span class="dt">ncol =</span> <span class="dv">4</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb11-19" title="19"><span class="st">  </span><span class="kw">theme_light</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">axis.title =</span> <span class="kw">element_blank</span>(), </a>
+<a class="sourceLine" id="cb11-20" title="20">                     <span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb11-21" title="21">                     <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>())</a></code></pre></div>
+<center><img src="img/precipitation.png" width="800"></center>
+<p>Once we have showed how the precipitation is spatially distributed in the Balearic Islands, we can perform a categorical regionalisation to extract the main precipitation regions/regimes of this area. To do this, we use the <code>raster_pca</code> over the <code>raster_env</code> to get the main spatial patterns. In addition, if we work with larger or mountainous areas, we can use the <code>aggregate</code> and <code>focal</code> arguments inside the <code>raster_pca</code> function in order to get a more continuous regionalisation.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">pca_precp &lt;-<span class="st"> </span><span class="kw"><a href="reference/raster_pca.html">raster_pca</a></span>(raster_env)</a>
+<a class="sourceLine" id="cb12-2" title="2"></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="co"># For a quick inspection:</span></a>
+<a class="sourceLine" id="cb12-4" title="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(pca_precp<span class="op">$</span>rasterPCA)</a></code></pre></div>
+<p>Nevertheless, we would like to obtain a final map showing the precipitation regions/regimes of our study area. You can use a <code>for</code> loop to find the ideal number of regions. In this case, we have applied a regionalization with 4 centers (regions).</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co"># Regionalization </span></a>
+<a class="sourceLine" id="cb13-2" title="2"></a>
+<a class="sourceLine" id="cb13-3" title="3">precp_region &lt;-<span class="st"> </span><span class="kw"><a href="reference/regionalization.html">regionalization</a></span>(pca_precp<span class="op">$</span>rasterPCA, </a>
+<a class="sourceLine" id="cb13-4" title="4">                                <span class="dt">centers =</span> <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb13-5" title="5"></a>
+<a class="sourceLine" id="cb13-6" title="6">precp_region_df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/as.data.frame">as.data.frame</a></span>(precp_region<span class="op">$</span>regionalization, </a>
+<a class="sourceLine" id="cb13-7" title="7">                                 <span class="dt">xy =</span> T)</a>
+<a class="sourceLine" id="cb13-8" title="8"></a>
+<a class="sourceLine" id="cb13-9" title="9"><span class="co"># Visualization</span></a>
+<a class="sourceLine" id="cb13-10" title="10"></a>
+<a class="sourceLine" id="cb13-11" title="11">labels =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Region 1"</span>,<span class="st">"Region 2"</span>,</a>
+<a class="sourceLine" id="cb13-12" title="12">           <span class="st">"Region 3"</span>, <span class="st">"Region 4"</span>)</a>
+<a class="sourceLine" id="cb13-13" title="13">colours &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"mediumseagreen"</span>,<span class="st">"darkgoldenrod1"</span>,</a>
+<a class="sourceLine" id="cb13-14" title="14">              <span class="st">"khaki1"</span>, <span class="st">"dodgerblue3"</span>)</a>
+<a class="sourceLine" id="cb13-15" title="15"></a>
+<a class="sourceLine" id="cb13-16" title="16"><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb13-17" title="17"><span class="st">  </span><span class="kw">geom_tile</span>(<span class="dt">data=</span>precp_region_df, <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y,<span class="dt">fill=</span>layer)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-18" title="18"><span class="st">  </span><span class="kw">scale_fill_gradientn</span>(<span class="dt">colours =</span> colours,</a>
+<a class="sourceLine" id="cb13-19" title="19">                       <span class="dt">guide =</span> <span class="st">"legend"</span>, <span class="dt">breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>),</a>
+<a class="sourceLine" id="cb13-20" title="20">                       <span class="dt">na.value =</span> <span class="kw">alpha</span>(<span class="st">"white"</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>),</a>
+<a class="sourceLine" id="cb13-21" title="21">                       <span class="dt">labels =</span> labels, <span class="dt">name=</span> <span class="st">""</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb13-22" title="22"><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb13-23" title="23"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),<span class="dt">axis.title =</span> <span class="kw">element_blank</span>(),</a>
+<a class="sourceLine" id="cb13-24" title="24">        <span class="dt">legend.position =</span> <span class="st">"bottom"</span>, <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>())</a></code></pre></div>
+<center><img src="img/regionalisation_v2.png" width="500"></center>
 </div>
 </div>
 <div id="contact" class="section level2">
