@@ -200,7 +200,7 @@
 <a class="sourceLine" id="cb7-17" title="17">synclas_gather_df &lt;-<span class="st"> </span><span class="kw">gather</span>(<span class="dt">data =</span> synclas_df,</a>
 <a class="sourceLine" id="cb7-18" title="18">                            <span class="dt">key =</span> <span class="st">"key"</span>,</a>
 <a class="sourceLine" id="cb7-19" title="19">                            <span class="dt">value =</span> <span class="st">"value"</span>,</a>
-<a class="sourceLine" id="cb7-20" title="20">                            CT1<span class="op">:</span>CT10) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-20" title="20">                            CT1<span class="op">:</span>CT12) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb7-21" title="21"><span class="st">                     </span><span class="kw">mutate</span>(<span class="dt">value =</span> value<span class="op">/</span><span class="dv">100</span>) <span class="co">#conversion to hPa</span></a>
 <a class="sourceLine" id="cb7-22" title="22">                            </a>
 <a class="sourceLine" id="cb7-23" title="23">synclas_gather_df<span class="op">$</span>key &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/factor">factor</a></span>(synclas_gather_df<span class="op">$</span>key, <span class="dt">levels =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(<span class="st">"CT"</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">12</span>))</a></code></pre></div>
