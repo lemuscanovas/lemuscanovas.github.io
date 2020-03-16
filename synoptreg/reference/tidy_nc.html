@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PCA decision — pca_decision • synoptReg</title>
+<title>Set the time period and the geogprahical extension, as well as computes the anomaly of the atmospheric variable/s — tidy_nc • synoptReg</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,11 @@
 
 
 
-<meta property="og:title" content="PCA decision — pca_decision" />
-<meta property="og:description" content="pca_decision plots the explained variances against the number of the principal component. In addition, it returns all the information about the PCA performance." />
+<meta property="og:title" content="Set the time period and the geogprahical extension, as well as computes the anomaly of the atmospheric variable/s — tidy_nc" />
+<meta property="og:description" content="This function allows to subset the time series and geogprahical area of your atmospheric variable.
+In addition, even if no argument is given, the anomaly of the atmospheric variable/s will be computed.
+The anomaly value is provided in order to facilitate the visualization of the results after use the synoptclas function.
+It is mandatory to pass the tidy_nc even if you do not want to change the time period or the geographical extension." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,52 +106,52 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>PCA decision</h1>
+    <h1>Set the time period and the geogprahical extension, as well as computes the anomaly of the atmospheric variable/s</h1>
     
-    <div class="hidden name"><code>pca_decision.Rd</code></div>
+    <div class="hidden name"><code>tidy_nc.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>pca_decision</code> plots the explained variances against the number of the principal component. In addition, it returns all the information about the PCA performance.</p>
+    <p>This function allows to subset the time series and geogprahical area of your atmospheric variable.
+In addition, even if no argument is given, the anomaly of the atmospheric variable/s will be computed.
+The anomaly value is provided in order to facilitate the visualization of the results after use the <code>synoptclas</code> function.
+It is mandatory to pass the <code>tidy_nc</code> even if you do not want to change the time period or the geographical extension.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>pca_decision</span>(<span class='no'>x</span>, <span class='kw'>ncomp</span> <span class='kw'>=</span> <span class='fl'>30</span>, <span class='kw'>norm</span> <span class='kw'>=</span> <span class='no'>T</span>, <span class='kw'>matrix_mode</span> <span class='kw'>=</span> <span class='st'>"S-mode"</span>)</pre>
+    <pre class="usage"><span class='fu'>tidy_nc</span>(<span class='no'>x</span>, <span class='kw'>time_subset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>geo_subset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>monthly_subset</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>name_vars</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>data.frame. A data.frame with the following variables: <code>lon, lat, time, value, anom_value</code>. See <code>tidy_nc</code>.</p></td>
+      <td><p>data.frame. A data.frame with the following variables: <code>lon, lat, time, value</code>. The same structure returned when using <code>download_ncep</code>.</p></td>
     </tr>
     <tr>
-      <th>ncomp</th>
-      <td><p>integer. Number of principal components to show/retain</p></td>
+      <th>time_subset</th>
+      <td><p>vector. Starting and ending date, or a vector of dates of interest.</p></td>
     </tr>
     <tr>
-      <th>norm</th>
-      <td><p>logical. Default <code>TRUE</code>. <code>norm = TRUE</code> is recommended for classify two ore more variables.</p></td>
+      <th>geo_subset</th>
+      <td><p>vector. A vector providing the <code>xmin,xmax,ymin,ymax</code>.</p></td>
     </tr>
     <tr>
-      <th>matrix_mode</th>
-      <td><p>character. The mode of matrix to use. Choose between S-mode and T-mode</p></td>
+      <th>monthly_subset</th>
+      <td><p>an integer or a vector of integers. Number of the month/s desired.</p></td>
+    </tr>
+    <tr>
+      <th>name_vars</th>
+      <td><p>character or a vector of characters. Name of the atmospheric variable/s. If name is not specified, then will be coded as integers.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a list with:</p><ul>
-<li><p>A list with class <code>princomp</code> containing all the results of the PCA</p></li>
-<li><p>A data frame containing the main results of the <code>ncomp</code> selected (standard deviation, proportion of variance and cumulative variance).</p></li>
-<li><p>A <code>ggplot2</code> object to visualize the scree test</p></li>
-</ul>
-
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>To perform the PCA the <code>x</code> must contain more rows than columns. In addition, <code>x</code> cannot contain <code>NA</code> values.</p>
+    <p>A data.frame with the following variables: <code>lon, lat, time, value, anom_value</code></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='tidy_nc.html'>tidy_nc</a></code></p></div>
+    <div class='dont-index'><p><code><a href='download_ncep.html'>download_ncep</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Load data (mslp or precp_grid)</span>
@@ -158,17 +161,20 @@
 <span class='co'># and mean sea level pressure) together.</span>
 
 <span class='co'># Time subset between two dates</span>
-<span class='no'>atm_data1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tidy_nc.html'>tidy_nc</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='no'>mslp</span>,<span class='no'>z500</span>))
+<span class='no'>atm_data1</span> <span class='kw'>&lt;-</span> <span class='fu'>tidy_nc</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='no'>mslp</span>,<span class='no'>z500</span>), <span class='kw'>time_subset</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2000-05-01"</span>,<span class='st'>"2001-04-30"</span>))
 
-<span class='co'># Deciding on the number of PC to retain</span>
-<span class='no'>info</span> <span class='kw'>&lt;-</span> <span class='fu'>pca_decision</span>(<span class='no'>atm_data1</span>)</div></pre>
+<span class='co'># Time subset using a vector of dates of interest. Including a geographical crop</span>
+<span class='no'>dates_int</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2000-01-25"</span>,<span class='st'>"2000-04-01"</span>,<span class='st'>"2000-07-14"</span>,<span class='st'>"2001-05-08"</span>,<span class='st'>"2002-12-20"</span>)
+<span class='no'>atm_data1</span> <span class='kw'>&lt;-</span> <span class='fu'>tidy_nc</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='no'>mslp</span>,<span class='no'>z500</span>),
+                     <span class='kw'>time_subset</span> <span class='kw'>=</span> <span class='no'>dates_int</span>,
+                     <span class='kw'>geo_subset</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>20</span>,<span class='fl'>10</span>,<span class='fl'>30</span>,<span class='fl'>50</span>),
+                     <span class='kw'>name_vars</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"mslp"</span>,<span class='st'>"z500"</span>)) <span class='co'># following the list sequence</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#note">Note</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>

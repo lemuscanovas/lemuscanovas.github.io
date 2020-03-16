@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Environmental regionalization — regionalization • synoptReg</title>
+<title>Daily precipitation grid of Balearic Islands (Spain) — pcp • synoptReg</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,10 @@
 
 
 
-<meta property="og:title" content="Environmental regionalization — regionalization" />
-<meta property="og:description" content="Perform an unspervised clustering of the Raster Stack" />
+<meta property="og:title" content="Daily precipitation grid of Balearic Islands (Spain) — pcp" />
+<meta property="og:description" content="Data from the SPREAD data set downloaded from the Spanish National Research Council (CSIC).
+(http://spread.csic.es/info.html).
+This data corresponds to daily values of precipitation with a spatial resolution of 5 x 5 km from January 2000 to december 2010" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,54 +105,44 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Environmental regionalization</h1>
+    <h1>Daily precipitation grid of Balearic Islands (Spain)</h1>
     
-    <div class="hidden name"><code>regionalization.Rd</code></div>
+    <div class="hidden name"><code>pcp.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Perform an unspervised clustering of the Raster Stack</p>
+    <p>Data from the SPREAD data set downloaded from the Spanish National Research Council (CSIC).
+(<a href='http://spread.csic.es/info.html'>http://spread.csic.es/info.html</a>).
+This data corresponds to daily values of precipitation with a spatial resolution of 5 x 5 km from January 2000 to december 2010</p>
     </div>
 
-    <pre class="usage"><span class='fu'>regionalization</span>(<span class='no'>raststack</span>, <span class='no'>centers</span>, <span class='kw'>iter.max</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>nstart</span> <span class='kw'>=</span> <span class='fl'>100</span>)</pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>raststack</th>
-      <td><p>Raster Stack.</p></td>
-    </tr>
-    <tr>
-      <th>centers</th>
-      <td><p>Integer. Number of clusters.</p></td>
-    </tr>
-    <tr>
-      <th>iter.max</th>
-      <td><p>Integer. The maximum number of iterations allowed. Default 100.</p></td>
-    </tr>
-    <tr>
-      <th>nstart</th>
-      <td><p>Integer. How many random sets should be chosen? Default 100.</p></td>
-    </tr>
-    </table>
-
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>a list with:</p><ul>
-<li><p>A raster with the final regionalization</p></li>
-<li><p>A list with the results of the K-means performance</p></li>
-<li><p>A raster displaying a pseudo-MAE error based on the difference between each pixel value and its respective centroide</p></li>
-<li><p>A numeric pseudo-MAE mean value for the entire map</p></li>
-</ul>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>pcp</span>)</pre>
 
 
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data.frame with the following variables: <code>lon,lat,time,value</code>.</p><dl class='dl-horizontal'>
+  <dt>geographical area:</dt><dd><p>Balearic Islands</p></dd>
+  <dt>time period:</dt><dd><p>2000-01-01 to 2010-12-31</p></dd>
+  <dt>units:</dt><dd><p>mm*10</p></dd>
+  <dt>coordinates reference system:</dt><dd><p>+proj=utm +zone=30 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</p></dd>
+
+</dl>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Serrano-Notivoli et al. (2017)
+<em>SPREAD: a high-resolution daily gridded precipitation dataset for Spain, an extreme events frequency and intensity overview.
+             Earth Syst. Sci. Data, 9, 721-738, 2017, https://doi.org/10.5194/essd-9-721-2017</em></p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>pcp</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
+      <li><a href="#format">Format</a></li>
+      <li><a href="#references">References</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
