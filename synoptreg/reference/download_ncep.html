@@ -171,11 +171,13 @@
     <p>a data.frame with the following variables: <code>lon, lat, time, value</code></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>#Daily mean air temperature 2m for 2017</span>
-<span class='no'>ta_data</span> <span class='kw'>&lt;-</span> <span class='fu'>download_ncep</span>(<span class='kw'>year_range</span><span class='kw'>=</span><span class='fl'>2017</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: This variable is not available at the surface in the Reanalysis II dataset.  Using Reanalysis I instead.</span></div><div class='output co'>#&gt; [1] Units of variable 'slp' are Pascals</div><div class='output co'>#&gt; <span class='warning'>Warning: This variable is not available at the surface in the Reanalysis II dataset.  Using Reanalysis I instead.</span></div><div class='output co'>#&gt; [1] Units of variable 'slp' are Pascals</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='co'>#Daily mean air temperature 2m for 2017</span>
+<span class='co'>#ta_data &lt;- download_ncep(year_range=2017)</span>
+
 <span class='co'>#Air temperature 2m at 06:00 for 2017</span>
-<span class='no'>ta_data_h6</span> <span class='kw'>&lt;-</span> <span class='fu'>download_ncep</span>(<span class='kw'>year_range</span><span class='kw'>=</span><span class='fl'>2017</span>,<span class='kw'>dailymean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,<span class='kw'>hour</span><span class='kw'>=</span><span class='fl'>6</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: This variable is not available at the surface in the Reanalysis II dataset.  Using Reanalysis I instead.</span></div><div class='output co'>#&gt; [1] Units of variable 'slp' are Pascals</div><div class='output co'>#&gt; <span class='warning'>Warning: This variable is not available at the surface in the Reanalysis II dataset.  Using Reanalysis I instead.</span></div><div class='output co'>#&gt; [1] Units of variable 'slp' are Pascals</div><div class='input'>
-</div></pre>
+<span class='co'>#ta_data_h6 &lt;- download_ncep(year_range=2017,dailymean = FALSE,hour=6)</span>
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
