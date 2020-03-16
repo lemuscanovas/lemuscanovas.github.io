@@ -105,6 +105,21 @@
       
     </div>
 
+    <div id="synoptreg-100-cran--github" class="section level1">
+<h1 class="page-header">
+<a href="#synoptreg-100-cran--github" class="anchor"></a>synoptReg 1.0.0 (CRAN &amp; Github)<small> Unreleased </small>
+</h1>
+<p>Major release.</p>
+<ul>
+<li><p><code>read_nc</code> function was removed. From now on, the function <code>ReadNetCDF</code> from the R package <code>metR</code> will be used instead. This function makes it extremely easy to read NetCDF files.</p></li>
+<li><p><code>download_ncep</code> was updated and now it provides an output very similar to the <code>ReadNetCDF</code> function.</p></li>
+<li><p><code>tidy_cuttime_nc</code> was replaced by a new function called <code>tidy_nc</code>. This last function allows to subset the time period and the geographical extent. Now it is easier to create a more than one variable synoptic classification.</p></li>
+<li><p><code>pca_decision</code> was updated and the scree test is returned as a <code>ggplot2</code> object.</p></li>
+<li><p><code>synoptclas</code> function had several updates. The major change lies in the possibility to use two kind of matrix modes. Up to now, the user only could use the “S-mode” to perform de PCA-synoptic classification. This matrix mode is usually used to classify long and continuous period. Henceforth, user will can execute de PCA in T-mode, in order to analyse the synoptic patterns of extreme events: floods episodes, megadroughts, episodes of high pollution, etc. Another change provided in this update, is the output result, which is provided as a tibble, and it is easily to compute statistics in the <code>tidyverse</code> way.</p></li>
+<li><p><code>raster_clas</code> was removed. Henceforth, <code>synoptclas</code> already provides a plottable result.</p></li>
+<li><p><code>raster_ct2env</code> was replaced by <code>ct2env</code>. This new function allows to calculae that the metric the user wants using the <code>fun</code> parametre. In addition, the user can select the output of the object between <code>data.frame</code> or <code>raster</code>.</p></li>
+</ul>
+</div>
     <div id="synoptreg-030-github" class="section level1">
 <h1 class="page-header">
 <a href="#synoptreg-030-github" class="anchor"></a>synoptReg 0.3.0 (Github)<small> Unreleased </small>
@@ -129,6 +144,7 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#synoptreg-100-cran--github">1.0.0</a></li>
         <li><a href="#synoptreg-030-github">0.3.0</a></li>
         <li><a href="#synoptreg-022">0.2.2</a></li>
       </ul>
