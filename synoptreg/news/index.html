@@ -129,7 +129,7 @@
 </h1>
 <p>Minor release.</p>
 <ul>
-<li><p>From now, objects saved using the <code>download_ncep</code> are in <code>RDS</code> format instead of <code>RData</code>.</p></li>
+<li><p>From now, objects saved using the <code><a href="../reference/download_ncep.html">download_ncep()</a></code> are in <code>RDS</code> format instead of <code>RData</code>.</p></li>
 <li><p>Three external NetCDF files (<code>mslp_ei.nc</code>, <code>t850_ei.nc</code>, <code>z500_ei.nc</code>) from the ERA-interim dataset were upload for testing package purposes.</p></li>
 </ul>
 </div>
@@ -139,15 +139,15 @@
 </h1>
 <p>Major release.</p>
 <ul>
-<li><p><code>read_nc</code> function was removed. From now on, the function <code>ReadNetCDF</code> from the R package <code>metR</code> will be used instead. This function makes it extremely easy to read NetCDF files.</p></li>
-<li><p><code>download_ncep</code> was updated and now it provides an output very similar to the <code>ReadNetCDF</code> function.</p></li>
-<li><p><code>tidy_cuttime_nc</code> was replaced by a new function called <code>tidy_nc</code>. This last function allows to subset the time period and the geographical extent. Now it is easier to create a synoptic classification with more than one atmospheric variable.</p></li>
-<li><p><code>pca_decision</code> was updated and the scree test is returned as a <code>ggplot2</code> object.</p></li>
-<li><p><code>synoptclas</code> function had several updates. The major change lies in the possibility to use two kind of matrix modes. Up to now, the user only could use the “S-mode” to perform de PCA-synoptic classification. This matrix mode is usually used to classify long and continuous period. Henceforth, user will can execute de PCA in T-mode, in order to analyse the synoptic patterns of extreme events: floods episodes, megadroughts, episodes of high pollution, etc. Another change provided in this update, is the output result, which is provided as a tibble, and it is easily to compute statistics in the <code>tidyverse</code> way.</p></li>
+<li><p><code>read_nc()</code> function was removed. From now on, the function <code>ReadNetCDF()</code> from the R package <code>metR</code> will be used instead. This function makes it extremely easy to read NetCDF files.</p></li>
+<li><p><code><a href="../reference/download_ncep.html">download_ncep()</a></code> was updated and now it provides an output very similar to the <code>ReadNetCDF</code> function.</p></li>
+<li><p><code>tidy_cuttime_nc</code> was replaced by a new function called <code><a href="../reference/tidy_nc.html">tidy_nc()</a></code>. This last function allows to subset the time period and the geographical extent. Now it is easier to create a synoptic classification with more than one atmospheric variable.</p></li>
+<li><p><code><a href="../reference/pca_decision.html">pca_decision()</a></code> was updated and the scree test is returned as a <code>ggplot2</code> object.</p></li>
+<li><p><code><a href="../reference/synoptclas.html">synoptclas()</a></code> function had several updates. The major change lies in the possibility to use two kind of matrix modes. Up to now, the user only could use the “S-mode” to perform de PCA-synoptic classification. This matrix mode is usually used to classify long and continuous period. Henceforth, user will can execute de PCA in T-mode, in order to analyse the synoptic patterns of extreme events: floods episodes, megadroughts, episodes of high pollution, etc. Another change provided in this update, is the output result, which is provided as a tibble, and it is easily to compute statistics in the <code>tidyverse</code> way.</p></li>
 <li><p><code>raster_clas</code> was removed. Henceforth, <code>synoptclas</code> already provides a plottable result.</p></li>
-<li><p><code>raster_ct2env</code> was replaced by <code>ct2env</code>. This new function allows to calculae that the metric the user wants using the <code>fun</code> parametre. In addition, the user can select the output of the object between <code>data.frame</code> or <code>raster</code>.</p></li>
+<li><p><code>raster_ct2env</code> was replaced by <code><a href="../reference/ct2env.html">ct2env()</a></code>. This new function allows to calculae that the metric the user wants using the <code>fun</code> parametre. In addition, the user can select the output of the object between <code>data.frame</code> or <code>raster</code>.</p></li>
 <li><p>The pipe operator <code><a href="../reference/pipe.html">%&gt;%</a></code> was included in order to create chains of actions using the synoptReg functions and other auxiliar functions from other packages.</p></li>
-<li><p>New datasets were included: <code>mslp</code> and <code>z500</code>, mean sea level pressure and 500 hPa geopotential height, respectively. both datasets were retrived from the NCEP/NCAR reanalysis I using the <code>download_ncep</code> function. In addition, we updated the precipitation dataset structure, called <code>pcp</code>.</p></li>
+<li><p>New datasets were included: <code>mslp</code> and <code>z500</code>, mean sea level pressure and 500 hPa geopotential height, respectively. both datasets were retrived from the NCEP/NCAR reanalysis I using the <code><a href="../reference/download_ncep.html">download_ncep()</a></code> function. In addition, we updated the precipitation dataset structure, called <code>pcp</code>.</p></li>
 </ul>
 </div>
     <div id="synoptreg-030" class="section level1">
@@ -155,7 +155,7 @@
 <a href="#synoptreg-030" class="anchor"></a>synoptReg 0.3.0<small> Unreleased </small>
 </h1>
 <ul>
-<li>A new function called <code>download_ncep</code> was developed in order two download reanalysis data form NCEP/NCAR.</li>
+<li>A new function called <code><a href="../reference/download_ncep.html">download_ncep()</a></code> was developed in order two download reanalysis data form NCEP/NCAR.</li>
 <li>A new function called <code>classjen</code> is underdeveolopement but can be run.</li>
 <li>We have added the argument <code>option</code> to <code>raster_clas</code> function in the same way as in the <code>raster_ct2env</code>.</li>
 </ul>

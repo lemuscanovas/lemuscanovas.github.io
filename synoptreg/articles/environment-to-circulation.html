@@ -103,7 +103,7 @@
 <div id="extracting-the-torrential-rainfall-events-100-mm24h" class="section level1">
 <h1 class="hasAnchor">
 <a href="#extracting-the-torrential-rainfall-events-100-mm24h" class="anchor"></a>Extracting the torrential rainfall events (&gt;= 100 mm/24h)</h1>
-<p>In this example we will extract every day that has at least one point of grid with a precipitation &gt;= 100 mm in the Balearic Islands. This can easily be done with the <code>dplyr</code> library from the <code>tidyverese</code> <a href="https://doi.org/10.21105/joss.01686">(Wickham et al., 2019)</a>.</p>
+<p>In this example we will extract every day that has at least one point of grid with a precipitation &gt;= 100 mm in the Balearic Islands. This can easily be done with the <code>dplyr()</code> library from the <code>tidyverese</code> <a href="https://doi.org/10.21105/joss.01686">(Wickham et al., 2019)</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(synoptReg)</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="co">#&gt; ****</span></a>
@@ -135,8 +135,8 @@
 <div id="reading-netcdf-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#reading-netcdf-data" class="anchor"></a>Reading NetCDF data</h2>
-<p>In order to compute the synoptic classification of these 83 events we need to read previously the amospheric data from the ERA-Interim dataset <a href="http://dx.doi.org/10.1002/qj.828">(Dee et al., 2011)</a>, stored in <code>NetCDF</code> files. To read these type of files, <code>synoptReg</code> does not have a specific function. In previous versions it did, but now there are more intuitive and simple alternatives for reading it. In this case, we will use the <code>ReadNetCDF</code> function included in <a href="https://eliocamp.github.io/metR/index.html"><code>metR</code></a>. The variables we will read are: mean sea level pressure (mslp), geopotential height at 500 hPa (z500) and temperature at 850 hPa (t850). Thus, our classification will be made with <strong>3 atmospheric variables</strong> that will provide information from different layers of the troposphere (surface and height).</p>
-<p>Note that reading with <code>ReadNetCDF</code> does not return exactly the desired <code>data.frame</code> format. For this reason, a simple manipulation with <code>dplyr</code> is required:</p>
+<p>In order to compute the synoptic classification of these 83 events we need to read previously the amospheric data from the ERA-Interim dataset <a href="http://dx.doi.org/10.1002/qj.828">(Dee et al., 2011)</a>, stored in <code>NetCDF</code> files. To read these type of files, <code>synoptReg</code> does not have a specific function. In previous versions it did, but now there are more intuitive and simple alternatives for reading it. In this case, we will use the <code>ReadNetCDF()</code> function included in <a href="https://eliocamp.github.io/metR/index.html"><code>metR</code></a>. The variables we will read are: mean sea level pressure (mslp), geopotential height at 500 hPa (z500) and temperature at 850 hPa (t850). Thus, our classification will be made with <strong>3 atmospheric variables</strong> that will provide information from different layers of the troposphere (surface and height).</p>
+<p>Note that reading with <code>ReadNetCDF()</code> does not return exactly the desired <code>data.frame</code> format. For this reason, a simple manipulation with <code>dplyr()</code> is required:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(metR)</a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="co"># listing NetCDF files stored in synoptReg:</span></a>
 <a class="sourceLine" id="cb2-3" title="3">slp_file &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"mslp_ei.nc"</span>, <span class="dt">package =</span> <span class="st">"synoptReg"</span>)</a>
@@ -159,7 +159,7 @@
 <div id="filtering-and-grouping-the-atmospheric-variables-using-the-torrential-events" class="section level2">
 <h2 class="hasAnchor">
 <a href="#filtering-and-grouping-the-atmospheric-variables-using-the-torrential-events" class="anchor"></a>Filtering and grouping the atmospheric variables using the torrential events</h2>
-<p>Now, we can proceed to: 1) grouping the three atmospheric variables in one unique <code>tibble</code>; 2) Subset the atmospheric variables using the torrential rainfall dates. All this process can be computed by means of <code>tidy_nc</code>. A list is required to group the atmospheric variables.</p>
+<p>Now, we can proceed to: 1) grouping the three atmospheric variables in one unique <code>tibble</code>; 2) Subset the atmospheric variables using the torrential rainfall dates. All this process can be computed by means of <code><a href="../reference/tidy_nc.html">tidy_nc()</a></code>. A list is required to group the atmospheric variables.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">vars_torrential &lt;-<span class="st"> </span><span class="kw"><a href="../reference/tidy_nc.html">tidy_nc</a></span>(<span class="dt">x =</span> <span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(slp,z500,t850),</a>
 <a class="sourceLine" id="cb3-2" title="2">                       <span class="dt">time_subset =</span> torrential_dates,</a>
 <a class="sourceLine" id="cb3-3" title="3">                       <span class="dt">name_vars =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"slp"</span>,<span class="st">"z500"</span>,<span class="st">"t850"</span>))</a>
@@ -178,12 +178,12 @@
 <a class="sourceLine" id="cb3-16" title="16"><span class="co">#&gt;  9 slp     5      55 2000-09-04 102092.      419. </span></a>
 <a class="sourceLine" id="cb3-17" title="17"><span class="co">#&gt; 10 slp     7.5    55 2000-09-04 101949.      276. </span></a>
 <a class="sourceLine" id="cb3-18" title="18"><span class="co">#&gt; # ... with 35,597 more rows</span></a></code></pre></div>
-<p>We already have the variables grouped and filtered. In addition, <code>tidy_nc</code> computes the anomaly of the atmospheric variables using the monthly average of the whole study period before filtering the dates.</p>
+<p>We already have the variables grouped and filtered. In addition, <code><a href="../reference/tidy_nc.html">tidy_nc()</a></code> computes the anomaly of the atmospheric variables using the monthly average of the whole study period before filtering the dates.</p>
 </div>
 <div id="selecting-the-number-of-pcs-and-synoptic-classification-performance" class="section level2">
 <h2 class="hasAnchor">
 <a href="#selecting-the-number-of-pcs-and-synoptic-classification-performance" class="anchor"></a>Selecting the number of PCs and Synoptic classification performance</h2>
-<p>As in the case of the <a href="articles/circulation-to-environment.html">circulation-to-environment</a> approach, it is important to take the decision on the number of components retain in order to carry out the synoptic classification. To help in the decision making process, <code>pca_decision</code> returns a scree test, among other stats:</p>
+<p>As in the case of the <a href="articles/circulation-to-environment.html">circulation-to-environment</a> approach, it is important to take the decision on the number of components retain in order to carry out the synoptic classification. To help in the decision making process, <code><a href="../reference/pca_decision.html">pca_decision()</a></code> returns a scree test, among other stats:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">info &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pca_decision.html">pca_decision</a></span>(vars_torrential,<span class="dt">ncomp =</span> <span class="dv">30</span>,<span class="dt">norm =</span> T,<span class="dt">matrix_mode =</span> <span class="st">"T-mode"</span>)</a>
 <a class="sourceLine" id="cb4-2" title="2">info<span class="op">$</span>screeplot</a></code></pre></div>
 <p><img src="environment-to-circulation_files/figure-html/unnamed-chunk-4-1.png" width="672"></p>
@@ -298,7 +298,7 @@
 <div id="analysing-the-spatial-contribution-of-each-wt-to-torrential-rainfall-in-the-balearic-islands" class="section level1">
 <h1 class="hasAnchor">
 <a href="#analysing-the-spatial-contribution-of-each-wt-to-torrential-rainfall-in-the-balearic-islands" class="anchor"></a>Analysing the spatial contribution of each WT to torrential rainfall in the Balearic Islands</h1>
-<p>We can then calculate the maximum precipitation associated with these CT/WT. To do this we will use the function <code>ct2env</code> indicating in the argument <code>fun</code> the function <code>max</code>:</p>
+<p>We can then calculate the maximum precipitation associated with these CT/WT. To do this we will use the function <code><a href="../reference/ct2env.html">ct2env()</a></code> indicating in the argument <code>fun</code> the function <code>max</code>:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">max_torrential_pcp &lt;-<span class="st"> </span><span class="kw"><a href="../reference/ct2env.html">ct2env</a></span>(pcp,<span class="dt">clas =</span> cl<span class="op">$</span>clas_abs,<span class="dt">fun =</span> max,<span class="dt">out =</span> <span class="st">"data.frame"</span>)</a>
 <a class="sourceLine" id="cb7-2" title="2"></a>
 <a class="sourceLine" id="cb7-3" title="3"><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></a>
