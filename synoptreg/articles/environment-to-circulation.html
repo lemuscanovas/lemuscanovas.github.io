@@ -266,7 +266,7 @@
 <a class="sourceLine" id="cb6-9" title="9"><span class="kw">ggplot</span>()<span class="op">+</span></a>
 <a class="sourceLine" id="cb6-10" title="10"><span class="st">    </span><span class="kw">geom_raster</span>(<span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(cl<span class="op">$</span>grid_clas_abs, var <span class="op">==</span><span class="st"> "z500"</span>), </a>
 <a class="sourceLine" id="cb6-11" title="11">              <span class="dt">mapping =</span> <span class="kw">aes</span>(lon,lat,<span class="dt">fill =</span> mean_WT_anom_value),</a>
-<a class="sourceLine" id="cb6-12" title="12">              <span class="dt">interpolate =</span> T)<span class="op">+</span></a>
+<a class="sourceLine" id="cb6-12" title="12">              <span class="dt">interpolate =</span> T,<span class="dt">hjust =</span> <span class="dv">0</span>,<span class="dt">vjust =</span> <span class="dv">0</span>)<span class="op">+</span></a>
 <a class="sourceLine" id="cb6-13" title="13"><span class="st">    </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> borders, <span class="dt">fill =</span> <span class="st">"transparent"</span>)<span class="op">+</span></a>
 <a class="sourceLine" id="cb6-14" title="14"><span class="st">  </span><span class="kw">geom_contour2</span>(<span class="dt">data =</span> <span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(cl<span class="op">$</span>grid_clas_abs,var <span class="op">==</span><span class="st"> "slp"</span>),</a>
 <a class="sourceLine" id="cb6-15" title="15">                <span class="kw">aes</span>(<span class="dt">x=</span>lon,<span class="dt">y=</span>lat,<span class="dt">z=</span>mean_WT_value<span class="op">/</span><span class="dv">100</span>), </a>
@@ -289,7 +289,7 @@
 <a class="sourceLine" id="cb6-32" title="32">                       <span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),</a>
 <a class="sourceLine" id="cb6-33" title="33">                       <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>(),</a>
 <a class="sourceLine" id="cb6-34" title="34">                       <span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</a>
-<a class="sourceLine" id="cb6-35" title="35"><span class="co">#&gt; Warning: Removed 220 rows containing missing values (geom_raster).</span></a>
+<a class="sourceLine" id="cb6-35" title="35"><span class="co">#&gt; Warning: Removed 115 rows containing missing values (geom_raster).</span></a>
 <a class="sourceLine" id="cb6-36" title="36"><span class="co">#&gt; Warning in min(var, na.rm = TRUE): ningún argumento finito para min;</span></a>
 <a class="sourceLine" id="cb6-37" title="37"><span class="co">#&gt; retornando Inf</span></a></code></pre></div>
 <p><img src="environment-to-circulation_files/figure-html/unnamed-chunk-6-1.png" width="672"></p>

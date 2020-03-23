@@ -151,7 +151,7 @@
 <a class="sourceLine" id="cb1-51" title="51"><span class="kw">ggplot</span>()<span class="op">+</span></a>
 <a class="sourceLine" id="cb1-52" title="52"><span class="st">    </span><span class="kw">geom_raster</span>(<span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(cl<span class="op">$</span>grid_clas, var <span class="op">==</span><span class="st"> "mslp"</span>), </a>
 <a class="sourceLine" id="cb1-53" title="53">              <span class="dt">mapping =</span> <span class="kw">aes</span>(lon,lat,<span class="dt">fill =</span> mean_WT_value<span class="op">/</span><span class="dv">100</span>),</a>
-<a class="sourceLine" id="cb1-54" title="54">              <span class="dt">interpolate =</span> T)<span class="op">+</span></a>
+<a class="sourceLine" id="cb1-54" title="54">              <span class="dt">interpolate =</span> T,<span class="dt">hjust =</span> <span class="dv">0</span>,<span class="dt">vjust =</span> <span class="dv">0</span>)<span class="op">+</span></a>
 <a class="sourceLine" id="cb1-55" title="55"><span class="st">    </span><span class="kw">geom_sf</span>(<span class="dt">data =</span> borders, <span class="dt">fill =</span> <span class="st">"transparent"</span>)<span class="op">+</span></a>
 <a class="sourceLine" id="cb1-56" title="56"><span class="st">    </span><span class="kw">geom_contour2</span>(<span class="dt">data =</span> <span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(cl<span class="op">$</span>grid_clas,var <span class="op">==</span><span class="st"> "mslp"</span>),</a>
 <a class="sourceLine" id="cb1-57" title="57">                  <span class="kw">aes</span>(<span class="dt">x=</span>lon,<span class="dt">y=</span>lat,<span class="dt">z=</span>mean_WT_value<span class="op">/</span><span class="dv">100</span>),</a>
@@ -168,7 +168,7 @@
 <a class="sourceLine" id="cb1-68" title="68">                       <span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),</a>
 <a class="sourceLine" id="cb1-69" title="69">                       <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>(),</a>
 <a class="sourceLine" id="cb1-70" title="70">                       <span class="dt">legend.position =</span> <span class="st">"bottom"</span>)</a>
-<a class="sourceLine" id="cb1-71" title="71"><span class="co">#&gt; Warning: Removed 352 rows containing missing values (geom_raster).</span></a></code></pre></div>
+<a class="sourceLine" id="cb1-71" title="71"><span class="co">#&gt; Warning: Removed 184 rows containing missing values (geom_raster).</span></a></code></pre></div>
 <p><img src="classification_metrics_files/figure-html/unnamed-chunk-1-1.png" width="672"></p>
 </div>
 <div id="extracting-monthly-relative-frequences" class="section level1">
