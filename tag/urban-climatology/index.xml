@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Urban Climatology | Marc Lemus-Canovas</title>
+    <link>/tag/urban-climatology/</link>
+      <atom:link href="/tag/urban-climatology/index.xml" rel="self" type="application/rss+xml" />
+    <description>Urban Climatology</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>Urban Climatology</title>
+      <link>/tag/urban-climatology/</link>
+    </image>
+    
+    <item>
+      <title>Estimating Barcelona&#39;s metropolitan daytime hot and cold poles using Landsat-8 Land Surface Temperature</title>
+      <link>/publication/lemus_canovas_2020/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/lemus_canovas_2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R | Marc Lemus-Cánovas</title>
+    <link>/ca/category/r/</link>
+      <atom:link href="/ca/category/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>R</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>ca</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Thu, 09 Jul 2020 15:00:00 -0500</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>R</title>
+      <link>/ca/category/r/</link>
+    </image>
+    
+    <item>
+      <title>Computant tendències en una graella climàtica amb Tidyverse</title>
+      <link>/ca/post/20200701/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 09 Jul 2020 15:00:00 -0500</pubDate>
+      <guid>/ca/post/20200701/2015-07-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;div id=&#34;lectura-dun-netcdf-a-lestil-tidyverse&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Lectura d’un NetCDF a l’estil Tidyverse!&lt;/h2&gt;
+&lt;p&gt;Actualment és possible llegir un fitxer &lt;a href=&#34;https://www.unidata.ucar.edu/publications/factsheets/current/factsheet_netcdf.pdf&#34;&gt;NetCDF&lt;/a&gt; a l’estil &lt;strong&gt;Tidyverse&lt;/strong&gt; mitjançant el &lt;strong&gt;package&lt;/strong&gt; creat per &lt;a href=&#34;https://github.com/eliocamp&#34;&gt;Elio Campitelli&lt;/a&gt; anomenat &lt;a href=&#34;https://eliocamp.github.io/metR/index.html&#34;&gt;&lt;code&gt;metR&lt;/code&gt;&lt;/a&gt;. A més, aquesta llibreria conté moltíssimes funcions útils per a la representació i l’anàlisi de dades meteorològiques i climàtiques.
+En aquesta ocasió treballarem amb una graella diària de 5x5 km de temperatura màxima de les Illes Balears &lt;a href=&#34;https://digital.csic.es/handle/10261/177655&#34;&gt;(Serrano-Notivoli 2019)&lt;/a&gt;. Per a la seva lectura farem ús d’un parell de funcions del package &lt;code&gt;metR&lt;/code&gt;:&lt;code&gt;GlanceNetCDF&lt;/code&gt;, ens permetrà fer una ullada al nom de la variable, dimensions, etc, i &lt;code&gt;ReadNetCDF&lt;/code&gt;, realitzarà la lectura de l’arxiu NetCDF. Lògicament farem ús de la llibreria &lt;code&gt;tidyverse&lt;/code&gt;, la qual ens permetrà organitzar les dades i realitzar algun càlcul senzill (recorda que el &lt;code&gt;tidyverse&lt;/code&gt; és una col·lecció de packages!), Així com les llibreries &lt;code&gt;lubridate&lt;/code&gt;, per a la gestió de dates, i la llibreria &lt;code&gt;trend&lt;/code&gt; per calcular la significació estadística de la tendència. A més farem servir la llibreria &lt;code&gt;pals&lt;/code&gt; per escollir la paleta de colors quan representem els resultats gràficament.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(lubridate)
+library(metR)
+library(trend)
+library(pals) # paletes de colors&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Al voler treballar amb les dades del &lt;code&gt;NetCDF&lt;/code&gt; en format &lt;em&gt;Tidyverse&lt;/em&gt;, especificarem que el &lt;strong&gt;output&lt;/strong&gt; de la funció &lt;code&gt;ReadNetCDF&lt;/code&gt; sigui un &lt;code&gt;data.frame&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Descarreguem el fitxer de Temperatura màxima (Tx) de les Balears 
+
+# https://digital.csic.es/handle/10261/177655
+
+# Extraiem informació de l&amp;#39;NetCDF (nom variable, dimensions, etc.)
+file = &amp;quot;tmax_bal.nc&amp;quot;
+
+variable &amp;lt;- GlanceNetCDF(file = file)
+variable
+## ----- Variables ----- 
+## tx:
+##     Maximum temperature in Celsius degrees
+##     Dimensions: lon by lat by Time
+## 
+## 
+## ----- Dimensions ----- 
+##   lon: 63 values from 0.970530815018679 to 4.55413081501868 degrees_east
+##   lat: 48 values from 38.3196292450381 to 40.4252292450381 degrees_north
+##   Time: 16071 values from 1971-01-02 to 2015-01-01
+
+# Llegim el NetCDF
+tx &amp;lt;- ReadNetCDF(file = file,
+                 vars = c(var = names(variable$vars[1])),# extracció del nom de la variable.
+                 out = &amp;quot;data.frame&amp;quot;) # objecte de sortida
+tx # voilà.
+##                 Time      lat       lon var
+##        1: 1971-01-02 40.42523 0.9705308  NA
+##        2: 1971-01-02 40.42523 1.0283308  NA
+##        3: 1971-01-02 40.42523 1.0861308  NA
+##        4: 1971-01-02 40.42523 1.1439308  NA
+##        5: 1971-01-02 40.42523 1.2017308  NA
+##       ---                                  
+## 48598700: 2015-01-01 38.31963 4.3229308  NA
+## 48598701: 2015-01-01 38.31963 4.3807308  NA
+## 48598702: 2015-01-01 38.31963 4.4385308  NA
+## 48598703: 2015-01-01 38.31963 4.4963308  NA
+## 48598704: 2015-01-01 38.31963 4.5541308  NA&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gestió-y-manipulació-de-les-dades&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Gestió y manipulació de les dades&lt;/h2&gt;
+&lt;p&gt;A continuació l’objectiu és agregar les dades a escala anual, això és, passar de la dada diària a la mitjana anual. Per a tal objectiu hem de jugar amb diverses funcions de la llibreria &lt;code&gt;dplyr&lt;/code&gt;, carregada al&lt;code&gt;tidyverse&lt;/code&gt;. Primer, però, cal filtrar els valors &lt;code&gt;NA&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tx &amp;lt;- tx %&amp;gt;% filter(!is.na(var)) %&amp;gt;% as.tibble()
+## Warning: `as.tibble()` is deprecated as of tibble 2.0.0.
+## Please use `as_tibble()` instead.
+## The signature and semantics have changed, see `?as_tibble`.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.
+tx
+## # A tibble: 4,114,176 x 4
+##    Time                  lat   lon   var
+##    &amp;lt;dttm&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1 1971-01-02 00:00:00  40.1  3.92  7.64
+##  2 1971-01-02 00:00:00  40.1  3.98  7.69
+##  3 1971-01-02 00:00:00  40.1  4.03  7.44
+##  4 1971-01-02 00:00:00  40.1  4.09  8.29
+##  5 1971-01-02 00:00:00  40.1  4.15  8.15
+##  6 1971-01-02 00:00:00  40.1  4.21  8.35
+##  7 1971-01-02 00:00:00  40.0  3.80  8.10
+##  8 1971-01-02 00:00:00  40.0  3.86  8.04
+##  9 1971-01-02 00:00:00  40.0  3.92  7.63
+## 10 1971-01-02 00:00:00  40.0  3.98  7.70
+## # ... with 4,114,166 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Un cop filtrats els &lt;code&gt;NA&lt;/code&gt;, procedim a calcular les mitjanes anuals a cada punt de grid:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tx_annual &amp;lt;- tx %&amp;gt;%
+  mutate(Time = as_date(Time)) %&amp;gt;% # convertim les dates en format lubridate
+  mutate(year = year(Time)) %&amp;gt;% # Creem la columna d&amp;#39;anys per realitzar l&amp;#39;agregat
+  group_by(year, lon, lat) %&amp;gt;% # agrupem per any, longitud i latitud
+  summarise(annual_tx = mean(var)) %&amp;gt;% # Ara només falta fer la mitjana
+  ungroup() # desagrupem
+## `summarise()` regrouping output by &amp;#39;year&amp;#39;, &amp;#39;lon&amp;#39; (override with `.groups` argument)
+
+tx_annual
+## # A tibble: 11,520 x 4
+##     year   lon   lat annual_tx
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1  1971  1.20  38.9      20.8
+##  2  1971  1.20  38.9      20.9
+##  3  1971  1.26  38.9      20.2
+##  4  1971  1.26  38.9      20.3
+##  5  1971  1.26  38.9      20.8
+##  6  1971  1.32  38.9      20.7
+##  7  1971  1.32  38.9      20.6
+##  8  1971  1.32  38.9      20.7
+##  9  1971  1.32  39.0      21.0
+## 10  1971  1.32  39.0      20.3
+## # ... with 11,510 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Com podem observar, es mostra la temperatura màxima mitjana per a cada any i punt de grid.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;càlcul-de-la-tendència-i-de-la-seva-significació-estadística&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Càlcul de la tendència i de la seva significació estadística&lt;/h2&gt;
+&lt;p&gt;D’aquesta manera, ja podem calcular la tendència anual i la seva significació estadística mitjançant la llibreria &lt;code&gt;trend&lt;/code&gt;.
+Emprarem la funció &lt;code&gt;sens.slope&lt;/code&gt; per al càlcul del pendent de la tendència (quina magnitud de temperatura augmenta / disminueix en un any); i la funció &lt;code&gt;mk.test&lt;/code&gt; (&lt;em&gt;Test de Mann Kendall&lt;/em&gt;), per verificar si la tendència és estadísticament significativa o si realment és fruit de la variabilitat de la pròpia sèrie termomètrica. A més, al tractar-se d’un test no paramètric, les nostres dades no hauran d’ajustar-se a una distribució gaussiana necessàriament.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tx_trend &amp;lt;- tx_annual %&amp;gt;%
+  group_by(lon,lat) %&amp;gt;% # Agrupem per lon i lat per a realitzar el càlcul en cada cel·la
+  summarise(slope = sens.slope(annual_tx)$estimates *10,
+            sign = mk.test(annual_tx)$p.value)
+## `summarise()` regrouping output by &amp;#39;lon&amp;#39; (override with `.groups` argument)
+
+tx_trend
+## # A tibble: 256 x 4
+## # Groups:   lon [38]
+##      lon   lat slope   sign
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1  1.20  38.9 0.122 0.156 
+##  2  1.20  38.9 0.122 0.156 
+##  3  1.26  38.9 0.110 0.115 
+##  4  1.26  38.9 0.112 0.120 
+##  5  1.26  38.9 0.147 0.0834
+##  6  1.32  38.9 0.136 0.0983
+##  7  1.32  38.9 0.133 0.111 
+##  8  1.32  38.9 0.146 0.0869
+##  9  1.32  39.0 0.150 0.0645
+## 10  1.32  39.0 0.133 0.0983
+## # ... with 246 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ja tenim el valor del pendent de Sen, que ens indica la taxa de canvi cada 10 anys (hem multiplicat x 10), així com la significació de la tendència indicada a través del &lt;em&gt;p-value&lt;/em&gt;. Ara simplement realitzarem la visualització dels resultats indicant aquelles cel·les que mostren una significació estadística a l’augment o disminució de la temperatura màxima anual.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot()+
+  geom_tile(data = tx_trend, aes(x = lon, y = lat, fill = slope))+
+  scale_fill_gradientn(colors = rev(pals::linearlhot(100)), name = &amp;quot;ºC/10y&amp;quot;, limits = c(0.1,0.45)) +
+  geom_point(data = filter(tx_trend, sign &amp;lt; 0.01),aes(x = lon, y = lat, color = &amp;quot;Tendència sign. \n p-value &amp;lt;0.01&amp;quot;),
+             size = 0.4, show.legend = T) +
+  scale_color_manual(values = c(&amp;quot;black&amp;quot;), name = &amp;quot;&amp;quot;)+
+  coord_fixed(1.3)+
+  xlab(&amp;quot;Longitud&amp;quot;) + ylab(&amp;quot;Latitud&amp;quot;)+
+  labs(title = &amp;quot;Tendència decadal de la temperatura màxima a les Illes Balears&amp;quot;, 
+       subtitle = &amp;quot;(1971-2014)&amp;quot;,
+       caption = &amp;quot;Base de dades: STEAD (Serrano-Notivoli,2019)&amp;quot;)+
+  theme_bw() +
+  guides(fill = guide_colourbar(barwidth = 9, barheight = 0.5, title.position=&amp;quot;right&amp;quot;))+
+  theme(legend.position = &amp;quot;bottom&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/ca/post/20200701/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Per a qualsevol qüestió, no dubtis en deixar un comentari.&lt;/p&gt;
+&lt;p&gt;Salutacions!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
