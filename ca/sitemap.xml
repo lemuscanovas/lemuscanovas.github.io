@@ -143,22 +143,7 @@
   </url>
   
   <url>
-    <loc>/ca/post/20200701/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/post/20200701/2015-07-23-r-rmarkdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/post/20200701/2015-07-23-r-rmarkdown/"
-                />
-  </url>
-  
-  <url>
-    <loc>/ca/post/20200701/tendencies/</loc>
+    <loc>/ca/post/20200708/tendencies/</loc>
     <lastmod>2020-07-09T15:00:00-05:00</lastmod>
   </url>
   
@@ -208,17 +193,22 @@
   </url>
   
   <url>
-    <loc>/ca/post/20200701/</loc>
+    <loc>/ca/post/20200708/</loc>
     <lastmod>2020-07-09T15:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="/post/20200708/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="es"
-                href="/es/post/20200701/"
+                href="/es/post/20200708/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="/ca/post/20200701/"
+                href="/ca/post/20200708/"
                 />
   </url>
   
