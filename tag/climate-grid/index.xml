@@ -166,5 +166,159 @@ tx_trend
 </description>
     </item>
     
+    <item>
+      <title>Computing trends in a climate grid with Tidyverse</title>
+      <link>/post/20200708/trends/</link>
+      <pubDate>Thu, 09 Jul 2020 15:00:00 -0500</pubDate>
+      <guid>/post/20200708/trends/</guid>
+      <description>
+
+
+&lt;div id=&#34;reading-a-netcdf-in-the-tidyverse-style&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Reading a NetCDF in the Tidyverse style!&lt;/h2&gt;
+&lt;p&gt;Currently, it is possible to read a &lt;a href=&#34;https://www.unidata.ucar.edu/publications/factsheets/current/factsheet_netcdf.pdf&#34;&gt;NetCDF&lt;/a&gt; file in a &lt;strong&gt;Tidyverse&lt;/strong&gt; way through the &lt;strong&gt;package&lt;/strong&gt; created by &lt;a href=&#34;https://github.com/eliocamp&#34;&gt;Elio Campitelli&lt;/a&gt; called &lt;a href=&#34;https://eliocamp.github.io/metR/index.html&#34;&gt;&lt;code&gt;metR&lt;/code&gt;&lt;/a&gt;. This library also contains many useful functions for visualizing and analyzing weather and climate data.
+In this case, we will work with a daily grid of 5x5 km of the maximum temperature of the Balearic Islands (Spain) &lt;a href=&#34;https://digital.csic.es/handle/10261/177655&#34;&gt;(Serrano-Notivoli 2019)&lt;/a&gt;. To read it we will use a couple of functions from the &lt;code&gt;metR&lt;/code&gt; package: &lt;code&gt;GlanceNetCDF&lt;/code&gt;, to take a look at the variable name, dimensions, etc, and &lt;code&gt;ReadNetCDF&lt;/code&gt;, to read the NetCDF file. Logically we will use the &lt;code&gt;tidyverse&lt;/code&gt; package, which will allow us to organize the data and perform some simple calculations (remember that &lt;code&gt;tidyverse&lt;/code&gt; is a collection of packages!), as well as the &lt;code&gt;lubridate&lt;/code&gt; library, for the handling of dates, and the &lt;code&gt;trend&lt;/code&gt; library to calculate the statistical significance of the trend of our data. We will also use the pals library to choose the color palette when we plot the results.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(lubridate)
+library(metR)
+library(trend)
+library(pals) # color palette&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In order to work with the NetCDF data in the tidyverse style, we will specify that the output of the &lt;code&gt;ReadNetCDF&lt;/code&gt; function is a &lt;code&gt;data.frame&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Download the Maximum Temperature (Tx) file for the Balearic Islands 
+
+# https://digital.csic.es/handle/10261/177655
+
+# We extract information from the NetCDF (variable name, dimensions, etc)
+file = &amp;quot;tmax_bal.nc&amp;quot;
+
+variable &amp;lt;- GlanceNetCDF(file = file)
+variable
+## ----- Variables ----- 
+## tx:
+##     Maximum temperature in Celsius degrees
+##     Dimensions: lon by lat by Time
+## 
+## 
+## ----- Dimensions ----- 
+##   lon: 63 values from 0.970530815018679 to 4.55413081501868 degrees_east
+##   lat: 48 values from 38.3196292450381 to 40.4252292450381 degrees_north
+##   Time: 16071 values from 1971-01-02 to 2015-01-01
+
+# Reading the NetCDF
+tx &amp;lt;- ReadNetCDF(file = file,
+                 vars = c(var = names(variable$vars[1])),# extraction of the name of the variable.
+                 out = &amp;quot;data.frame&amp;quot;) # output object
+tx # voilà.
+##                 Time      lat       lon var
+##        1: 1971-01-02 40.42523 0.9705308  NA
+##        2: 1971-01-02 40.42523 1.0283308  NA
+##        3: 1971-01-02 40.42523 1.0861308  NA
+##        4: 1971-01-02 40.42523 1.1439308  NA
+##        5: 1971-01-02 40.42523 1.2017308  NA
+##       ---                                  
+## 48598700: 2015-01-01 38.31963 4.3229308  NA
+## 48598701: 2015-01-01 38.31963 4.3807308  NA
+## 48598702: 2015-01-01 38.31963 4.4385308  NA
+## 48598703: 2015-01-01 38.31963 4.4963308  NA
+## 48598704: 2015-01-01 38.31963 4.5541308  NA&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-management-and-handling&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data management and handling&lt;/h2&gt;
+&lt;p&gt;The objective is to aggregate the daily data on an annual scale. To do this we have to use several functions from the &lt;code&gt;dplyr&lt;/code&gt; package, loaded in the &lt;code&gt;tidyverse&lt;/code&gt;. First, however, we have to filter the &lt;code&gt;NA&lt;/code&gt; values:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tx &amp;lt;- tx %&amp;gt;% filter(!is.na(var)) %&amp;gt;% as.tibble()
+## Warning: `as.tibble()` is deprecated as of tibble 2.0.0.
+## Please use `as_tibble()` instead.
+## The signature and semantics have changed, see `?as_tibble`.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.
+tx
+## # A tibble: 4,114,176 x 4
+##    Time                  lat   lon   var
+##    &amp;lt;dttm&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1 1971-01-02 00:00:00  40.1  3.92  7.64
+##  2 1971-01-02 00:00:00  40.1  3.98  7.69
+##  3 1971-01-02 00:00:00  40.1  4.03  7.44
+##  4 1971-01-02 00:00:00  40.1  4.09  8.29
+##  5 1971-01-02 00:00:00  40.1  4.15  8.15
+##  6 1971-01-02 00:00:00  40.1  4.21  8.35
+##  7 1971-01-02 00:00:00  40.0  3.80  8.10
+##  8 1971-01-02 00:00:00  40.0  3.86  8.04
+##  9 1971-01-02 00:00:00  40.0  3.92  7.63
+## 10 1971-01-02 00:00:00  40.0  3.98  7.70
+## # ... with 4,114,166 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once the &lt;code&gt;NAs&lt;/code&gt; have been filtered, we proceed to carry out the annual aggregation at each grid point:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tx_annual &amp;lt;- tx %&amp;gt;%
+  mutate(Time = as_date(Time)) %&amp;gt;% # we convert the dates into lubridate format
+  mutate(year = year(Time)) %&amp;gt;% # We create the &amp;quot;year&amp;quot; column to perform the annual aggregate
+  group_by(year, lon, lat) %&amp;gt;% # we group by year, longitude and latitude
+  summarise(annual_tx = mean(var)) %&amp;gt;% # computing yearly mean
+  ungroup() 
+## `summarise()` regrouping output by &amp;#39;year&amp;#39;, &amp;#39;lon&amp;#39; (override with `.groups` argument)
+
+tx_annual
+## # A tibble: 11,520 x 4
+##     year   lon   lat annual_tx
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1  1971  1.20  38.9      20.8
+##  2  1971  1.20  38.9      20.9
+##  3  1971  1.26  38.9      20.2
+##  4  1971  1.26  38.9      20.3
+##  5  1971  1.26  38.9      20.8
+##  6  1971  1.32  38.9      20.7
+##  7  1971  1.32  38.9      20.6
+##  8  1971  1.32  38.9      20.7
+##  9  1971  1.32  39.0      21.0
+## 10  1971  1.32  39.0      20.3
+## # ... with 11,510 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As we can see, the average maximum temperature for each year and grid point is shown.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trend-computation-and-its-statistical-significance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Trend Computation and its statistical significance&lt;/h2&gt;
+&lt;p&gt;In this way, we can already calculate the annual trend and its statistical significance with the &lt;code&gt;trend&lt;/code&gt; package.
+To do this we will use the &lt;code&gt;sens.slope&lt;/code&gt; function to calculate the slope of the trend (increase/decrease per year); and the &lt;code&gt;mk.test&lt;/code&gt; function (&lt;em&gt;Mann test Kendall&lt;/em&gt;), to verify if the trend is statistically significant or if it is the result of the variability of the thermometric series itself. Furthermore, as this is a non-parametric test, our data will not have to fit a Gaussian distribution.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tx_trend &amp;lt;- tx_annual %&amp;gt;%
+  group_by(lon,lat) %&amp;gt;% # we group by lon and lat to perform the calculation in each cell
+  summarise(slope = sens.slope(annual_tx)$estimates *10,
+            sign = mk.test(annual_tx)$p.value)
+## `summarise()` regrouping output by &amp;#39;lon&amp;#39; (override with `.groups` argument)
+
+tx_trend
+## # A tibble: 256 x 4
+## # Groups:   lon [38]
+##      lon   lat slope   sign
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1  1.20  38.9 0.122 0.156 
+##  2  1.20  38.9 0.122 0.156 
+##  3  1.26  38.9 0.110 0.115 
+##  4  1.26  38.9 0.112 0.120 
+##  5  1.26  38.9 0.147 0.0834
+##  6  1.32  38.9 0.136 0.0983
+##  7  1.32  38.9 0.133 0.111 
+##  8  1.32  38.9 0.146 0.0869
+##  9  1.32  39.0 0.150 0.0645
+## 10  1.32  39.0 0.133 0.0983
+## # ... with 246 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The value of the Sen’s slope gives us the rate of change per 10 years (we have multiplied by 10), as well as the statistical significance -provided for the Mann-Kendall test- of the trend indicated through the &lt;em&gt;p-value&lt;/em&gt;. Now we will visualize the results indicating those cells that show a statistical significance to the increase or decrease of the maximum annual temperature.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot()+
+  geom_tile(data = tx_trend, aes(x = lon, y = lat, fill = slope))+
+  scale_fill_gradientn(colors = rev(pals::linearlhot(100)), name = &amp;quot;ºC/10y&amp;quot;, limits = c(0.1,0.45)) +
+  geom_point(data = filter(tx_trend, sign &amp;lt; 0.01),aes(x = lon, y = lat, color = &amp;quot;Sign. trend \n p-value &amp;lt;0.01&amp;quot;),
+             size = 0.4, show.legend = T) +
+  scale_color_manual(values = c(&amp;quot;black&amp;quot;), name = &amp;quot;&amp;quot;)+
+  coord_fixed(1.3)+
+  xlab(&amp;quot;Longitude&amp;quot;) + ylab(&amp;quot;Latitude&amp;quot;)+
+  labs(title = &amp;quot;Decadal trend of maximum temperature in the Balearic Islands&amp;quot;, 
+       subtitle = &amp;quot;(1971-2014)&amp;quot;,
+       caption = &amp;quot;Database: STEAD (Serrano-Notivoli,2019)&amp;quot;)+
+  theme_bw() +
+  guides(fill = guide_colourbar(barwidth = 9, barheight = 0.5, title.position=&amp;quot;right&amp;quot;))+
+  theme(legend.position = &amp;quot;bottom&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/en/post/20200708/trends_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;If you have any questions, please do not hesitate to leave a comment.&lt;/p&gt;
+&lt;p&gt;Greetings!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
