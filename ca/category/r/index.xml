@@ -159,7 +159,7 @@ tx_trend
   theme_bw() +
   guides(fill = guide_colourbar(barwidth = 9, barheight = 0.5, title.position=&amp;quot;right&amp;quot;))+
   theme(legend.position = &amp;quot;bottom&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/ca/post/20200701/tendencies_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ca/post/20200708/tendencies_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Per a qualsevol qüestió, no dubtis en deixar un comentari.&lt;/p&gt;
 &lt;p&gt;Salutacions!&lt;/p&gt;
 &lt;/div&gt;
