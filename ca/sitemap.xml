@@ -382,13 +382,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/publication/"
+                hreflang="es"
+                href="/es/publication/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="/es/publication/"
+                hreflang="en"
+                href="/publication/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -814,6 +814,46 @@
                 rel="alternate"
                 hreflang="ca"
                 href="/ca/author/santiago-manguan/"
+                />
+  </url>
+  
+  <url>
+    <loc>/ca/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/privacy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/privacy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/privacy/"
+                />
+  </url>
+  
+  <url>
+    <loc>/ca/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/terms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/terms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/terms/"
                 />
   </url>
   
