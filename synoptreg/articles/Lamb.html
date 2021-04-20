@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">synoptReg</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.0</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -65,6 +65,9 @@
     <li>
       <a href="../articles/Lamb.html">Objective Lamb classification</a>
     </li>
+    <li>
+      <a href="../articles/SOM.html">Self-Organizing Maps</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -74,7 +77,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/lemuscanovas/synoptReg/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -88,13 +91,13 @@
 
       
 
-      </header><script src="Lamb_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="Lamb_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Objective Lamb classification</h1>
                         <h4 class="author">Marc Lemus-Canovas</h4>
             
-            <h4 class="date">2020-12-02</h4>
+            <h4 class="date">2021-04-20</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/lemuscanovas/synoptReg/blob/master/vignettes/Lamb.Rmd"><code>vignettes/Lamb.Rmd</code></a></small>
       <div class="hidden name"><code>Lamb.Rmd</code></div>
@@ -103,42 +106,114 @@
 
     
     
-<div id="objective-lamb-weather-type-classification-jenkinson-and-collison---under-construction" class="section level1">
-<h1 class="hasAnchor">
-<a href="#objective-lamb-weather-type-classification-jenkinson-and-collison---under-construction" class="anchor"></a>Objective Lamb weather type classification (Jenkinson and Collison) - UNDER CONSTRUCTION</h1>
-<!-- The structure of the matrix in `T-mode` establishes that the variables are the days, and the observations are the grid points. In this case, the PCA establishes the linear relationships between each daily map of the atmospheric variable in order to extract the main WT. The PCA associates directly those days more similar to each other to group the WTs, so it is not necessary to use any clustering method. `synoptReg` allows to perform two variants of the `T-mode` based on: 1) absolute loadings (correlations) of each day against each PC. Day 1 will be associated with the PC with a higher correlation; 2) positive and negative loadings of each of the days against each PC. Day 1 may be associated with PC X+ or PC X-, depending on whether the correlation is positive or negative. This last option, allows to obtain the double of classes of the selected components. If we select 4 PCs, the final result can be up to a maximum of 8 CTs. Note, that a VARIMAX rotation is applied to the retained PCs. See [Circulation-To-Environment approach](articles/circulation-to-environment.html) vignette for more information about PC rotation. -->
-<!--   la  clasificación  de  Lamb,  modificada  por  Jenkinson  y  Collison (1977), adopta un  conjunto  de  índices que  toman en  cuenta explícitamente las  consideraciones  físicas o  geométricos,  es  decir, la dirección  y  la fuerza del flujo de aire, la dirección y la vorticidad del flujo geostrófico, y la señal y la intensidad  de la ciclonicidad (Jones et al,  1993;  Trigo  and  Da Camara,  2000). Para determinar los   WTs diarios, se   utilizó un   conjunto de 16   puntos de   presiones superficiales centradosenIPde  la  base de datos EMSLP de   compilada porAnselletal.(2006). En  comparaciónconTrigoyDaCamara(2000),  estos  puntos fueron trasladadosde  5°hacia  el  estepara  centrartoda  la  mallaenel  centro  de  laIP,  con resolución de 5° x5°. -->
-<p>It is recommended to review the references proposed in the section <a href="#method-references">Method references</a>.</p>
-</div>
 <div id="a-simple-example" class="section level1">
 <h1 class="hasAnchor">
 <a href="#a-simple-example" class="anchor"></a>A simple example</h1>
-<p>In this example we will extract every day that has at least one point of grid with a precipitation &gt;= 100 mm in the Balearic Islands. This can easily be done with the <code><a href="https://dplyr.tidyverse.org/reference/dplyr-package.html">dplyr()</a></code> library from the <code>tidyverese</code> <a href="https://doi.org/10.21105/joss.01686">(Wickham et al., 2019)</a>.</p>
+<p><code>synoptReg</code> provides three functions to easily apply the automatic version of the Lamb classification, also known as <strong>Jenkinson and Collison</strong>.</p>
+<p>The first step is to read mean sea level pressure data and then get the 16 coordinate points to compute the classification. <code>get_lamb_points</code> allows to compute theses points and <code>plot_lamb_scheme</code> to visualize them.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">synoptReg</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ****</span>
-<span class="co">#&gt; Welcome to synoptReg! </span>
-<span class="co">#&gt; Using synoptReg for research publication?  Please cite it!</span>
-<span class="co">#&gt; I'm an early career researcher and every citation matters.</span>
-<span class="co">#&gt; ****</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'dplyr'</span>
-<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     filter, lag</span>
-<span class="co">#&gt; The following objects are masked from 'package:base':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">mslp</span><span class="op">)</span>
 
-<span class="va">points</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_lamb_points.html">get_lamb_points</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">45</span><span class="op">)</span>
-<span class="fu"><a href="../reference/plot_lamb_scheme.html">plot_lamb_scheme</a></span><span class="op">(</span><span class="va">points</span><span class="op">)</span></code></pre></div>
+<span class="va">mslp</span><span class="op">$</span><span class="va">value</span> <span class="op">&lt;-</span> <span class="va">mslp</span><span class="op">$</span><span class="va">value</span><span class="op">/</span><span class="fl">100</span> <span class="co"># Important: mslp in hPa.</span>
+<span class="va">points</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_lamb_points.html">get_lamb_points</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">45</span><span class="op">)</span> <span class="co">#centroid used for the 16-points grid computation</span>
+<span class="va">points</span>
+<span class="co">#&gt;    lat lon label</span>
+<span class="co">#&gt; 1   50  25    P6</span>
+<span class="co">#&gt; 2   45  25   P10</span>
+<span class="co">#&gt; 3   40  25   P14</span>
+<span class="co">#&gt; 4   55  15    P2</span>
+<span class="co">#&gt; 5   50  15    P5</span>
+<span class="co">#&gt; 6   45  15    P9</span>
+<span class="co">#&gt; 7   40  15   P13</span>
+<span class="co">#&gt; 8   35  15   P16</span>
+<span class="co">#&gt; 9   55   5    P1</span>
+<span class="co">#&gt; 10  50   5    P4</span>
+<span class="co">#&gt; 11  45   5    P8</span>
+<span class="co">#&gt; 12  40   5   P12</span>
+<span class="co">#&gt; 13  35   5   P15</span>
+<span class="co">#&gt; 14  50  -5    P3</span>
+<span class="co">#&gt; 15  45  -5    P7</span>
+<span class="co">#&gt; 16  40  -5   P11</span>
+<span class="fu"><a href="../reference/plot_lamb_scheme.html">plot_lamb_scheme</a></span><span class="op">(</span><span class="va">points</span><span class="op">)</span> <span class="co"># plot lamb scheme</span></code></pre></div>
 <p><img src="Lamb_files/figure-html/unnamed-chunk-1-1.png" width="672"></p>
+<p>Once we computed these 16 points, we can use the <code>lamb_clas</code> function to perform the classification. The user can define if the undefined type (<code>U</code>) is desired (Jones et al., 1996) or not (Trigo and Dacamara, 2000). <code>thr</code> argument allows to select the threshold you want for total shear vorticity and total flow, to tune the frequency of the “U” type.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R">
-<span class="va">clas</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/lamb_clas.html">lamb_clas</a></span><span class="op">(</span><span class="va">points</span>,<span class="va">mslp</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="va">clas</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/lamb_clas.html">lamb_clas</a></span><span class="op">(</span><span class="va">points</span>, <span class="va">mslp</span>,U <span class="op">=</span> <span class="cn">T</span>,thr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4.8</span>,<span class="fl">4.2</span><span class="op">)</span><span class="op">)</span> <span class="co"># default c(6,6)</span>
+<span class="va">clas</span>
+<span class="co">#&gt; $clas</span>
+<span class="co">#&gt; # A tibble: 1,096 x 2</span>
+<span class="co">#&gt;    time       WT   </span>
+<span class="co">#&gt;    &lt;date&gt;     &lt;chr&gt;</span>
+<span class="co">#&gt;  1 2000-01-01 A    </span>
+<span class="co">#&gt;  2 2000-01-02 A    </span>
+<span class="co">#&gt;  3 2000-01-03 A    </span>
+<span class="co">#&gt;  4 2000-01-04 ANW  </span>
+<span class="co">#&gt;  5 2000-01-05 A    </span>
+<span class="co">#&gt;  6 2000-01-06 A    </span>
+<span class="co">#&gt;  7 2000-01-07 A    </span>
+<span class="co">#&gt;  8 2000-01-08 A    </span>
+<span class="co">#&gt;  9 2000-01-09 C    </span>
+<span class="co">#&gt; 10 2000-01-10 E    </span>
+<span class="co">#&gt; # ... with 1,086 more rows</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $grid_clas</span>
+<span class="co">#&gt; # A tibble: 5,967 x 4</span>
+<span class="co">#&gt;      lon   lat WT    value</span>
+<span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt;  1   -10    30 A     1020.</span>
+<span class="co">#&gt;  2   -10    30 AE    1022.</span>
+<span class="co">#&gt;  3   -10    30 AN    1023.</span>
+<span class="co">#&gt;  4   -10    30 ANE   1020.</span>
+<span class="co">#&gt;  5   -10    30 ANW   1025.</span>
+<span class="co">#&gt;  6   -10    30 AS    1006.</span>
+<span class="co">#&gt;  7   -10    30 ASE   1025.</span>
+<span class="co">#&gt;  8   -10    30 ASW   1024.</span>
+<span class="co">#&gt;  9   -10    30 AW    1025.</span>
+<span class="co">#&gt; 10   -10    30 C     1025.</span>
+<span class="co">#&gt; # ... with 5,957 more rows</span></code></pre></div>
+<p>Plot the synoptic maps is quite easy using ggplot2:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ropenscilabs/rnaturalearth">rnaturalearth</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/eliocamp/metR">metR</a></span><span class="op">)</span>
+
+<span class="va">borders</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/rnaturalearth/man/ne_countries.html">ne_countries</a></span><span class="op">(</span>continent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"europe"</span>,<span class="st">"africa"</span><span class="op">)</span>,
+                        returnclass <span class="op">=</span> <span class="st">"sf"</span>,scale <span class="op">=</span> <span class="fl">50</span><span class="op">)</span>
+
+<span class="co"># Plotting only cyclonic weather types, including the U type</span>
+
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour_fill.html">geom_contour_fill</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">clas</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="fu">str_detect</span><span class="op">(</span><span class="va">WT</span>, <span class="st">'A|U'</span><span class="op">)</span><span class="op">)</span>, 
+              mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">value</span><span class="op">)</span>,bins <span class="op">=</span> <span class="fl">15</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">borders</span>, fill <span class="op">=</span> <span class="st">"transparent"</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour2.html">geom_contour2</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">clas</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="fu">str_detect</span><span class="op">(</span><span class="va">WT</span>, <span class="st">'A|U'</span><span class="op">)</span><span class="op">)</span>, 
+                mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">value</span><span class="op">)</span>, 
+                binwidth <span class="op">=</span> <span class="fl">4</span>, color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_text_contour.html">geom_text_contour</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">clas</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="fu">str_detect</span><span class="op">(</span><span class="va">WT</span>, <span class="st">'A|U'</span><span class="op">)</span><span class="op">)</span>, 
+                    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">value</span><span class="op">)</span>, 
+                    stroke <span class="op">=</span> <span class="fl">0.15</span>,binwidth <span class="op">=</span> <span class="fl">4</span>, size <span class="op">=</span> <span class="fl">2</span>, check_overlap <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_colourbar.html">guide_colourbar</a></span><span class="op">(</span>barwidth <span class="op">=</span> <span class="fl">9</span>, barheight <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">WT</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradientn</a></span><span class="op">(</span>colors <span class="op">=</span>  <span class="fu">pals</span><span class="fu">::</span><span class="fu"><a href="http://kwstat.github.io/pals/reference/continuous.html">coolwarm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, name <span class="op">=</span> <span class="st">"hPa"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">mslp</span><span class="op">$</span><span class="va">lon</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">mslp</span><span class="op">$</span><span class="va">lon</span><span class="op">)</span><span class="op">)</span>, expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">mslp</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">mslp</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span><span class="op">)</span>, expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu">ggthemes</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_hc.html">theme_hc</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
+                     axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
+                     axis.ticks <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
+                     legend.position <span class="op">=</span> <span class="st">"bottom"</span>,
+                     axis.title.x<span class="op">=</span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
+                     axis.title.y<span class="op">=</span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
+                     strip.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p><img src="Lamb_files/figure-html/unnamed-chunk-3-1.png" width="100%"></p>
+</div>
+<div id="references" class="section level1">
+<h1 class="hasAnchor">
+<a href="#references" class="anchor"></a>References</h1>
+<ul>
+<li><p>Trigo, R.M.; DaCamara, C.C. Circulation weather types and their influence on the precipitation regime in Portugal. Int. J. Climatol. 2000, 20, 1559–1581, <a href="doi:10.1002/1097-0088(20001115)20:13" class="uri">doi:10.1002/1097-0088(20001115)20:13</a>&lt;1559::AID-JOC555&gt;3.0.CO;2-5.</p></li>
+<li><p>Jones, P.D., Hulme, M. and Briffa, K.R., 1993: A comparison of Lamb circulation types with an objective classification scheme. Int. J. Climatol. 13, 655-663.</p></li>
+</ul>
 </div>
   </div>
 
@@ -153,7 +228,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Marc Lemus-Canovas, Dominic Roye).</p>
+  <p>Developed by Marc Lemus-Canovas.</p>
 </div>
 
 <div class="pkgdown">
