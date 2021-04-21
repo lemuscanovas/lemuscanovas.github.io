@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">synoptReg</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.1</span>
       </span>
     </div>
 
@@ -97,7 +97,7 @@
       <h1 data-toc-skip>Circulation-To-Environment</h1>
                         <h4 class="author">Marc Lemus-Canovas</h4>
             
-            <h4 class="date">2021-04-20</h4>
+            <h4 class="date">2021-04-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/lemuscanovas/synoptReg/blob/master/vignettes/circulation-to-environment.Rmd"><code>vignettes/circulation-to-environment.Rmd</code></a></small>
       <div class="hidden name"><code>circulation-to-environment.Rmd</code></div>
@@ -213,6 +213,9 @@
     <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour_fill.html">geom_contour_fill</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="va">var</span> <span class="op">==</span> <span class="st">"z500"</span><span class="op">)</span>, 
               mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">mean_WT_anom_value</span><span class="op">)</span>,
               binwidth <span class="op">=</span> <span class="fl">20</span><span class="op">)</span><span class="op">+</span>
+    <span class="fu"><a href="https://rdrr.io/pkg/metR/man/stat_subset.html">stat_subset</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>,<span class="va">var</span> <span class="op">==</span> <span class="st">"z500"</span><span class="op">)</span>,
+              <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>, subset <span class="op">=</span> <span class="va">var</span> <span class="op">==</span> <span class="st">"z500"</span> <span class="op">&amp;</span> <span class="va">pval_ttest</span>  <span class="op">&lt;</span><span class="fl">0.01</span><span class="op">)</span>, <span class="co"># skip = 1</span>
+              size <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span><span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">borders</span>, fill <span class="op">=</span> <span class="st">"transparent"</span><span class="op">)</span><span class="op">+</span>
     <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour2.html">geom_contour2</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>,<span class="va">var</span> <span class="op">==</span> <span class="st">"mslp"</span><span class="op">)</span>,
                   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">lon</span>,y<span class="op">=</span><span class="va">lat</span>,z<span class="op">=</span><span class="va">mean_WT_value</span><span class="op">/</span><span class="fl">100</span><span class="op">)</span>,

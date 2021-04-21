@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">synoptReg</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.1</span>
       </span>
     </div>
 
@@ -97,7 +97,7 @@
       <h1 data-toc-skip>Objective Lamb classification</h1>
                         <h4 class="author">Marc Lemus-Canovas</h4>
             
-            <h4 class="date">2021-04-20</h4>
+            <h4 class="date">2021-04-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/lemuscanovas/synoptReg/blob/master/vignettes/Lamb.Rmd"><code>vignettes/Lamb.Rmd</code></a></small>
       <div class="hidden name"><code>Lamb.Rmd</code></div>
@@ -160,18 +160,18 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $grid_clas</span>
 <span class="co">#&gt; # A tibble: 5,967 x 4</span>
-<span class="co">#&gt;      lon   lat WT    value</span>
-<span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;</span>
-<span class="co">#&gt;  1   -10    30 A     1020.</span>
-<span class="co">#&gt;  2   -10    30 AE    1022.</span>
-<span class="co">#&gt;  3   -10    30 AN    1023.</span>
-<span class="co">#&gt;  4   -10    30 ANE   1020.</span>
-<span class="co">#&gt;  5   -10    30 ANW   1025.</span>
-<span class="co">#&gt;  6   -10    30 AS    1006.</span>
-<span class="co">#&gt;  7   -10    30 ASE   1025.</span>
-<span class="co">#&gt;  8   -10    30 ASW   1024.</span>
-<span class="co">#&gt;  9   -10    30 AW    1025.</span>
-<span class="co">#&gt; 10   -10    30 C     1025.</span>
+<span class="co">#&gt;      lon   lat WT    mean_WT_value</span>
+<span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;</span>
+<span class="co">#&gt;  1   -10    30 A             1018.</span>
+<span class="co">#&gt;  2   -10    30 AE            1016.</span>
+<span class="co">#&gt;  3   -10    30 AN            1018.</span>
+<span class="co">#&gt;  4   -10    30 ANE           1017.</span>
+<span class="co">#&gt;  5   -10    30 ANW           1019.</span>
+<span class="co">#&gt;  6   -10    30 AS            1012.</span>
+<span class="co">#&gt;  7   -10    30 ASE           1017.</span>
+<span class="co">#&gt;  8   -10    30 ASW           1020.</span>
+<span class="co">#&gt;  9   -10    30 AW            1021.</span>
+<span class="co">#&gt; 10   -10    30 C             1017.</span>
 <span class="co">#&gt; # ... with 5,957 more rows</span></code></pre></div>
 <p>Plot the synoptic maps is quite easy using ggplot2:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -185,13 +185,13 @@
 
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour_fill.html">geom_contour_fill</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">clas</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="fu">str_detect</span><span class="op">(</span><span class="va">WT</span>, <span class="st">'A|U'</span><span class="op">)</span><span class="op">)</span>, 
-              mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">value</span><span class="op">)</span>,bins <span class="op">=</span> <span class="fl">15</span><span class="op">)</span><span class="op">+</span>
+              mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">mean_WT_value</span><span class="op">)</span>,bins <span class="op">=</span> <span class="fl">15</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">borders</span>, fill <span class="op">=</span> <span class="st">"transparent"</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour2.html">geom_contour2</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">clas</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="fu">str_detect</span><span class="op">(</span><span class="va">WT</span>, <span class="st">'A|U'</span><span class="op">)</span><span class="op">)</span>, 
-                mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">value</span><span class="op">)</span>, 
+                mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">mean_WT_value</span><span class="op">)</span>, 
                 binwidth <span class="op">=</span> <span class="fl">4</span>, color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_text_contour.html">geom_text_contour</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">clas</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="fu">str_detect</span><span class="op">(</span><span class="va">WT</span>, <span class="st">'A|U'</span><span class="op">)</span><span class="op">)</span>, 
-                    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">value</span><span class="op">)</span>, 
+                    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">lon</span>,<span class="va">lat</span>,z <span class="op">=</span> <span class="va">mean_WT_value</span><span class="op">)</span>, 
                     stroke <span class="op">=</span> <span class="fl">0.15</span>,binwidth <span class="op">=</span> <span class="fl">4</span>, size <span class="op">=</span> <span class="fl">2</span>, check_overlap <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_colourbar.html">guide_colourbar</a></span><span class="op">(</span>barwidth <span class="op">=</span> <span class="fl">9</span>, barheight <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">WT</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span>

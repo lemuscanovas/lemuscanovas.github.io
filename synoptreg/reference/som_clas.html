@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Self-Organized Map classification — som_clas • synoptReg</title>
+<title>Self-Organizing Maps classification — som_clas • synoptReg</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,7 @@
 
 
 
-<meta property="og:title" content="Self-Organized Map classification — som_clas" />
+<meta property="og:title" content="Self-Organizing Maps classification — som_clas" />
 <meta property="og:description" content="som_clas allows to perform a SOM synoptic classification" />
 
 
@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">synoptReg</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.1</span>
       </span>
     </div>
 
@@ -135,7 +135,7 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Self-Organized Map classification</h1>
+    <h1>Self-Organizing Maps classification</h1>
     <small class="dont-index">Source: <a href='https://github.com/lemuscanovas/synoptReg/blob/master/R/som_clas.R'><code>R/som_clas.R</code></a></small>
     <div class="hidden name"><code>som_clas.Rd</code></div>
     </div>
@@ -222,7 +222,7 @@ Journal of Statistical Software, 21(5), 1 - 19.</p>
              name_vars <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"z500"</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># SOM classification</span>
-<span class='va'>som_cl</span> <span class='op'>&lt;-</span> <span class='fu'>som_clas</span><span class='op'>(</span><span class='va'>z500_tidy</span>, xdim <span class='op'>=</span> <span class='fl'>4</span>,ydim <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span>
+<span class='va'>som_cl</span> <span class='op'>&lt;-</span> <span class='fu'>som_clas</span><span class='op'>(</span><span class='va'>z500_tidy</span>, xdim <span class='op'>=</span> <span class='fl'>4</span>, ydim <span class='op'>=</span> <span class='fl'>4</span>, iter <span class='op'>=</span> <span class='fl'>200</span><span class='op'>)</span>
 
 
 </div></pre>
