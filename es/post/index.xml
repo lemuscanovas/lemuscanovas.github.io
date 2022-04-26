@@ -5,12 +5,263 @@
     <link>/es/post/</link>
       <atom:link href="/es/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Thu, 09 Jul 2020 15:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Fri, 15 Apr 2022 15:00:00 -0500</lastBuildDate>
     <image>
       <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/es/post/</link>
     </image>
+    
+    <item>
+      <title>Curso de Introducción a R para el análisis y visualización de datos estadísticos y espaciales</title>
+      <link>/es/post/20220501/info_r_curso/</link>
+      <pubDate>Fri, 15 Apr 2022 15:00:00 -0500</pubDate>
+      <guid>/es/post/20220501/info_r_curso/</guid>
+      <description>
+
+
+&lt;div id=&#34;introducción&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Introducción&lt;/h3&gt;
+&lt;p&gt;Bienvenidos a este curso de introducción a R organizado por el Programa de Doctorado en Geografía, Planificación Territorial y Gestión Ambiental del Departamento de Geografía de la Universidad de Barcelona. En esta página encontaréis toda la información relativa al inicio de este curso.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;días-y-aulas&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Días y aulas&lt;/h3&gt;
+&lt;p&gt;El curso tiene una duración de &lt;strong&gt;4 días&lt;/strong&gt;, siempre en el horario de &lt;strong&gt;16 a 20h&lt;/strong&gt;. A continuación se detallan las aulas en las que se impartirá:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Fecha&lt;/th&gt;
+&lt;th&gt;Aula&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Martes, 03-05-2022&lt;/td&gt;
+&lt;td&gt;315&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Jueves, 05-05-2022&lt;/td&gt;
+&lt;td&gt;316&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Martes, 10-05-2022&lt;/td&gt;
+&lt;td&gt;315&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Jueves, 12-05-2022&lt;/td&gt;
+&lt;td&gt;214&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acceso-al-material-del-curso&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acceso al material del curso&lt;/h3&gt;
+&lt;p&gt;El curso es 100% presencial. Sin embargo, y con el objetivo de facilitar su seguimiento, todos los alumnos tendrán acceso al &lt;a href=&#34;https://cursr.moodlecloud.com/&#34;&gt;&lt;strong&gt;Moodle&lt;/strong&gt;&lt;/a&gt; del curso. Para acceder a él hay que rellenar el siguiente &lt;a href=&#34;https://forms.gle/fp62kasJcvvSnYp1A&#34;&gt;&lt;u&gt;&lt;strong&gt;formulario&lt;/strong&gt;&lt;/u&gt;&lt;/a&gt;. &lt;u&gt;&lt;strong&gt;El usuario para acceder al moodle será el correo electrónico que hayáis facilitado, mientras que la contraseña será enviada tan pronto como sea posible.&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dudas-y-contacto&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Dudas y contacto&lt;/h3&gt;
+&lt;p&gt;Para cualquier duda o problema que os surja con el acceso al Moodle o cualquier otra cuestión relativa al curso, podéis contactarme via e-mail a &lt;strong&gt;&lt;em&gt;lemuscanovas@gmail.com&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Tutorial] Clasificación sinóptica de eventos de precipitación abundante con la librería {synoptReg}</title>
+      <link>/es/post/20220412/tutorial_aec2022/</link>
+      <pubDate>Tue, 19 Oct 2021 15:00:00 -0500</pubDate>
+      <guid>/es/post/20220412/tutorial_aec2022/</guid>
+      <description>
+
+
+&lt;div id=&#34;introducción&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Introducción&lt;/h3&gt;
+&lt;p&gt;Este pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R &lt;a href=&#34;https://lemuscanovas.github.io/synoptreg/&#34;&gt;&lt;strong&gt;{synoptReg}&lt;/strong&gt;&lt;/a&gt; [&lt;a href=&#34;https://www.sciencedirect.com/science/article/abs/pii/S1364815219300064&#34;&gt;@lemus-canovas2019&lt;/a&gt;]. Los pasos que se seguirán son básicamente 3:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Descarga y cómputo de los eventos torrenciales&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Descarga y preproceso de los datos diarios de presión en superfície del reanálisis NCEP/NCAR 2.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;descarga-y-preproceso-de-los-datos-climáticos&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Descarga y preproceso de los datos climáticos&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(synoptReg)
+library(tidyverse)
+library(lubridate)
+library(rnaturalearth)
+library(metR)
+
+eventos_torrenciales &amp;lt;- read_csv(file = &amp;quot;data/RR_STAID000236.txt&amp;quot;,
+                      skip = 18) %&amp;gt;%
+  mutate(DATE = ymd(DATE),
+         RR = ifelse(RR == -9999, NA,RR/10)) %&amp;gt;%
+  filter(RR &amp;gt;= 50, DATE &amp;gt;= &amp;quot;1948-01-01&amp;quot;)
+
+dates &amp;lt;- eventos_torrenciales %&amp;gt;%
+  select(DATE) %&amp;gt;%
+  mutate(yr = year(DATE),
+         mo = month(DATE))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora que ya hemos filtrado los días con precipitación &amp;gt;= 50 mm/24h, podemos proceder a extraer las fechas de tales eventos para empezar la descarga de los datos del reanálisis NCEP/NCAR.Usaremos los años en que se producen los eventos para no descargar toda la base de datos entera y ahorrar espacio en el disco y tiempo de descarga.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;slp_l &amp;lt;- list()
+for (ii in 1:nrow(dates)) {
+yr &amp;lt;- pull(dates, yr)[ii]
+mo &amp;lt;- pull(dates, mo)[ii]
+
+slp_l[[ii]] &amp;lt;- download_ncep(var = &amp;quot;slp&amp;quot;,
+                     level = &amp;quot;surface&amp;quot;,
+                     year_range = c(yr,yr),
+                     month_range = c(1,12),
+                     lat_range = c(25,70),
+                     lon_range = c(-20,30),
+                     dailymean = T,
+                     save_download = F,
+                     reanalysis2 = F)
+
+print(paste(ii/nrow(dates)*100, &amp;quot;%&amp;quot;))
+}
+
+slp_data &amp;lt;- bind_rows(slp_l)
+write_csv(slp_data,&amp;quot;data/slp_dat_1949to2022.csv&amp;quot;,col_names = T)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Add a new chunk by clicking the &lt;em&gt;Insert Chunk&lt;/em&gt; button on the toolbar or by pressing &lt;em&gt;Ctrl+Alt+I&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;slp_data &amp;lt;- read_csv(&amp;quot;data/slp_dat_1949to2022.csv&amp;quot;) %&amp;gt;% 
+  distinct(time,lon,lat, .keep_all = T)
+vars_torrential &amp;lt;- tidy_nc(x = slp_data,
+                       time_subset = dates$DATE,
+                       name_vars = &amp;quot;mslp&amp;quot;)
+vars_torrential&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 45,885 x 6
+##    var     lon   lat time         value anom_value
+##    &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;
+##  1 mslp  -20      70 1949-05-15 102538.       903.
+##  2 mslp  -17.5    70 1949-05-15 102530        922.
+##  3 mslp  -15      70 1949-05-15 102482.       907.
+##  4 mslp  -12.5    70 1949-05-15 102405        866.
+##  5 mslp  -10      70 1949-05-15 102302.       801.
+##  6 mslp   -7.5    70 1949-05-15 102182.       711.
+##  7 mslp   -5      70 1949-05-15 102065        614.
+##  8 mslp   -2.5    70 1949-05-15 101942.       510.
+##  9 mslp    0      70 1949-05-15 101828.       417.
+## 10 mslp    2.5    70 1949-05-15 101738.       352.
+## # ... with 45,875 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clasificación-sinóptica-mediante-análisis-de-componentes-principales&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Clasificación sinóptica mediante Análisis de Componentes Principales&lt;/h3&gt;
+&lt;p&gt;When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the &lt;em&gt;Preview&lt;/em&gt; button or press &lt;em&gt;Ctrl+Shift+K&lt;/em&gt; to preview the HTML file).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;info &amp;lt;- pca_decision(vars_torrential,ncomp = 20,norm = T,matrix_mode = &amp;quot;T-mode&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike &lt;em&gt;Knit&lt;/em&gt;, &lt;em&gt;Preview&lt;/em&gt; does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;info$screeplot&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/es/post/20220412/tutorial_AEC2022_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cl &amp;lt;- synoptclas(vars_torrential,ncomp = 6,norm = T,matrix_mode = &amp;quot;T-mode&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sf::sf_use_s2(F)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Spherical geometry (s2) switched off&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;borders &amp;lt;- ne_countries(continent = c(&amp;quot;europe&amp;quot;,&amp;quot;africa&amp;quot;),
+                                       returnclass = &amp;quot;sp&amp;quot;,scale = 50)
+
+
+ggplot()+
+    geom_contour_fill(filter(cl$grid_clas_pn, var == &amp;quot;mslp&amp;quot;), 
+              mapping = aes(lon,lat,z = mean_WT_value/100),
+              breaks = seq(976,1032,2))+
+    geom_path(data = borders,aes(long,lat, group = group), 
+              fill = &amp;quot;transparent&amp;quot;, color = &amp;quot;black&amp;quot;)+
+    geom_contour2(data = filter(cl$grid_clas_pn,var == &amp;quot;mslp&amp;quot;),
+                  aes(x=lon,y=lat,z=mean_WT_value/100),
+                  binwidth = 2, color = &amp;quot;black&amp;quot;) +
+    geom_text_contour(data= filter(cl$grid_clas_pn, var == &amp;quot;mslp&amp;quot;),
+                      aes(x=lon,y=lat,z=mean_WT_value/100), 
+                      stroke = 0.15,binwidth = 2) +
+    annotate(&amp;quot;text&amp;quot;, x = 0.5, y = 40.8, colour = &amp;quot;magenta&amp;quot;, label = &amp;quot;x&amp;quot;)+
+    guides(fill = guide_colourbar(barwidth = 30, barheight = 0.5))+
+    facet_wrap(~WT, ncol = 4) +
+    scale_fill_stepsn(colours = rev(pals::brewer.rdylbu(100)),name = &amp;quot;slp (hPa)&amp;quot;, 
+                         limits = c(996,1032), breaks = seq(976,1032,2)) +
+    scale_x_continuous(limits = c(-20,30), expand = c(0, 0))+
+    scale_y_continuous(limits = c(25,70), expand = c(0,0))+
+    theme_void() +
+    coord_map(projection = &amp;quot;lambert&amp;quot;,lat0 =0, lat1 = 70)+
+    theme(
+      panel.grid.major = element_blank(), 
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      text = element_text(size = 10),
+      strip.background = element_rect(fill = &amp;quot;transparent&amp;quot;, color = NA),
+      axis.title = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      legend.position = &amp;quot;bottom&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/es/post/20220412/tutorial_AEC2022_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;clas &amp;lt;- cl$clas_pn
+
+# monthly frequence histogram
+WTs &amp;lt;- sort(unique(clas$WT))
+mo_hist &amp;lt;- clas %&amp;gt;%  
+  mutate(mo = month(time)) %&amp;gt;% 
+  group_by(WT,mo) %&amp;gt;%
+  mutate(n = length(time)) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  group_by(WT) %&amp;gt;%
+  mutate(n_prop = n/length(time)) %&amp;gt;%
+  distinct(WT,mo,.keep_all = T) %&amp;gt;%
+  complete(mo, WT = WTs, 
+           fill = list(n_prop = 0))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mo_hist, aes(x = mo, y = WT,fill = n_prop))+
+  geom_tile(color = &amp;quot;black&amp;quot;) +
+  scale_fill_gradientn(colors = pals::brewer.blues(100), 
+                       name = &amp;quot;fi&amp;quot;,
+                       breaks = seq(0,1, by = 0.1)) +
+  geom_text(aes(label=round(n_prop,2)), size = 4)+
+  scale_x_continuous(name=&amp;quot;Month&amp;quot;, 
+                     breaks = seq(1,12,1), 
+                     expand=c(0,0)) +
+  guides(fill = guide_colourbar(barwidth = 15, barheight = 0.5))+
+
+  theme_classic()+
+  labs(title = &amp;quot;Frecuencia relativa mensual por tipo de circulación (WT)&amp;quot;)+
+  theme(axis.text=element_text(size=8),
+        axis.title.x = element_text(size = 8),
+        axis.title.y = element_text(size = 8),
+        legend.title=element_text(size=8),
+        legend.text=element_text(size= 8),
+        legend.position=&amp;quot;bottom&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/es/post/20220412/tutorial_AEC2022_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extracting-annual-frequency-trends&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Extracting annual frequency trends&lt;/h1&gt;
+&lt;p&gt;How to extract the trend of annual frequences per WT?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;WT_time_series &amp;lt;- clas %&amp;gt;%  
+  mutate(yr = year(time)) %&amp;gt;% 
+  group_by(yr,WT) %&amp;gt;%
+  mutate(n = length(time)) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  distinct(WT,yr,.keep_all = T) %&amp;gt;%
+  select(-time) %&amp;gt;%
+  complete(yr, WT =WTs, 
+           fill = list(n = 0)) %&amp;gt;%
+  complete(WT, yr =1948:2022, 
+           fill = list(n = 0))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = WT_time_series, aes(x = yr, y = 1, fill = n))+
+  geom_tile(color = &amp;quot;black&amp;quot;)+
+  scale_x_continuous(labels = seq(1950,2020,5), 
+                     breaks = seq(1950,2020,5),
+                     minor_breaks = seq(1950,2020,1))  +
+  scale_fill_gradientn(colors = pals::brewer.reds(100), 
+                       name = &amp;quot;Fi&amp;quot;,
+                       breaks = seq(0,5, by = 1)) +
+  labs(title = &amp;quot;Frecuencia absoluta anual por tipo de circulación&amp;quot;)+
+  guides(fill = guide_colourbar(barwidth = 15, barheight = 0.5))+
+  facet_wrap(~ WT, ncol = 2,scales = &amp;quot;free_y&amp;quot;) +
+  theme_void() +
+  theme(axis.text.x = element_text(colour=&amp;quot;grey20&amp;quot;, 
+                                   size=8, 
+                                   angle=90, 
+                                   hjust=.5, 
+                                   vjust=.5),
+        axis.text.y = element_blank(),
+        text = element_text(size=10),panel.grid = element_blank(),
+        legend.position = &amp;quot;bottom&amp;quot;) +
+  ylab(&amp;quot;Daily Frequency&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/es/post/20220412/tutorial_AEC2022_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

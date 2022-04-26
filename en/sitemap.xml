@@ -123,17 +123,242 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="/ca/categories/"
+                href="/ca/publication-type/2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
+                href="/es/publication-type/2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication-type/2/"
+                />
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/dhais-pena-angulo/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/javier-martin-vide/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/javier-martin-vide/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/javier-martin-vide/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/javier-martin-vide/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/joan-a.-lopez-bustins/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/joan-a.-lopez-bustins/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/joan-a.-lopez-bustins/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/joan-a.-lopez-bustins/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/joan-albert-lopez-bustins/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/joan-martinez-artigas/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/jose-carlos-gonzalez-hidalgo/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/leire-sandonis/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/marc-lemus-canovas/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/marc-lemus-canovas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/marc-lemus-canovas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/marc-lemus-canovas/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/miquel-tomas-burguera/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/martinez_2020/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication_types/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/rainfall-variability/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/rainfall-variability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/rainfall-variability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/rainfall-variability/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/santiago-begueria/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/pena_angulo_2020/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
                 href="/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -177,13 +402,13 @@
     <lastmod>2020-07-09T15:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/post/"
+                hreflang="es"
+                href="/es/post/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="/es/post/"
+                hreflang="ca"
+                href="/ca/post/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -217,38 +442,18 @@
     <lastmod>2020-07-09T15:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/category/r/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="es"
                 href="/es/category/r/"
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ca"
+                href="/ca/category/r/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="/category/r/"
-                />
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/"
                 />
   </url>
   
@@ -298,146 +503,6 @@
   </url>
   
   <url>
-    <loc>/publication-type/2/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/publication-type/2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/publication-type/2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/publication-type/2/"
-                />
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/authors/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/joan-a.-lopez-bustins/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/author/joan-a.-lopez-bustins/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/author/joan-a.-lopez-bustins/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/author/joan-a.-lopez-bustins/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/marc-lemus-canovas/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/author/marc-lemus-canovas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/author/marc-lemus-canovas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/author/marc-lemus-canovas/"
-                />
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/publication_types/"
-                />
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/publication/"
-                />
-  </url>
-  
-  <url>
-    <loc>/tag/rainfall-variability/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/tag/rainfall-variability/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tag/rainfall-variability/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tag/rainfall-variability/"
-                />
-  </url>
-  
-  <url>
     <loc>/publication/lopez_bustins_2020/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -474,26 +539,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/publication/lemus_canovas_2020/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/javier-martin-vide/</loc>
-    <lastmod>2020-01-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/author/javier-martin-vide/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/author/javier-martin-vide/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/author/javier-martin-vide/"
                 />
   </url>
   
@@ -602,13 +647,13 @@
     <lastmod>2019-08-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/tag/synoptreg/"
+                hreflang="es"
+                href="/es/tag/synoptreg/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="/es/tag/synoptreg/"
+                hreflang="ca"
+                href="/ca/tag/synoptreg/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -814,46 +859,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/author/santiago-manguan/"
-                />
-  </url>
-  
-  <url>
-    <loc>/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/privacy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/privacy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/privacy/"
-                />
-  </url>
-  
-  <url>
-    <loc>/terms/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/terms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/terms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/terms/"
                 />
   </url>
   

@@ -5,12 +5,20 @@
     <link>/author/javier-martin-vide/</link>
       <atom:link href="/author/javier-martin-vide/index.xml" rel="self" type="application/rss+xml" />
     <description>Javier Martin-Vide</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
       <title>Javier Martin-Vide</title>
       <link>/author/javier-martin-vide/</link>
     </image>
+    
+    <item>
+      <title>Seasonal temperature trends on the Spanish mainland. A secular study (1916–2015)</title>
+      <link>/publication/pena_angulo_2020/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/pena_angulo_2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Estimating Barcelona&#39;s metropolitan daytime hot and cold poles using Landsat-8 Land Surface Temperature</title>

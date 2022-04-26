@@ -6,31 +6,27 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PCA Synoptic classification — synoptclas • synoptReg</title>
+<title>Synoptic classification — synoptclas • synoptReg</title>
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
-
-<!-- bootstrap-toc -->
-<link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,8 +35,9 @@
 
 
 
-<meta property="og:title" content="PCA Synoptic classification — synoptclas" />
+<meta property="og:title" content="Synoptic classification — synoptclas" />
 <meta property="og:description" content="synoptclas allows to perform several types of synoptic classification approaches based on one or several atmospheric variables (i.e. mean sea level pressure, geoptential height at 500 hPa, etc.)" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -58,7 +55,7 @@
 
   </head>
 
-  <body data-spy="scroll" data-target="#toc">
+  <body>
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -72,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">synoptReg</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2</span>
       </span>
     </div>
 
@@ -80,7 +77,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,12 +100,6 @@
     <li>
       <a href="../articles/environment-to-circulation.html">Environment-To-Circulation</a>
     </li>
-    <li>
-      <a href="../articles/Lamb.html">Objective Lamb classification</a>
-    </li>
-    <li>
-      <a href="../articles/SOM.html">Self-Organizing Maps</a>
-    </li>
   </ul>
 </li>
 <li>
@@ -116,12 +107,7 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/lemuscanovas/synoptReg/">
-    <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -135,8 +121,8 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>PCA Synoptic classification</h1>
-    <small class="dont-index">Source: <a href='https://github.com/lemuscanovas/synoptReg/blob/master/R/synoptclas.R'><code>R/synoptclas.R</code></a></small>
+    <h1>Synoptic classification</h1>
+    
     <div class="hidden name"><code>synoptclas.Rd</code></div>
     </div>
 
@@ -144,7 +130,8 @@
     <p><code>synoptclas</code> allows to perform several types of synoptic classification approaches based on one or several atmospheric variables (i.e. mean sea level pressure, geoptential height at 500 hPa, etc.)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>synoptclas</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>ncomp</span>, norm <span class='op'>=</span> <span class='cn'>T</span>, matrix_mode <span class='op'>=</span> <span class='st'>"S-mode"</span>, extreme_scores <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>synoptclas</span>(<span class='no'>x</span>, <span class='no'>ncomp</span>, <span class='kw'>norm</span> <span class='kw'>=</span> <span class='no'>T</span>, <span class='kw'>matrix_mode</span> <span class='kw'>=</span> <span class='st'>"S-mode"</span>,
+  <span class='kw'>extreme_scores</span> <span class='kw'>=</span> <span class='fl'>2</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -159,7 +146,7 @@
     </tr>
     <tr>
       <th>norm</th>
-      <td><p>logical. Default <code>TRUE</code>. <code>norm = TRUE</code> is recommended for classifying two ore more variables.</p></td>
+      <td><p>logical. Default <code>TRUE</code>. <code>norm = TRUE</code> is recommended for classify two ore more variables.</p></td>
     </tr>
     <tr>
       <th>matrix_mode</th>
@@ -175,7 +162,7 @@
 
     <p>A list with:</p><ul>
 <li><p>A data.frame containing the dates and the weather types. If "T-mode" is selected, two classifications are returned (absolute and positive/negative classification).</p></li>
-<li><p>A data frame containing the gridded data grouped by circulation types.If "T-mode" is selected, 3 classifications are returned (absolute correlation,maximum positive correlation, and positive/negative classification). In addition, p-values of a t-test computed to the anomalies, comparing them to 0 with a conf.level = 0.95, are returned</p></li>
+<li><p>A data frame containing the gridded data grouped by circulation types.If "T-mode" is selected, two classifications are returned (absolute and positive/negative classification) .</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
@@ -185,9 +172,9 @@ If the user wants to perform a synoptic classification of a long and continuous 
 When we apply the PCA to a matrix in S-mode, the variables are the grid points (lon,lat) and the observations are the days (time series),
 so the linear relationships that the PCA establishes are between the time series of the grid points. One of the results we obtain from the PCA are the "scores",
 which indicate the degree of representativeness of each day for each of the principal components. However, the scores do not allow us to directly obtain the
-weather types (WT) classification, since one day can be represented by several principal components. For this reason, a clustering method is required  to group each day
+weather types (WT) clasification, since one day can be represented by several principal components. For this reason, a clustering method is required  to group each day
 to an specific WT based on the multivariate coordinates provided by the "scores". Before using a clustering method, a VARIMAX rotation is performed on the principal Components
-retained, with the aim of redistributing the variance of such components.
+retined, with the aim of redistributing the variance of such components.
 With the rotated components, the scores are used to apply the extreme scores method (Esteban et al., 2005). The scores show the degree of representativeness associated
 with the variation modes of each principal component, i.e., the classification of each day to its more representative centroid. Thus, the extreme scores method uses
 the scores &gt; 2 and &lt; -2, establishing a positive and negative phase for each principal component. The extreme scores procedure establishes the number of groups and their
@@ -206,43 +193,49 @@ Int. J. Climatol. 25: 319-329. doi:10.1002/joc.1103</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Load data (mslp or precp_grid)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>mslp</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>z500</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>mslp</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>z500</span>)
 <span class='co'># Tidying our atmospheric variables (500 hPa geopotential height</span>
 <span class='co'># and mean sea level pressure) together.</span>
-<span class='va'>atm_data1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='tidy_nc.html'>tidy_nc</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>mslp</span>,<span class='va'>z500</span><span class='op'>)</span>,
-             name_vars <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"mslp"</span>,<span class='st'>"z500"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='co'># Time subset between two dates</span>
+<span class='no'>atm_data1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tidy_nc.html'>tidy_nc</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='no'>mslp</span>,<span class='no'>z500</span>),
+             <span class='kw'>name_vars</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"mslp"</span>,<span class='st'>"z500"</span>))
 
 <span class='co'># S-mode classification</span>
-<span class='va'>smode_cl</span> <span class='op'>&lt;-</span> <span class='fu'>synoptclas</span><span class='op'>(</span><span class='va'>atm_data1</span>, ncomp <span class='op'>=</span> <span class='fl'>6</span><span class='op'>)</span>
+<span class='no'>smode_clas</span> <span class='kw'>&lt;-</span> <span class='fu'>synoptclas</span>(<span class='no'>atm_data1</span>, <span class='kw'>ncomp</span> <span class='kw'>=</span> <span class='fl'>6</span>)
 
 <span class='co'># Time subset using a vector of dates of interest</span>
-<span class='va'>dates_int</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2000-01-25"</span>,<span class='st'>"2000-04-01"</span>,<span class='st'>"2000-07-14"</span>,<span class='st'>"2001-05-08"</span>,<span class='st'>"2002-12-20"</span><span class='op'>)</span>
-<span class='va'>atm_data2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='tidy_nc.html'>tidy_nc</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>mslp</span>,<span class='va'>z500</span><span class='op'>)</span>,
-                     time_subset <span class='op'>=</span> <span class='va'>dates_int</span>,
-                     name_vars <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"mslp"</span>,<span class='st'>"z500"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='no'>dates_int</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2000-01-25"</span>,<span class='st'>"2000-04-01"</span>,<span class='st'>"2000-07-14"</span>,<span class='st'>"2001-05-08"</span>,<span class='st'>"2002-12-20"</span>)
+<span class='no'>atm_data2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tidy_nc.html'>tidy_nc</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='no'>mslp</span>,<span class='no'>z500</span>),
+                     <span class='kw'>time_subset</span> <span class='kw'>=</span> <span class='no'>dates_int</span>,
+                     <span class='kw'>name_vars</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"mslp"</span>,<span class='st'>"z500"</span>))
 
-<span class='co'># T-mode classification</span>
-<span class='va'>tmode_cl</span> <span class='op'>&lt;-</span> <span class='fu'>synoptclas</span><span class='op'>(</span><span class='va'>atm_data2</span>, ncomp <span class='op'>=</span> <span class='fl'>2</span>, matrix_mode <span class='op'>=</span> <span class='st'>"T-mode"</span><span class='op'>)</span>
-
-
-</div></pre>
+<span class='co'># S-mode classification</span>
+<span class='no'>tmode_clas</span> <span class='kw'>&lt;-</span> <span class='fu'>synoptclas</span>(<span class='no'>atm_data2</span>, <span class='kw'>ncomp</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>matrix_mode</span> <span class='kw'>=</span> <span class='st'>"T-mode"</span>)</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <nav id="toc" data-toggle="toc" class="sticky-top">
-      <h2 data-toc-skip>Contents</h2>
-    </nav>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#references">References</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
 
       <footer>
       <div class="copyright">
-  <p>Developed by Marc Lemus-Canovas.</p>
+  <p>Developed by Marc Lemus-Canovas, Dominic Roye).</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

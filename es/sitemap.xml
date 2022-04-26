@@ -123,8 +123,43 @@
   </url>
   
   <url>
+    <loc>/es/post/20220501/info_r_curso/</loc>
+    <lastmod>2022-04-15T15:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/es/post/</loc>
+    <lastmod>2022-04-15T15:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/post/20220412/tutorial_aec2022/</loc>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/es/tag/acp/</loc>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/es/categories/</loc>
-    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
@@ -139,6 +174,76 @@
                 rel="alternate"
                 hreflang="es"
                 href="/es/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/tag/clasificacion-sinoptica/</loc>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/es/category/r/</loc>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/category/r/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/category/r/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/category/r/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/tag/synoptreg/</loc>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/synoptreg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/synoptreg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/synoptreg/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/category/synoptreg/</loc>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/es/tags/</loc>
+    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tags/"
                 />
   </url>
   
@@ -168,26 +273,6 @@
   </url>
   
   <url>
-    <loc>/es/post/</loc>
-    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/post/"
-                />
-  </url>
-  
-  <url>
     <loc>/es/post/20200708/</loc>
     <lastmod>2020-07-09T15:00:00-05:00</lastmod>
     <xhtml:link
@@ -208,48 +293,8 @@
   </url>
   
   <url>
-    <loc>/es/category/r/</loc>
-    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/category/r/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/category/r/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/category/r/"
-                />
-  </url>
-  
-  <url>
     <loc>/es/tag/rejilla-climatica/</loc>
     <lastmod>2020-07-09T15:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/es/tags/</loc>
-    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tags/"
-                />
   </url>
   
   <url>
@@ -302,13 +347,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/publication-type/2/"
+                hreflang="en"
+                href="/publication-type/2/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/publication-type/2/"
+                hreflang="ca"
+                href="/ca/publication-type/2/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -322,13 +367,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/authors/"
+                hreflang="en"
+                href="/authors/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/authors/"
+                hreflang="ca"
+                href="/ca/authors/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -342,13 +387,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/author/joan-a.-lopez-bustins/"
+                hreflang="en"
+                href="/author/joan-a.-lopez-bustins/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/author/joan-a.-lopez-bustins/"
+                hreflang="ca"
+                href="/ca/author/joan-a.-lopez-bustins/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -362,13 +407,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/author/marc-lemus-canovas/"
+                hreflang="en"
+                href="/author/marc-lemus-canovas/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/author/marc-lemus-canovas/"
+                hreflang="ca"
+                href="/ca/author/marc-lemus-canovas/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -382,13 +427,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/publication/"
+                hreflang="en"
+                href="/publication/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/publication/"
+                hreflang="ca"
+                href="/ca/publication/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -402,13 +447,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/publication_types/"
+                hreflang="en"
+                href="/publication_types/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/publication_types/"
+                hreflang="ca"
+                href="/ca/publication_types/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -422,13 +467,13 @@
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/tag/rainfall-variability/"
+                hreflang="en"
+                href="/tag/rainfall-variability/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/tag/rainfall-variability/"
+                hreflang="ca"
+                href="/ca/tag/rainfall-variability/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -482,13 +527,13 @@
     <lastmod>2020-01-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="/ca/author/javier-martin-vide/"
+                hreflang="en"
+                href="/author/javier-martin-vide/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/author/javier-martin-vide/"
+                hreflang="ca"
+                href="/ca/author/javier-martin-vide/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -594,26 +639,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="/es/tag/synoptic-climatology/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/tag/synoptreg/</loc>
-    <lastmod>2019-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/tag/synoptreg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tag/synoptreg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tag/synoptreg/"
                 />
   </url>
   
@@ -814,46 +839,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="/es/author/santiago-manguan/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/privacy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/privacy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/privacy/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/terms/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/terms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/terms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/terms/"
                 />
   </url>
   
