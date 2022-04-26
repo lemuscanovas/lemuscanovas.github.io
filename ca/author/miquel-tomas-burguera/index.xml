@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miquel Tomas-Burguera | Marc Lemus-Cánovas</title>
+    <link>/ca/author/miquel-tomas-burguera/</link>
+      <atom:link href="/ca/author/miquel-tomas-burguera/index.xml" rel="self" type="application/rss+xml" />
+    <description>Miquel Tomas-Burguera</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>ca</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>Miquel Tomas-Burguera</title>
+      <link>/ca/author/miquel-tomas-burguera/</link>
+    </image>
+    
+    <item>
+      <title>Seasonal temperature trends on the Spanish mainland. A secular study (1916–2015)</title>
+      <link>/ca/publication/pena_angulo_2021/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/ca/publication/pena_angulo_2021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

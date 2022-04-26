@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roberto Serrano-Notivoli | Marc Lemus-Cánovas</title>
+    <link>/ca/author/roberto-serrano-notivoli/</link>
+      <atom:link href="/ca/author/roberto-serrano-notivoli/index.xml" rel="self" type="application/rss+xml" />
+    <description>Roberto Serrano-Notivoli</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>ca</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>Roberto Serrano-Notivoli</title>
+      <link>/ca/author/roberto-serrano-notivoli/</link>
+    </image>
+    
+    <item>
+      <title>Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale</title>
+      <link>/ca/publication/lemus_canovas_2021a/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/ca/publication/lemus_canovas_2021a/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

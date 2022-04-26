@@ -209,6 +209,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172173193-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-172173193-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -247,7 +285,7 @@
   <meta property="og:description" content="Investigador Predoctoral FPU"><meta property="og:image" content="/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="ca">
   
-    <meta property="og:updated_time" content="2020-07-09T15:00:00-05:00">
+    <meta property="og:updated_time" content="2022-02-08T00:00:00&#43;00:00">
   
 
   
@@ -428,6 +466,30 @@
         
         
 
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://lemuscanovas.github.io/synoptreg/" target="_blank" rel="noopener"><span>synoptReg</span></a>
+        </li>
+
+        
+        
+
       
 
         
@@ -509,7 +571,27 @@
     
     
     <div>
-      <h2><a href="/ca/tag/demo/" >Demo</a></h2>
+      <h2><a href="/ca/tag/r-package/" >R package</a></h2>
+      <div class="article-style">
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/ca/tag/synoptic-climatology/" >Synoptic Climatology</a></h2>
+      <div class="article-style">
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/ca/tag/synoptreg/" >synoptReg</a></h2>
       <div class="article-style">
         
       </div>
@@ -645,16 +727,6 @@
   
   <div class="container">
     <footer class="site-footer">
-  
-  <p class="powered-by">
-    
-      <a href="/ca/privacy/">Privacy Policy</a>
-    
-    
-       &middot; 
-      <a href="/ca/terms/">Terms</a>
-    
-  </p>
   
 
   <p class="powered-by">

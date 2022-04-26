@@ -5,12 +5,36 @@
     <link>/ca/author/javier-martin-vide/</link>
       <atom:link href="/ca/author/javier-martin-vide/index.xml" rel="self" type="application/rss+xml" />
     <description>Javier Martin-Vide</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>ca</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>ca</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
       <title>Javier Martin-Vide</title>
       <link>/ca/author/javier-martin-vide/</link>
     </image>
+    
+    <item>
+      <title>The consecutive disparity of precipitation in conterminous Spain</title>
+      <link>/ca/publication/martin_vide_2022/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/ca/publication/martin_vide_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale</title>
+      <link>/ca/publication/lemus_canovas_2021a/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/ca/publication/lemus_canovas_2021a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seasonal temperature trends on the Spanish mainland. A secular study (1916–2015)</title>
+      <link>/ca/publication/pena_angulo_2021/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/ca/publication/pena_angulo_2021/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Estimating Barcelona&#39;s metropolitan daytime hot and cold poles using Landsat-8 Land Surface Temperature</title>

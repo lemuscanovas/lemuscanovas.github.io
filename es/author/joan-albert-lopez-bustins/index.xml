@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joan Albert López-Bustins | Marc Lemus-Cánovas</title>
+    <link>/es/author/joan-albert-lopez-bustins/</link>
+      <atom:link href="/es/author/joan-albert-lopez-bustins/index.xml" rel="self" type="application/rss+xml" />
+    <description>Joan Albert López-Bustins</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>Joan Albert López-Bustins</title>
+      <link>/es/author/joan-albert-lopez-bustins/</link>
+    </image>
+    
+    <item>
+      <title>The consecutive disparity of precipitation in conterminous Spain</title>
+      <link>/es/publication/martin_vide_2022/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/es/publication/martin_vide_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assessing internal changes in the future structure of dry–hot compound events. The case of the Pyrenees</title>
+      <link>/es/publication/lemus_canovas_2021b/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/es/publication/lemus_canovas_2021b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale</title>
+      <link>/es/publication/lemus_canovas_2021a/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/es/publication/lemus_canovas_2021a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seasonal temperature trends on the Spanish mainland. A secular study (1916–2015)</title>
+      <link>/es/publication/pena_angulo_2021/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/es/publication/pena_angulo_2021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

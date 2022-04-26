@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dhais Peña-Angulo | Marc Lemus-Cánovas</title>
+    <link>/es/author/dhais-pena-angulo/</link>
+      <atom:link href="/es/author/dhais-pena-angulo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dhais Peña-Angulo</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>Dhais Peña-Angulo</title>
+      <link>/es/author/dhais-pena-angulo/</link>
+    </image>
+    
+    <item>
+      <title>The consecutive disparity of precipitation in conterminous Spain</title>
+      <link>/es/publication/martin_vide_2022/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/es/publication/martin_vide_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seasonal temperature trends on the Spanish mainland. A secular study (1916–2015)</title>
+      <link>/es/publication/pena_angulo_2021/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/es/publication/pena_angulo_2021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

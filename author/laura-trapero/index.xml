@@ -5,12 +5,20 @@
     <link>/author/laura-trapero/</link>
       <atom:link href="/author/laura-trapero/index.xml" rel="self" type="application/rss+xml" />
     <description>Laura Trapero</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
       <title>Laura Trapero</title>
       <link>/author/laura-trapero/</link>
     </image>
+    
+    <item>
+      <title>Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale</title>
+      <link>/publication/lemus_canovas_2021a/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/lemus_canovas_2021a/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Combining circulation weather types and daily precipitation modelling to derive climatic precipitation regions in the Pyrenees</title>

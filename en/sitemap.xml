@@ -124,7 +124,7 @@
   
   <url>
     <loc>/publication-type/2/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
@@ -144,7 +144,7 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
@@ -163,13 +163,148 @@
   </url>
   
   <url>
+    <loc>/publication/lemus_canovas_2022/</loc>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/lemus_canovas_2022/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/lemus_canovas_2022/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/lemus_canovas_2022/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/marc-lemus-canovas/</loc>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/marc-lemus-canovas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/marc-lemus-canovas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/marc-lemus-canovas/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication_types/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/rainfall-variability-teleconnections/</loc>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/rainfall-variability-teleconnections/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/rainfall-variability-teleconnections/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/rainfall-variability-teleconnections/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+  </url>
+  
+  <url>
     <loc>/author/dhais-pena-angulo/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/dhais-pena-angulo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/dhais-pena-angulo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/dhais-pena-angulo/"
+                />
   </url>
   
   <url>
     <loc>/author/javier-martin-vide/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
@@ -184,6 +319,426 @@
                 rel="alternate"
                 hreflang="en"
                 href="/author/javier-martin-vide/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/joan-albert-lopez-bustins/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/joan-albert-lopez-bustins/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/joan-albert-lopez-bustins/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/joan-albert-lopez-bustins/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/jose-carlos-gonzalez-hidalgo/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/jose-carlos-gonzalez-hidalgo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/jose-carlos-gonzalez-hidalgo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/jose-carlos-gonzalez-hidalgo/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/m.c.-moreno-garcia/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/m.c.-moreno-garcia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/m.c.-moreno-garcia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/m.c.-moreno-garcia/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/rainfall-variability/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/rainfall-variability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/rainfall-variability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/rainfall-variability/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/santiago-begueria/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/santiago-begueria/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/santiago-begueria/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/santiago-begueria/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/martin_vide_2022/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/martin_vide_2022/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/martin_vide_2022/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/martin_vide_2022/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/victor-trullenque/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/victor-trullenque/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/victor-trullenque/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/victor-trullenque/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/xavier-balague/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/xavier-balague/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/xavier-balague/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/xavier-balague/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/air-pollution-barcelona/</loc>
+    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/air-pollution-barcelona/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/air-pollution-barcelona/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/air-pollution-barcelona/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/lemus_canovas_2021c/</loc>
+    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/lemus_canovas_2021c/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/lemus_canovas_2021c/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/lemus_canovas_2021c/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/insua_costa_2021/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/insua_costa_2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/insua_costa_2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/insua_costa_2021/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/damian-insua-costa/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/damian-insua-costa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/damian-insua-costa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/damian-insua-costa/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/francos_2021/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/francos_2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/francos_2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/francos_2021/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/gonzalo-miguez-macho/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/gonzalo-miguez-macho/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/gonzalo-miguez-macho/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/gonzalo-miguez-macho/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/marcos-francos/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/marcos-francos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/marcos-francos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/marcos-francos/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/maria-carmen-llasat/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/maria-carmen-llasat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/maria-carmen-llasat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/maria-carmen-llasat/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/synoptic-climatology-extreme-events/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/synoptic-climatology-extreme-events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/synoptic-climatology-extreme-events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/synoptic-climatology-extreme-events/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tag/wildfires/</loc>
+    <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/wildfires/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/wildfires/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/wildfires/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/amar-halifa-marin/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/amar-halifa-marin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/amar-halifa-marin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/amar-halifa-marin/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/lemus_canovas_2021b/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/lemus_canovas_2021b/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/lemus_canovas_2021b/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/lemus_canovas_2021b/"
+                />
+  </url>
+  
+  <url>
+    <loc>/publication/lemus_canovas_2021a/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/publication/lemus_canovas_2021a/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/lemus_canovas_2021a/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/lemus_canovas_2021a/"
                 />
   </url>
   
@@ -208,142 +763,162 @@
   </url>
   
   <url>
-    <loc>/author/joan-albert-lopez-bustins/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/author/joan-martinez-artigas/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/joan-martinez-artigas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/joan-martinez-artigas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/joan-martinez-artigas/"
+                />
   </url>
   
   <url>
-    <loc>/author/jose-carlos-gonzalez-hidalgo/</loc>
+    <loc>/author/jose-m.-cuadrat/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/jose-m.-cuadrat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/jose-m.-cuadrat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/jose-m.-cuadrat/"
+                />
+  </url>
+  
+  <url>
+    <loc>/author/laura-trapero/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/author/laura-trapero/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/author/laura-trapero/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/laura-trapero/"
+                />
   </url>
   
   <url>
     <loc>/author/leire-sandonis/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/marc-lemus-canovas/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="/ca/author/marc-lemus-canovas/"
+                href="/ca/author/leire-sandonis/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/author/marc-lemus-canovas/"
+                href="/es/author/leire-sandonis/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/author/marc-lemus-canovas/"
+                href="/author/leire-sandonis/"
                 />
   </url>
   
   <url>
     <loc>/author/miquel-tomas-burguera/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/martinez_2020/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="/ca/publication_types/"
+                href="/ca/author/miquel-tomas-burguera/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/publication_types/"
+                href="/es/author/miquel-tomas-burguera/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/publication_types/"
+                href="/author/miquel-tomas-burguera/"
                 />
   </url>
   
   <url>
-    <loc>/publication/</loc>
+    <loc>/publication/martinez_2021/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="/ca/publication/"
+                href="/ca/publication/martinez_2021/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/publication/"
+                href="/es/publication/martinez_2021/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/publication/"
+                href="/publication/martinez_2021/"
                 />
   </url>
   
   <url>
-    <loc>/tag/rainfall-variability/</loc>
+    <loc>/author/roberto-serrano-notivoli/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="/ca/tag/rainfall-variability/"
+                href="/ca/author/roberto-serrano-notivoli/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/tag/rainfall-variability/"
+                href="/es/author/roberto-serrano-notivoli/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tag/rainfall-variability/"
+                href="/author/roberto-serrano-notivoli/"
                 />
   </url>
   
   <url>
-    <loc>/author/santiago-begueria/</loc>
+    <loc>/publication/pena_angulo_2021/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/pena_angulo_2020/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tags/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="/ca/tags/"
+                href="/ca/publication/pena_angulo_2021/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/pena_angulo_2021/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="/publication/pena_angulo_2021/"
                 />
   </url>
   
@@ -699,26 +1274,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/publication/lemus_canovas_2019a/"
-                />
-  </url>
-  
-  <url>
-    <loc>/author/laura-trapero/</loc>
-    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/author/laura-trapero/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/author/laura-trapero/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/author/laura-trapero/"
                 />
   </url>
   

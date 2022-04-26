@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Damian Insua-Costa | Marc Lemus-Canovas</title>
+    <link>/author/damian-insua-costa/</link>
+      <atom:link href="/author/damian-insua-costa/index.xml" rel="self" type="application/rss+xml" />
+    <description>Damian Insua-Costa</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>Damian Insua-Costa</title>
+      <link>/author/damian-insua-costa/</link>
+    </image>
+    
+    <item>
+      <title>Climatology and ranking of hazardous precipitation events in the western Mediterranean area</title>
+      <link>/publication/insua_costa_2021/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/insua_costa_2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale</title>
+      <link>/publication/lemus_canovas_2021a/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/lemus_canovas_2021a/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>air pollution, Barcelona | Marc Lemus-Canovas</title>
+    <link>/tag/air-pollution-barcelona/</link>
+      <atom:link href="/tag/air-pollution-barcelona/index.xml" rel="self" type="application/rss+xml" />
+    <description>air pollution, Barcelona</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Fri, 15 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
+      <title>air pollution, Barcelona</title>
+      <link>/tag/air-pollution-barcelona/</link>
+    </image>
+    
+    <item>
+      <title>Barcelona intense urban activity greatly limited the role of the atmosphere in driving NO2 concentration in 2018</title>
+      <link>/publication/lemus_canovas_2021c/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/lemus_canovas_2021c/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

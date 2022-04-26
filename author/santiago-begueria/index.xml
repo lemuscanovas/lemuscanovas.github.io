@@ -5,7 +5,7 @@
     <link>/author/santiago-begueria/</link>
       <atom:link href="/author/santiago-begueria/index.xml" rel="self" type="application/rss+xml" />
     <description>Santiago Beguería</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
       <title>Santiago Beguería</title>
@@ -13,10 +13,18 @@
     </image>
     
     <item>
+      <title>The consecutive disparity of precipitation in conterminous Spain</title>
+      <link>/publication/martin_vide_2022/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/martin_vide_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Seasonal temperature trends on the Spanish mainland. A secular study (1916–2015)</title>
-      <link>/publication/pena_angulo_2020/</link>
+      <link>/publication/pena_angulo_2021/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/pena_angulo_2020/</guid>
+      <guid>/publication/pena_angulo_2021/</guid>
       <description></description>
     </item>
     
