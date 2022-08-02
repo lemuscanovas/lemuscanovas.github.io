@@ -1,8 +1,11 @@
-pandoc: '2.6'
-pkgdown: 1.4.1
+pandoc: 2.11.2
+pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   circulation-to-environment: circulation-to-environment.html
   classification_metrics: classification_metrics.html
   environment-to-circulation: environment-to-circulation.html
+  Lamb: Lamb.html
+  SOM: SOM.html
+last_built: 2021-04-21T10:55Z
 
