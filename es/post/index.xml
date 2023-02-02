@@ -5,7 +5,7 @@
     <link>/es/post/</link>
       <atom:link href="/es/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>Marc Lemus-Canovas (2020)</copyright><lastBuildDate>Fri, 15 Apr 2022 15:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>Marc Lemus-Canovas (2023)</copyright><lastBuildDate>Fri, 15 Apr 2022 15:00:00 -0500</lastBuildDate>
     <image>
       <url>/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
@@ -68,14 +68,14 @@
     <item>
       <title>[Tutorial] Clasificación sinóptica de eventos de precipitación abundante con la librería {synoptReg}</title>
       <link>/es/post/20220412/tutorial_aec2022/</link>
-      <pubDate>Tue, 19 Oct 2021 15:00:00 -0500</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/es/post/20220412/tutorial_aec2022/</guid>
       <description>
 
 
 &lt;div id=&#34;introducción&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Introducción&lt;/h3&gt;
-&lt;p&gt;Este pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R &lt;a href=&#34;https://lemuscanovas.github.io/synoptreg/&#34;&gt;&lt;strong&gt;{synoptReg}&lt;/strong&gt;&lt;/a&gt; [&lt;a href=&#34;https://www.sciencedirect.com/science/article/abs/pii/S1364815219300064&#34;&gt;@lemus-canovas2019&lt;/a&gt;]. Los pasos que se seguirán son básicamente 3:&lt;/p&gt;
+&lt;p&gt;Este pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R &lt;a href=&#34;https://lemuscanovas.github.io/synoptreg/&#34;&gt;&lt;strong&gt;{synoptReg}&lt;/strong&gt;&lt;/a&gt; &lt;a href=&#34;https://www.sciencedirect.com/science/article/abs/pii/S1364815219300064&#34;&gt;lemus-canovas2019&lt;/a&gt;]. Los pasos que se seguirán son básicamente 3:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Descarga y cómputo de los eventos torrenciales&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Descarga y preproceso de los datos diarios de presión en superfície del reanálisis NCEP/NCAR 2.&lt;/p&gt;&lt;/li&gt;
@@ -127,7 +127,7 @@ vars_torrential &amp;lt;- tidy_nc(x = slp_data,
                        time_subset = dates$DATE,
                        name_vars = &amp;quot;mslp&amp;quot;)
 vars_torrential&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 45,885 x 6
+&lt;pre&gt;&lt;code&gt;## # A tibble: 45,885 × 6
 ##    var     lon   lat time         value anom_value
 ##    &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;
 ##  1 mslp  -20      70 1949-05-15 102538.       903.
@@ -140,7 +140,8 @@ vars_torrential&lt;/code&gt;&lt;/pre&gt;
 ##  8 mslp   -2.5    70 1949-05-15 101942.       510.
 ##  9 mslp    0      70 1949-05-15 101828.       417.
 ## 10 mslp    2.5    70 1949-05-15 101738.       352.
-## # ... with 45,875 more rows&lt;/code&gt;&lt;/pre&gt;
+## # … with 45,875 more rows
+## # ℹ Use `print(n = ...)` to see more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clasificación-sinóptica-mediante-análisis-de-componentes-principales&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Clasificación sinóptica mediante Análisis de Componentes Principales&lt;/h3&gt;
@@ -150,9 +151,8 @@ vars_torrential&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;info$screeplot&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/es/post/20220412/tutorial_AEC2022_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cl &amp;lt;- synoptclas(vars_torrential,ncomp = 6,norm = T,matrix_mode = &amp;quot;T-mode&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sf::sf_use_s2(F)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Spherical geometry (s2) switched off&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;borders &amp;lt;- ne_countries(continent = c(&amp;quot;europe&amp;quot;,&amp;quot;africa&amp;quot;),
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sf::sf_use_s2(F)
+borders &amp;lt;- ne_countries(continent = c(&amp;quot;europe&amp;quot;,&amp;quot;africa&amp;quot;),
                                        returnclass = &amp;quot;sp&amp;quot;,scale = 50)
 
 
@@ -200,6 +200,7 @@ mo_hist &amp;lt;- clas %&amp;gt;%
   group_by(WT) %&amp;gt;%
   mutate(n_prop = n/length(time)) %&amp;gt;%
   distinct(WT,mo,.keep_all = T) %&amp;gt;%
+  ungroup() %&amp;gt;%
   complete(mo, WT = WTs, 
            fill = list(n_prop = 0))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mo_hist, aes(x = mo, y = WT,fill = n_prop))+

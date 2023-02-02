@@ -508,86 +508,6 @@
   </url>
   
   <url>
-    <loc>/es/post/20220412/tutorial_aec2022/</loc>
-    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/es/tag/acp/</loc>
-    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/es/categories/</loc>
-    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/tag/clasificacion-sinoptica/</loc>
-    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/es/category/r/</loc>
-    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/category/r/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/category/r/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/category/r/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/tag/synoptreg/</loc>
-    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="/ca/tag/synoptreg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tag/synoptreg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tag/synoptreg/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/category/synoptreg/</loc>
-    <lastmod>2021-10-19T15:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/es/tag/air-pollution-barcelona/</loc>
     <lastmod>2021-10-15T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -1028,6 +948,26 @@
   </url>
   
   <url>
+    <loc>/es/categories/</loc>
+    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/categories/"
+                />
+  </url>
+  
+  <url>
     <loc>/es/post/20200708/tendencias/</loc>
     <lastmod>2020-07-09T15:00:00-05:00</lastmod>
   </url>
@@ -1069,6 +1009,26 @@
                 rel="alternate"
                 hreflang="es"
                 href="/es/post/20200708/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/category/r/</loc>
+    <lastmod>2020-07-09T15:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/category/r/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/category/r/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/category/r/"
                 />
   </url>
   
@@ -1259,6 +1219,26 @@
                 rel="alternate"
                 hreflang="es"
                 href="/es/tag/synoptic-climatology/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/tag/synoptreg/</loc>
+    <lastmod>2019-08-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="/ca/tag/synoptreg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tag/synoptreg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tag/synoptreg/"
                 />
   </url>
   
@@ -1500,6 +1480,22 @@
                 hreflang="es"
                 href="/es/project/"
                 />
+  </url>
+  
+  <url>
+    <loc>/es/post/20220412/tutorial_aec2022/</loc>
+  </url>
+  
+  <url>
+    <loc>/es/tag/acp/</loc>
+  </url>
+  
+  <url>
+    <loc>/es/tag/clasificacion-sinoptica/</loc>
+  </url>
+  
+  <url>
+    <loc>/es/category/synoptreg/</loc>
   </url>
   
   <url>

@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="IntroducciónEste pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R {synoptReg} [@lemus-canovas2019].">
+  <meta name="description" content="IntroducciónEste pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R {synoptReg} lemus-canovas2019].">
 
   
   <link rel="alternate" hreflang="es" href="/es/post/20220412/tutorial_aec2022/">
@@ -276,13 +276,11 @@
   <meta property="og:site_name" content="Marc Lemus-Cánovas">
   <meta property="og:url" content="/es/post/20220412/tutorial_aec2022/">
   <meta property="og:title" content="[Tutorial] Clasificación sinóptica de eventos de precipitación abundante con la librería {synoptReg} | Marc Lemus-Cánovas">
-  <meta property="og:description" content="IntroducciónEste pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R {synoptReg} [@lemus-canovas2019]."><meta property="og:image" content="/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="IntroducciónEste pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R {synoptReg} lemus-canovas2019]."><meta property="og:image" content="/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="es">
   
     
-      <meta property="article:published_time" content="2021-10-19T15:00:00-05:00">
     
-    <meta property="article:modified_time" content="2021-10-19T15:00:00-05:00">
   
 
   
@@ -310,8 +308,8 @@
   },
   "headline": "[Tutorial] Clasificación sinóptica de eventos de precipitación abundante con la librería {synoptReg}",
   
-  "datePublished": "2021-10-19T15:00:00-05:00",
-  "dateModified": "2021-10-19T15:00:00-05:00",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +324,7 @@
       "url": "/images/icon_hu03a6f3421006a4cc5fd6ea2595e8c82d_51099_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Introducción\rEste pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R {synoptReg} [@lemus-canovas2019]."
+  "description": "Introducción\rEste pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R {synoptReg} lemus-canovas2019]."
 }
 </script>
 
@@ -597,7 +595,7 @@
     
       
     
-    Oct 19, 2021
+    Jan 1, 0001
   </span>
   
 
@@ -651,7 +649,7 @@
 
 <div id="introducción" class="section level3">
 <h3>Introducción</h3>
-<p>Este pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R <a href="https://lemuscanovas.github.io/synoptreg/"><strong>{synoptReg}</strong></a> [<a href="https://www.sciencedirect.com/science/article/abs/pii/S1364815219300064">@lemus-canovas2019</a>]. Los pasos que se seguirán son básicamente 3:</p>
+<p>Este pequeño tutorial tiene como objetivo computar una clasificación sinóptica de los días con precipitación torrencial en el Observatorio del Ebro (Tortosa, Catalunya) con la librería de programación R <a href="https://lemuscanovas.github.io/synoptreg/"><strong>{synoptReg}</strong></a> <a href="https://www.sciencedirect.com/science/article/abs/pii/S1364815219300064">lemus-canovas2019</a>]. Los pasos que se seguirán son básicamente 3:</p>
 <ol style="list-style-type: decimal">
 <li><p>Descarga y cómputo de los eventos torrenciales</p></li>
 <li><p>Descarga y preproceso de los datos diarios de presión en superfície del reanálisis NCEP/NCAR 2.</p></li>
@@ -703,7 +701,7 @@ vars_torrential &lt;- tidy_nc(x = slp_data,
                        time_subset = dates$DATE,
                        name_vars = &quot;mslp&quot;)
 vars_torrential</code></pre>
-<pre><code>## # A tibble: 45,885 x 6
+<pre><code>## # A tibble: 45,885 × 6
 ##    var     lon   lat time         value anom_value
 ##    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;date&gt;       &lt;dbl&gt;      &lt;dbl&gt;
 ##  1 mslp  -20      70 1949-05-15 102538.       903.
@@ -716,7 +714,8 @@ vars_torrential</code></pre>
 ##  8 mslp   -2.5    70 1949-05-15 101942.       510.
 ##  9 mslp    0      70 1949-05-15 101828.       417.
 ## 10 mslp    2.5    70 1949-05-15 101738.       352.
-## # ... with 45,875 more rows</code></pre>
+## # … with 45,875 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
 </div>
 <div id="clasificación-sinóptica-mediante-análisis-de-componentes-principales" class="section level3">
 <h3>Clasificación sinóptica mediante Análisis de Componentes Principales</h3>
@@ -726,9 +725,8 @@ vars_torrential</code></pre>
 <pre class="r"><code>info$screeplot</code></pre>
 <p><img src="/es/post/20220412/tutorial_AEC2022_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <pre class="r"><code>cl &lt;- synoptclas(vars_torrential,ncomp = 6,norm = T,matrix_mode = &quot;T-mode&quot;)</code></pre>
-<pre class="r"><code>sf::sf_use_s2(F)</code></pre>
-<pre><code>## Spherical geometry (s2) switched off</code></pre>
-<pre class="r"><code>borders &lt;- ne_countries(continent = c(&quot;europe&quot;,&quot;africa&quot;),
+<pre class="r"><code>sf::sf_use_s2(F)
+borders &lt;- ne_countries(continent = c(&quot;europe&quot;,&quot;africa&quot;),
                                        returnclass = &quot;sp&quot;,scale = 50)
 
 
@@ -776,6 +774,7 @@ mo_hist &lt;- clas %&gt;%
   group_by(WT) %&gt;%
   mutate(n_prop = n/length(time)) %&gt;%
   distinct(WT,mo,.keep_all = T) %&gt;%
+  ungroup() %&gt;%
   complete(mo, WT = WTs, 
            fill = list(n_prop = 0))</code></pre>
 <pre class="r"><code>ggplot(data = mo_hist, aes(x = mo, y = WT,fill = n_prop))+
@@ -976,7 +975,7 @@ mo_hist &lt;- clas %&gt;%
 
       <div class="media-body">
         <h5 class="card-title"><a href="/">Marc Lemus-Canovas</a></h5>
-        <h6 class="card-subtitle">Investigador predoctoral FPU</h6>
+        <h6 class="card-subtitle">Investigador Postdoctoral</h6>
         <p class="card-text">Soy un apasionado del tratamiento de datos climáticos, especialmente utilizando R!</p>
         <ul class="network-icon" aria-hidden="true">
   
@@ -990,7 +989,7 @@ mo_hist &lt;- clas %&gt;%
     
     
     <li>
-      <a href="mailto:mlemus@ub.edu" >
+      <a href="mailto:mlemus@ari.ad" >
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -1252,7 +1251,7 @@ s.setAttribute('data-timestamp', +new Date());
   
 
   <p class="powered-by">
-    Marc Lemus-Canovas (2020)
+    Marc Lemus-Canovas (2023)
   </p>
 
   
