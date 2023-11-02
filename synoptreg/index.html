@@ -106,13 +106,13 @@
 <li>
 <p>Compute an objective <strong>synoptic classification</strong> to obtain the main atmospheric patterns, the so-called weather types, of a given region. Two approaches are provided:</p>
 <ul>
-<li><p><strong><em>Circulation-To-Environment</em></strong>: First establishes the main circulation types for a long time series and then characterises an environmental variable (i.e. precipitation,NO<sub>2</sub>,O<sub>3</sub>,…) based on the previous circulation types.</p></li>
-<li><p><strong><em>Environment-To-Circulation</em></strong>: First categorises the environmental variable (e.g. precipitation, temperature,…) and then characterises the synoptic patterns prevailing under specific environmental conditions (e.g. days with elevated temperatures, torrential rainfall events).</p></li>
-<li><p>Several methods are implemented: PCA-based, Lamb and SOM.</p></li>
+<li><p><strong><em>Circulation-To-Environment</em></strong>: First establishes the main circulation types for a long time series and then characterises an environmental/meteorological variable (i.e. precipitation,NO<sub>2</sub>,O<sub>3</sub>,…) based on the previous circulation types.</p></li>
+<li><p><strong><em>Environment-To-Circulation</em></strong>: characterises the synoptic patterns prevailing under extreme specific environmental conditions. (e.g. torrential rainfall days).</p></li>
+<li><p>Methods implemented: PCA-based, Automatic Lamb (Jenkinson &amp; Collison)</p></li>
 </ul>
 </li>
-<li><p>Represent the <strong>impact of each weather type</strong> on an environmental variable (continuous): precipitation, temperature, pollutants, …</p></li>
-<li><p>Define a <strong>categorical regionalization</strong> of this environmental variable. Each region will be independent and with specific characteristics.</p></li>
+<li><p>Represent the <strong>impact of each weather type</strong> on an environmental/meteorological variable: precipitation, temperature, pollutants, …</p></li>
+<li><p>Compute a <strong>clustering</strong> to get a spatial summary of the main regions of such a variable.</p></li>
 </ul>
 </div>
 <div class="section level2">
@@ -121,11 +121,9 @@
 <div class="section level3">
 <h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h3>
+<p><span style="color:darkred;">Major update in the latest version due to the removal of rgdal, maptools and sp dependencies!</span></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># To install the CRAN version (1.2.1):</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"synoptReg"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># To install the latest version from Github (1.3.0):</span></span>
+<code class="sourceCode R"><span><span class="co"># To install the latest version from Github (1.3.0):</span></span>
 <span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"lemuscanovas/synoptReg"</span><span class="op">)</span></span></code></pre></div>
 </div>

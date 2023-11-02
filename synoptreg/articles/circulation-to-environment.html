@@ -78,7 +78,7 @@
                         <h4 data-toc-skip class="author">Marc
 Lemus-Canovas</h4>
             
-            <h4 data-toc-skip class="date">2023-10-27</h4>
+            <h4 data-toc-skip class="date">2023-11-02</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/lemuscanovas/synoptReg/blob/HEAD/vignettes/circulation-to-environment.Rmd" class="external-link"><code>vignettes/circulation-to-environment.Rmd</code></a></small>
       <div class="d-none name"><code>circulation-to-environment.Rmd</code></div>
@@ -127,10 +127,9 @@ types/circulation types.</p>
 </h2>
 <p>In this example we will use the data previously downloaded with the
 <code><a href="../reference/download_ncep.html">download_ncep()</a></code> function. Specifically, we will use the
-<code>mslp</code> and <code>z500</code> objects loaded into the package,
-referring to the mean sea level pressure and 500 hPa geopotential height
-variables, respectively. The time period of the atmospheric variables is
-from 2000-01-01 to 2002-12-31. A total of 3 years.</p>
+<code>mslp</code> object already loaded into the package, referring to
+the mean sea level pressure. The time period of the atmospheric
+variables is from 2000-01-01 to 2010-12-31. A total of 11 years.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">synoptReg</span><span class="op">)</span></span>
 <span><span class="co">#&gt; The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,</span></span>
@@ -168,24 +167,18 @@ from 2000-01-01 to 2002-12-31. A total of 3 years.</p>
 <span><span class="co">#&gt;     cross</span></span>
 <span></span>
 <span><span class="va">slp_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"mslp_ei.nc"</span>, package <span class="op">=</span> <span class="st">"synoptReg"</span><span class="op">)</span></span>
-<span><span class="va">z500_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"z500_ei.nc"</span>, package <span class="op">=</span> <span class="st">"synoptReg"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">msl_ei</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_nc.html">read_nc</a></span><span class="op">(</span><span class="va">slp_file</span><span class="op">)</span></span>
-<span><span class="va">z500_ei</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_nc.html">read_nc</a></span><span class="op">(</span><span class="va">z500_file</span>,anomaly <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># The output is just an SpatRaster object</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">z500_ei</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">msl_ei</span><span class="op">)</span></span>
 <span><span class="co">#&gt; class       : SpatRaster </span></span>
 <span><span class="co">#&gt; dimensions  : 11, 13, 4018  (nrow, ncol, nlyr)</span></span>
 <span><span class="co">#&gt; resolution  : 2.5, 2.5  (x, y)</span></span>
 <span><span class="co">#&gt; extent      : -16.25, 16.25, 28.75, 56.25  (xmin, xmax, ymin, ymax)</span></span>
 <span><span class="co">#&gt; coord. ref. : lon/lat WGS 84 </span></span>
-<span><span class="co">#&gt; source(s)   : memory</span></span>
-<span><span class="co">#&gt; varname     : z (Geopotential) </span></span>
-<span><span class="co">#&gt; names       :        z_1,        z_2,        z_3,        z_4,        z_5,        z_6, ... </span></span>
-<span><span class="co">#&gt; min values  : -2108.3423, -2137.6039, -2481.7125, -3137.6695, -3835.5451, -2447.2036, ... </span></span>
-<span><span class="co">#&gt; max values  :   830.8972,   940.7783,   792.2698,   388.1245,   122.3911,   166.3179, ... </span></span>
-<span><span class="co">#&gt; unit        : m**2 s**-2, m**2 s**-2, m**2 s**-2, m**2 s**-2, m**2 s**-2, m**2 s**-2, ... </span></span>
+<span><span class="co">#&gt; source      : mslp_ei.nc </span></span>
+<span><span class="co">#&gt; varname     : msl (Mean sea level pressure) </span></span>
+<span><span class="co">#&gt; names       : msl_1, msl_2, msl_3, msl_4, msl_5, msl_6, ... </span></span>
+<span><span class="co">#&gt; unit        :    Pa,    Pa,    Pa,    Pa,    Pa,    Pa, ... </span></span>
 <span><span class="co">#&gt; time (days) : 2000-01-01 to 2010-12-31</span></span></code></pre></div>
 <p>The first step before executing the synoptic classification is to
 pass the function tidy_nc(), since it will allow us to join the two
@@ -199,10 +192,7 @@ period.</p>
 <p>In any case, now we will only group our atmospheric variables. It is
 mandatory to use a list for grouping variables.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">msl_ei_sr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_synoptReg.html">as_synoptReg</a></span><span class="op">(</span><span class="va">msl_ei</span><span class="op">)</span></span>
-<span><span class="va">z500_ei_sr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_synoptReg.html">as_synoptReg</a></span><span class="op">(</span><span class="va">z500_ei</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">vars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">msl_ei_sr</span>, <span class="va">z500_ei_sr</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">msl_ei_sr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_synoptReg.html">as_synoptReg</a></span><span class="op">(</span><span class="va">msl_ei</span><span class="op">)</span></span></code></pre></div>
 <p>Once the two variables are joined in the same tibble, we can proceed
 to explore our data set to decide the number of components to retain.
 For such decision we will use the pca_decision() function. It is
@@ -212,57 +202,57 @@ our data. Also, since we’re working with 2 variables that have different
 units of measurement, it’s important to normalize/standardize such
 variables.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pca_decision.html">pca_decision</a></span><span class="op">(</span><span class="va">vars</span>,ncomp <span class="op">=</span> <span class="fl">30</span>,norm <span class="op">=</span> <span class="cn">T</span>,matrix_mode <span class="op">=</span> <span class="st">"S-mode"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pca_decision.html">pca_decision</a></span><span class="op">(</span><span class="va">msl_ei_sr</span>,ncomp <span class="op">=</span> <span class="fl">30</span>,norm <span class="op">=</span> <span class="cn">T</span>,matrix_mode <span class="op">=</span> <span class="st">"S-mode"</span><span class="op">)</span></span>
 <span><span class="va">info</span><span class="op">$</span><span class="va">screeplot</span> <span class="co">#scree test</span></span></code></pre></div>
 <p><img src="circulation-to-environment_files/figure-html/unnamed-chunk-3-1.png" width="672"></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">info</span><span class="op">$</span><span class="va">summary</span><span class="op">[</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">]</span> <span class="co"># first 10 PCs</span></span>
-<span><span class="co">#&gt;                        1         2         3         4          5          6</span></span>
-<span><span class="co">#&gt; sdev          10.4087822 7.8720684 6.6881486 5.1484813 3.25659957 2.69474712</span></span>
-<span><span class="co">#&gt; prop.variance  0.3789151 0.2167304 0.1564422 0.0927044 0.03709119 0.02539675</span></span>
-<span><span class="co">#&gt; cum.variance   0.3789151 0.5956455 0.7520877 0.8447921 0.88188326 0.90728001</span></span>
+<span><span class="co">#&gt;                       1         2         3          4          5          6</span></span>
+<span><span class="co">#&gt; sdev          8.2273640 5.7411415 4.2465834 2.59031446 2.33961526 1.84155183</span></span>
+<span><span class="co">#&gt; prop.variance 0.4734711 0.2305518 0.1261396 0.04693286 0.03828785 0.02372138</span></span>
+<span><span class="co">#&gt; cum.variance  0.4734711 0.7040229 0.8301625 0.87709538 0.91538323 0.93910461</span></span>
 <span><span class="co">#&gt;                        7          8           9          10</span></span>
-<span><span class="co">#&gt; sdev          2.34252337 1.78480256 1.534254531 1.411645834</span></span>
-<span><span class="co">#&gt; prop.variance 0.01919154 0.01114096 0.008232598 0.006969371</span></span>
-<span><span class="co">#&gt; cum.variance  0.92647155 0.93761251 0.945845106 0.952814477</span></span></code></pre></div>
+<span><span class="co">#&gt; sdev          1.31226694 1.19991499 1.044715181 0.790432555</span></span>
+<span><span class="co">#&gt; prop.variance 0.01204527 0.01007101 0.007634276 0.004370204</span></span>
+<span><span class="co">#&gt; cum.variance  0.95114988 0.96122089 0.968855163 0.973225367</span></span></code></pre></div>
 <p>After taking a look at the scree test, it seems reasonable to retain
-5 PCs, which could allow up to 10 WT. These 5 PCs explain arround 90% of
+4 PCs, which could allow up to 8 WT. These 4 PCs explain arround 88% of
 the explained variance. Now, we can already compute the synoptic
 classification:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">cl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/synoptclas.html">synoptclas</a></span><span class="op">(</span><span class="va">vars</span>,ncomp <span class="op">=</span> <span class="fl">5</span>,norm <span class="op">=</span> <span class="cn">T</span>,matrix_mode <span class="op">=</span> <span class="st">"S-mode"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">cl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/synoptclas.html">synoptclas</a></span><span class="op">(</span><span class="va">msl_ei_sr</span>,ncomp <span class="op">=</span> <span class="fl">4</span>,norm <span class="op">=</span> <span class="cn">T</span>,matrix_mode <span class="op">=</span> <span class="st">"S-mode"</span><span class="op">)</span></span>
 <span><span class="va">cl</span></span>
 <span><span class="co">#&gt; $clas</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 4,018 × 2</span></span></span>
 <span><span class="co">#&gt;    time          WT</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 2000-01-01     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 2000-01-02     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 2000-01-03     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 2000-01-04     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 2000-01-05     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 2000-01-06     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 2000-01-07     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 2000-01-08     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 2000-01-09     7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 2000-01-10     9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 2000-01-01     1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 2000-01-02     1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 2000-01-03     1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 2000-01-04     1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 2000-01-05     4</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 2000-01-06     1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 2000-01-07     1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 2000-01-08     1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 2000-01-09     5</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 2000-01-10     5</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 4,008 more rows</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $grid_clas</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 2,574 × 8</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1,144 × 8</span></span></span>
 <span><span class="co">#&gt;        x     y time       var   units    WT mean_WT_value cv_WT_value</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> -<span style="color: #BB0000;">15</span>      55 2000-01-01 msl   Pa        7       <span style="text-decoration: underline;">100</span>838.       1.46 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> -<span style="color: #BB0000;">15</span>      55 2000-01-10 msl   Pa        9       <span style="text-decoration: underline;">101</span>370.       1.07 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> -<span style="color: #BB0000;">15</span>      55 2000-01-14 msl   Pa        3       <span style="text-decoration: underline;">101</span>661.       1.15 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> -<span style="color: #BB0000;">15</span>      55 2000-01-18 msl   Pa        1       <span style="text-decoration: underline;">102</span>375.       1.02 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> -<span style="color: #BB0000;">15</span>      55 2000-01-22 msl   Pa        8       <span style="text-decoration: underline;">101</span>220.       1.19 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> -<span style="color: #BB0000;">15</span>      55 2000-02-10 msl   Pa        2       <span style="text-decoration: underline;">100</span>197.       1.30 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> -<span style="color: #BB0000;">15</span>      55 2000-03-17 msl   Pa        4       <span style="text-decoration: underline;">102</span>064.       0.708</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> -<span style="color: #BB0000;">15</span>      55 2000-03-23 msl   Pa        5        <span style="text-decoration: underline;">99</span>395.       1.18 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> -<span style="color: #BB0000;">15</span>      55 2000-05-17 msl   Pa        6       <span style="text-decoration: underline;">100</span>985.       0.784</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> -<span style="color: #BB0000;">12.5</span>    55 2000-01-01 msl   Pa        7       <span style="text-decoration: underline;">100</span>954.       1.42 </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2,564 more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> -<span style="color: #BB0000;">15</span>      55 2000-01-01 msl   Pa        1       <span style="text-decoration: underline;">101</span>017.       1.43 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> -<span style="color: #BB0000;">15</span>      55 2000-01-05 msl   Pa        4        <span style="text-decoration: underline;">99</span>066.       1.12 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> -<span style="color: #BB0000;">15</span>      55 2000-01-09 msl   Pa        5       <span style="text-decoration: underline;">100</span>630.       1.20 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> -<span style="color: #BB0000;">15</span>      55 2000-01-14 msl   Pa        3       <span style="text-decoration: underline;">102</span>032.       0.863</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> -<span style="color: #BB0000;">15</span>      55 2000-01-22 msl   Pa        7       <span style="text-decoration: underline;">100</span>975.       1.23 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> -<span style="color: #BB0000;">15</span>      55 2000-03-12 msl   Pa        8       <span style="text-decoration: underline;">101</span>281.       1.02 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> -<span style="color: #BB0000;">15</span>      55 2000-03-21 msl   Pa        6       <span style="text-decoration: underline;">101</span>362.       1.13 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> -<span style="color: #BB0000;">15</span>      55 2000-03-28 msl   Pa        2       <span style="text-decoration: underline;">101</span>150.       1.09 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> -<span style="color: #BB0000;">12.5</span>    55 2000-01-01 msl   Pa        1       <span style="text-decoration: underline;">101</span>131.       1.40 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> -<span style="color: #BB0000;">12.5</span>    55 2000-01-05 msl   Pa        4        <span style="text-decoration: underline;">99</span>083.       1.08 </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1,134 more rows</span></span></span></code></pre></div>
 <p>The object returned by synoptclas is a list that contains a tibble
 with each date and its corresponding WT, and another tibble that is a
 grid with the average value of the atmospheric variables for each CT.
@@ -271,22 +261,23 @@ patterns:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="va">borders</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://docs.ropensci.org/rnaturalearth/reference/ne_countries.html" class="external-link">ne_countries</a></span><span class="op">(</span>continent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"europe"</span>,<span class="st">"africa"</span><span class="op">)</span>,</span>
-<span>                                       returnclass <span class="op">=</span> <span class="st">"sf"</span><span class="op">)</span></span>
+<span>                                       returnclass <span class="op">=</span> <span class="st">"sf"</span>,</span>
+<span>                        scale <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour_fill.html" class="external-link">geom_contour_fill</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="va">var</span> <span class="op">==</span> <span class="st">"z"</span><span class="op">)</span>, </span>
-<span>              mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span>,z <span class="op">=</span> <span class="va">mean_WT_value</span><span class="op">/</span><span class="fl">9.8</span><span class="op">)</span>,</span>
-<span>              binwidth <span class="op">=</span> <span class="fl">20</span><span class="op">)</span><span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour_fill.html" class="external-link">geom_contour_fill</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="va">var</span> <span class="op">==</span> <span class="st">"msl"</span><span class="op">)</span>, </span>
+<span>              mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span>,z <span class="op">=</span> <span class="va">mean_WT_value</span><span class="op">/</span><span class="fl">100</span><span class="op">)</span>,</span>
+<span>              binwidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">borders</span>, fill <span class="op">=</span> <span class="st">"transparent"</span><span class="op">)</span><span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_contour2.html" class="external-link">geom_contour2</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>,<span class="va">var</span> <span class="op">==</span> <span class="st">"msl"</span><span class="op">)</span>,</span>
 <span>                  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">x</span>,y<span class="op">=</span><span class="va">y</span>,z<span class="op">=</span><span class="va">mean_WT_value</span><span class="op">/</span><span class="fl">100</span><span class="op">)</span>,</span>
 <span>                  binwidth <span class="op">=</span> <span class="fl">4</span>, color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/pkg/metR/man/geom_text_contour.html" class="external-link">geom_text_contour</a></span><span class="op">(</span>data<span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="va">var</span> <span class="op">==</span> <span class="st">"msl"</span><span class="op">)</span>,</span>
 <span>                      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">x</span>,y<span class="op">=</span><span class="va">y</span>,z<span class="op">=</span><span class="va">mean_WT_value</span><span class="op">/</span><span class="fl">100</span><span class="op">)</span>, </span>
-<span>                      stroke <span class="op">=</span> <span class="fl">0.15</span>,binwidth <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="op">+</span></span>
+<span>                      stroke <span class="op">=</span> <span class="fl">0.15</span>,binwidth <span class="op">=</span> <span class="fl">4</span>,skip <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html" class="external-link">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_colourbar.html" class="external-link">guide_colourbar</a></span><span class="op">(</span>barwidth <span class="op">=</span> <span class="fl">9</span>, barheight <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">WT</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/pkg/metR/man/scale_divergent.html" class="external-link">scale_fill_divergent</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Z anomaly (m)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">WT</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html" class="external-link">scale_fill_gradientn</a></span><span class="op">(</span>colours <span class="op">=</span> <span class="fu">pals</span><span class="fu">::</span><span class="fu"><a href="https://kwstat.github.io/pals/reference/continuous.html" class="external-link">jet</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, name <span class="op">=</span> <span class="st">"MSLP (hPa)"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_x_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">15</span>,<span class="fl">15</span><span class="op">)</span>, expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">30</span>,<span class="fl">55</span><span class="op">)</span>, expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
@@ -320,29 +311,29 @@ interaction of WTs with precipitation?</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ct2pcp</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ct2env.html">ct2env</a></span><span class="op">(</span><span class="va">pcp</span>,clas <span class="op">=</span> <span class="va">cl</span><span class="op">$</span><span class="va">clas</span>,fun <span class="op">=</span> <span class="va">mean</span>,out <span class="op">=</span> <span class="st">"data.frame"</span><span class="op">)</span></span>
 <span><span class="va">ct2pcp</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1,899 × 5</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1,688 × 5</span></span></span>
 <span><span class="co">#&gt;          x       y WT       tp units</span></span>
 <span><span class="co">#&gt;      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 1     0.553 mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 2     2.95  mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 3     1.91  mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 4     4.30  mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 5     1.21  mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 6     2.83  mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 7     1.42  mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 8     1.02  mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 9     0.777 mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1<span style="text-decoration: underline;">085</span>672 4<span style="text-decoration: underline;">453</span>822 1     0.526 mm   </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1,889 more rows</span></span></span></code></pre></div>
-<p>The result is a tibble containing the variables lon, lat, WT and
-calc. This last column is the result of the average precipitation for
-each grid point and WT.</p>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 1     0.424 mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 2     3.53  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 3     1.53  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 4     1.15  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 5     1.93  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 6     1.42  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 7     1.21  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1<span style="text-decoration: underline;">105</span>672 4<span style="text-decoration: underline;">458</span>822 8     1.62  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1<span style="text-decoration: underline;">085</span>672 4<span style="text-decoration: underline;">453</span>822 1     0.420 mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1<span style="text-decoration: underline;">085</span>672 4<span style="text-decoration: underline;">453</span>822 2     3.64  mm   </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1,678 more rows</span></span></span></code></pre></div>
 <p>To visualize the result:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">ct2pcp</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">x</span>, y<span class="op">=</span><span class="va">y</span>,color<span class="op">=</span><span class="va">tp</span><span class="op">)</span>, size <span class="op">=</span><span class="fl">0.2</span><span class="op">)</span> <span class="op">+</span> <span class="co"># original was mm*10</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html" class="external-link">scale_color_gradientn</a></span><span class="op">(</span>colours <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu">pals</span><span class="fu">::</span><span class="fu"><a href="https://kwstat.github.io/pals/reference/niccoli.html" class="external-link">linearl</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span><span class="op">)</span>, </span>
-<span>  name <span class="op">=</span> <span class="st">"rainfall (mm)"</span>,na.value<span class="op">=</span><span class="st">"transparent"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html" class="external-link">scale_color_gradientn</a></span><span class="op">(</span>colours <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu">pals</span><span class="fu">::</span><span class="fu"><a href="https://kwstat.github.io/pals/reference/niccoli.html" class="external-link">linearl</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                        breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.2</span>,<span class="fl">1</span>,<span class="fl">5</span>,<span class="fl">10</span><span class="op">)</span>,</span>
+<span>                        trans <span class="op">=</span> <span class="st">"sqrt"</span>, </span>
+<span>                        name <span class="op">=</span> <span class="st">"rainfall (mm)"</span>,</span>
+<span>                        na.value<span class="op">=</span><span class="st">"transparent"</span>,guide <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_colourbar.html" class="external-link">guide_colorbar</a></span><span class="op">(</span>barheight <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_fixed.html" class="external-link">coord_equal</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">WT</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html" class="external-link">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_colourbar.html" class="external-link">guide_colourbar</a></span><span class="op">(</span>barwidth <span class="op">=</span> <span class="fl">9</span>, barheight <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
@@ -371,19 +362,18 @@ necessary that our object ct2pcp is in SpatRaster format:</p>
 <code class="sourceCode R"><span><span class="va">ct2pcp_r</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ct2env.html">ct2env</a></span><span class="op">(</span><span class="va">pcp</span>,clas <span class="op">=</span> <span class="va">cl</span><span class="op">$</span><span class="va">clas</span>,fun <span class="op">=</span> <span class="va">mean</span>,out <span class="op">=</span> <span class="st">"SpatRaster"</span><span class="op">)</span></span>
 <span><span class="va">ct2pcp_r</span></span>
 <span><span class="co">#&gt; class       : SpatRaster </span></span>
-<span><span class="co">#&gt; dimensions  : 35, 53, 9  (nrow, ncol, nlyr)</span></span>
+<span><span class="co">#&gt; dimensions  : 35, 53, 8  (nrow, ncol, nlyr)</span></span>
 <span><span class="co">#&gt; resolution  : 5000, 5000  (x, y)</span></span>
 <span><span class="co">#&gt; extent      : 863172, 1128172, 4286322, 4461322  (xmin, xmax, ymin, ymax)</span></span>
 <span><span class="co">#&gt; coord. ref. : +proj=utm +zone=30 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs </span></span>
 <span><span class="co">#&gt; source(s)   : memory</span></span>
 <span><span class="co">#&gt; varname     : tp </span></span>
-<span><span class="co">#&gt; names       :         1,         2,        3,         4,         5,         6, ... </span></span>
-<span><span class="co">#&gt; min values  : 0.1901515,  1.890289, 1.554848,  2.869419, 0.5490909, 0.5472843, ... </span></span>
-<span><span class="co">#&gt; max values  : 1.3775252, 10.960744, 4.836970, 13.604893, 2.6737374, 5.7076678, ... </span></span>
-<span><span class="co">#&gt; unit        :        mm,        mm,       mm,        mm,        mm,        mm, ...</span></span></code></pre></div>
+<span><span class="co">#&gt; names       :         1,        2,        3,         4,         5,        6, ... </span></span>
+<span><span class="co">#&gt; min values  : 0.1599424, 1.656782, 1.129224, 0.4895089, 0.6118959, 1.235447, ... </span></span>
+<span><span class="co">#&gt; max values  : 1.3025937, 8.523975, 3.312900, 2.5515625, 4.5516729, 3.861095, ... </span></span>
+<span><span class="co">#&gt; unit        :        mm,       mm,       mm,        mm,        mm,       mm, ...</span></span></code></pre></div>
 <p>Now it is a matter of extracting the main spatial patterns of
-precipitation linked to WTs. For this purpose, we will use the
-raster_pca() function.</p>
+precipitation linked to WTs.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Regionalization</span></span>
 <span><span class="va">ct2pcp_reg</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/regionalization.html">regionalization</a></span><span class="op">(</span><span class="va">ct2pcp_r</span>,centers <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> </span>

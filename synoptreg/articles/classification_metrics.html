@@ -78,7 +78,7 @@
                         <h4 data-toc-skip class="author">Marc
 Lemus-Canovas</h4>
             
-            <h4 data-toc-skip class="date">2023-10-27</h4>
+            <h4 data-toc-skip class="date">2023-11-02</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/lemuscanovas/synoptReg/blob/HEAD/vignettes/classification_metrics.Rmd" class="external-link"><code>vignettes/classification_metrics.Rmd</code></a></small>
       <div class="d-none name"><code>classification_metrics.Rmd</code></div>
@@ -87,34 +87,35 @@ Lemus-Canovas</h4>
     
     
 <p>This vingette will show you how to compute some metrics from our
-synoptic classification. To this end, we will mainly use
-<code>dplyr()</code> and <code>tidyr()</code> packages from the
-<code>tidyverse</code>.</p>
+synoptic classification.</p>
 <div class="section level2">
 <h2 id="computing-a-simple-synoptic-classification">Computing a simple synoptic classification<a class="anchor" aria-label="anchor" href="#computing-a-simple-synoptic-classification"></a>
 </h2>
 <p>Here we provide a simple example for computing a simple synoptic
-classification using <code>mslp</code> as a variable. In this case, we
-we will use the “<code>S-mode</code>” matrix.</p>
+classification using mean sea level pressure data from ERA-Interim
+already avaialble in the package. In this case, we we will use the
+“<code>S-mode</code>” matrix.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">synoptReg</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org" class="external-link">lubridate</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org" class="external-link">tidyr</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">synoptReg</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/rnaturalearth/" class="external-link">rnaturalearth</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/eliocamp/metR" class="external-link">metR</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rpkgs.datanovia.com/ggpubr/" class="external-link">ggpubr</a></span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># MSLP file path</span></span>
 <span><span class="va">slp_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"mslp_ei.nc"</span>, package <span class="op">=</span> <span class="st">"synoptReg"</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># Reading and formatting the NetCDF to  the synoptReg needs </span></span>
 <span><span class="va">slp</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_nc.html">read_nc</a></span><span class="op">(</span><span class="va">slp_file</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/as_synoptReg.html">as_synoptReg</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># Computing a PCA classification</span></span>
 <span><span class="va">cl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/synoptclas.html">synoptclas</a></span><span class="op">(</span><span class="va">slp</span>,ncomp <span class="op">=</span> <span class="fl">4</span>,norm <span class="op">=</span> <span class="cn">T</span>,matrix_mode <span class="op">=</span> <span class="st">"S-mode"</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># Get the Europe and Africa borders</span></span>
 <span><span class="va">borders</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://docs.ropensci.org/rnaturalearth/reference/ne_countries.html" class="external-link">ne_countries</a></span><span class="op">(</span>continent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"europe"</span>,<span class="st">"africa"</span><span class="op">)</span>,</span>
 <span>                                       returnclass <span class="op">=</span> <span class="st">"sf"</span><span class="op">)</span></span>
 <span></span>
+<span><span class="co"># Plotting the main atmospheric patterns of such a classification</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_raster</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">cl</span><span class="op">$</span><span class="va">grid_clas</span>, <span class="va">var</span> <span class="op">==</span> <span class="st">"msl"</span><span class="op">)</span>, </span>
 <span>              mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span>,fill <span class="op">=</span> <span class="va">mean_WT_value</span><span class="op">/</span><span class="fl">100</span><span class="op">)</span>,</span>
@@ -147,12 +148,12 @@ we will use the “<code>S-mode</code>” matrix.</p>
 <div class="section level2">
 <h2 id="extracting-monthly-relative-frequences">Extracting monthly relative frequences<a class="anchor" aria-label="anchor" href="#extracting-monthly-relative-frequences"></a>
 </h2>
-<p>How to extract the monthly relatives frequencies per WT?</p>
+<p>How to extract the monthly relatives frequencies per WT? Just use the
+power of the <code>tidyverse</code>!</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">clas</span> <span class="op">&lt;-</span> <span class="va">cl</span><span class="op">$</span><span class="va">clas</span></span>
 <span></span>
-<span><span class="co"># monthly frequence histogram</span></span>
-<span></span>
+<span><span class="co"># monthly frequencies histogram</span></span>
 <span><span class="va">mo_hist</span> <span class="op">&lt;-</span> <span class="va">clas</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>  </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>mo <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/month.html" class="external-link">month</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">WT</span>,<span class="va">mo</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
@@ -191,7 +192,8 @@ we will use the “<code>S-mode</code>” matrix.</p>
 <div class="section level2">
 <h2 id="extracting-annual-frequency-trends">Extracting annual frequency trends<a class="anchor" aria-label="anchor" href="#extracting-annual-frequency-trends"></a>
 </h2>
-<p>How to extract the trend of annual frequences per WT?</p>
+<p>How to extract the trend of annual frequences per WT? Again, simply
+doing some calculations using <code>tidyverse</code></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">WT_time_series</span> <span class="op">&lt;-</span> <span class="va">clas</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>  </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>yr <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/year.html" class="external-link">year</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> </span>
