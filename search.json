@@ -46,28 +46,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "An R package for computing a synoptic climate classification and spatial regionalization\n \nsynoptReg is an R package that provides tools for:\n\nComputing synoptic climate classifications using gridded atmospheric data (reanalyses)\nPerforming spatial regionalization of environmental variables (precipitation, temperature, etc.) based on their relationship with circulation types\nVisualizing atmospheric patterns and their climatic signatures\n\nThe package was developed during my PhD at the University of Barcelona and published in Environmental Modelling & Software (2019).\nLinks: Documentation · CRAN · GitHub"
-  },
-  {
-    "objectID": "projects.html#synoptreg",
-    "href": "projects.html#synoptreg",
-    "title": "Projects",
-    "section": "",
-    "text": "An R package for computing a synoptic climate classification and spatial regionalization\n \nsynoptReg is an R package that provides tools for:\n\nComputing synoptic climate classifications using gridded atmospheric data (reanalyses)\nPerforming spatial regionalization of environmental variables (precipitation, temperature, etc.) based on their relationship with circulation types\nVisualizing atmospheric patterns and their climatic signatures\n\nThe package was developed during my PhD at the University of Barcelona and published in Environmental Modelling & Software (2019).\nLinks: Documentation · CRAN · GitHub"
-  },
-  {
-    "objectID": "projects.html#pyrenees-climate-projections",
-    "href": "projects.html#pyrenees-climate-projections",
-    "title": "Projects",
-    "section": "Pyrenees Climate Projections",
-    "text": "Pyrenees Climate Projections\nAndorra Research + Innovation (ongoing)\nHigh-resolution climate projections for the Pyrenees mountain range, combining dynamical downscaling with observational data to characterize future climate scenarios at the local and regional scale."
-  },
-  {
-    "objectID": "projects.html#compound-climate-events",
-    "href": "projects.html#compound-climate-events",
-    "title": "Projects",
-    "section": "Compound Climate Events",
-    "text": "Compound Climate Events\nResearch on dry–hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX regional climate model data.\nRelated publication: Lemus-Canovas & Lopez-Bustins (2021)"
+    "text": "synoptReg\n\nR package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.\n\n\n\n\n\n\n\n\nclimaemet\n\nR package (rOpenSpain project) to download and visualize climate data from AEMET (Spanish Meteorological Agency) API.\n\n\n\n\n\n\n\n\nPyrenees Climate\n\nHigh-resolution climate projections for the Pyrenees combining dynamical downscaling with observational data to characterize future climate scenarios at local and regional scale.\n\n\n\n\n\n\n\n\nCompound Events\n\nResearch on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration."
   },
   {
     "objectID": "about.html",

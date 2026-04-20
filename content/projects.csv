@@ -1,0 +1,5 @@
+title,src,url,description,tags
+synoptReg,images/projects/synoptreg.png,https://lemuscanovas.github.io/synoptreg/,"R package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.",R; Software
+climaemet,images/projects/climaemet.png,https://ropenspain.github.io/climaemet/,"R package (rOpenSpain project) to download and visualize climate data from AEMET (Spanish Meteorological Agency) API.",R; Software
+Pyrenees Climate,images/projects/pyrenees.png,https://www.ari.ad/en/research/,"High-resolution climate projections for the Pyrenees combining dynamical downscaling with observational data to characterize future climate scenarios at local and regional scale.",Climate; Research
+Compound Events,images/projects/compound.png,https://doi.org/10.1088/1748-9326/ac1c88,"Research on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration.",Climate; Research
