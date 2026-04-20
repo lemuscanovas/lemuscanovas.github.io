@@ -1,0 +1,219 @@
+[
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Computing trends in a climate grid with Tidyverse\n\n\n\n\n\n\nR\n\nTidyverse\n\nClimate\n\nTrends\n\nNetCDF\n\n\n\nA step-by-step tutorial on reading NetCDF climate data with the metR package in R and computing Mann-Kendall trend tests and Sen’s slope on a spatial grid.\n\n\n\n\n\n2020-07-09\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "Below is a selection of conference presentations and invited talks."
+  },
+  {
+    "objectID": "talks.html#section",
+    "href": "talks.html#section",
+    "title": "Talks & Presentations",
+    "section": "2022",
+    "text": "2022\nChanges in compound monthly precipitation and temperature extremes and their relationship with teleconnection patterns in the Mediterranean\nEGU General Assembly 2022, Vienna / Online\nAbstract"
+  },
+  {
+    "objectID": "talks.html#section-1",
+    "href": "talks.html#section-1",
+    "title": "Talks & Presentations",
+    "section": "2021",
+    "text": "2021\nCharacterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale\n10th International Conference on Climate and Water, Tampere, Finland\nAssessing internal changes in the future structure of dry–hot compound events in the Pyrenees\nEGU General Assembly 2021, Online"
+  },
+  {
+    "objectID": "talks.html#section-2",
+    "href": "talks.html#section-2",
+    "title": "Talks & Presentations",
+    "section": "2019",
+    "text": "2019\nsynoptReg: An R package for computing a synoptic climate classification and spatial regionalization\nJornades Catalanes de Climatologia, Barcelona, Spain\nCombining circulation weather types and daily precipitation modelling to derive climatic precipitation regions in the Pyrenees\nInternational Conference of Alpine Meteorology (ICAM) 2019, Innsbruck, Austria"
+  },
+  {
+    "objectID": "talks.html#section-3",
+    "href": "talks.html#section-3",
+    "title": "Talks & Presentations",
+    "section": "2018",
+    "text": "2018\nA mixed application of an objective synoptic classification and spatial regression models for deriving winter precipitation regimes in the Eastern Pyrenees\n13th Annual Meeting of the European Meteorological Society (EMS), Budapest, Hungary"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "An R package for computing a synoptic climate classification and spatial regionalization\n \nsynoptReg is an R package that provides tools for:\n\nComputing synoptic climate classifications using gridded atmospheric data (reanalyses)\nPerforming spatial regionalization of environmental variables (precipitation, temperature, etc.) based on their relationship with circulation types\nVisualizing atmospheric patterns and their climatic signatures\n\nThe package was developed during my PhD at the University of Barcelona and published in Environmental Modelling & Software (2019).\nLinks: Documentation · CRAN · GitHub"
+  },
+  {
+    "objectID": "projects.html#synoptreg",
+    "href": "projects.html#synoptreg",
+    "title": "Projects",
+    "section": "",
+    "text": "An R package for computing a synoptic climate classification and spatial regionalization\n \nsynoptReg is an R package that provides tools for:\n\nComputing synoptic climate classifications using gridded atmospheric data (reanalyses)\nPerforming spatial regionalization of environmental variables (precipitation, temperature, etc.) based on their relationship with circulation types\nVisualizing atmospheric patterns and their climatic signatures\n\nThe package was developed during my PhD at the University of Barcelona and published in Environmental Modelling & Software (2019).\nLinks: Documentation · CRAN · GitHub"
+  },
+  {
+    "objectID": "projects.html#pyrenees-climate-projections",
+    "href": "projects.html#pyrenees-climate-projections",
+    "title": "Projects",
+    "section": "Pyrenees Climate Projections",
+    "text": "Pyrenees Climate Projections\nAndorra Research + Innovation (ongoing)\nHigh-resolution climate projections for the Pyrenees mountain range, combining dynamical downscaling with observational data to characterize future climate scenarios at the local and regional scale."
+  },
+  {
+    "objectID": "projects.html#compound-climate-events",
+    "href": "projects.html#compound-climate-events",
+    "title": "Projects",
+    "section": "Compound Climate Events",
+    "text": "Compound Climate Events\nResearch on dry–hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX regional climate model data.\nRelated publication: Lemus-Canovas & Lopez-Bustins (2021)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome! I am a climate researcher and R enthusiast. See my CV for full details.\n\nShort Bio\nMarc Lemus-Canovas is a Postdoctoral Researcher at Andorra Research + Innovation (Andorra). His research focuses on climate change and climate variability in the Pyrenees, with particular emphasis on high-resolution climate projections for this mountain region. He holds a PhD in Geography (Climatology) from the University of Barcelona, where he studied extreme precipitation events, synoptic climatology, and climate teleconnections across the Iberian Peninsula and the Pyrenees.\n\n\nResearch Interests\n\nClimate variability and change in mountain regions\nExtreme precipitation events and compound events\nTeleconnection patterns (WeMO, NAO, AMO…)\nSynoptic climatology and circulation weather types\nUrban climatology (Barcelona Metropolitan Area)\nHigh-resolution climate projections for the Pyrenees\nR programming and open-source tools for climate analysis\n\n\n\nThe synoptReg R Package\nAs part of his doctoral work, Marc developed synoptReg, an R package for computing synoptic climate classifications and performing spatial regionalization of environmental data. The package is available on CRAN and GitHub.\n\n\nR Programming & Data Science\nR is central to both Marc’s research and his passion for open and reproducible science. He is enrolled in a BSc in Applied Data Science at the Open University of Catalonia (UOC), deepening his expertise in data analysis, machine learning, and statistical modelling.\nThis website serves as a place to share R tutorials and tips — mainly focused on climate data analysis, but also covering general data science workflows.\n\n\nContact\nFeel free to reach out via email or through any of the social links at the bottom of this page.\nLast updated on April 20, 2026\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Marc Lemus-Canovas",
+    "section": "",
+    "text": "Welcome to my personal website!\nI am a postdoctoral researcher at Andorra Research + Innovation (Andorra), studying climate change and climate variability in the Pyrenees, with a focus on high-resolution climate projections. I am also passionate about R programming and open science, and recently enrolled in a BSc in Applied Data Science at the Open University of Catalonia.\nThis site is where I share R tips — mainly for climate analysis — along with my research and projects.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "View my full CV here\n Google Scholar ORCID Research Gate"
+  },
+  {
+    "objectID": "research.html#peer-reviewed-journal-articles",
+    "href": "research.html#peer-reviewed-journal-articles",
+    "title": "Research",
+    "section": "Peer-Reviewed Journal Articles",
+    "text": "Peer-Reviewed Journal Articles\n    Lemus-Canovas, M. (2022) “Changes in compound monthly precipitation and temperature extremes and their relationship with teleconnection patterns in the Mediterranean” Global and Planetary Change.  DOI: 10.1016/j.gloplacha.2022.103711      View     Martin-Vide, J., López-Bustins, J.A., Lemus-Canovas, M., Moreno-Garcia, M.C., Balagué, X., Gonzalez-Hidalgo, J.C., Beguería, S., Peña-Angulo, D., Trullenque, V. (2022) “The consecutive disparity of precipitation in conterminous Spain” International Journal of Climatology.  DOI: 10.1002/joc.7535      View     Lemus-Canovas, M. (2021) “Barcelona intense urban activity greatly limited the role of the atmosphere in driving NO2 concentration in 2018” Environmental Research Letters.  DOI: 10.1088/1748-9326/ac3028      View     Insua-Costa, D., Lemus-Canovas, M., Miguez-Macho, G., Llasat, M.C. (2021) “Climatology and ranking of hazardous precipitation events in the western Mediterranean area” Atmospheric Research.  DOI: 10.1016/j.atmosres.2021.105521      View     Francos, M., Lemus-Canovas, M. (2021) “Field observations and remote sensing techniques for evaluation of vegetal recovery after different wildfire severity in a Mediterranean ecosystem” Science of the Total Environment.  DOI: 10.1016/j.scitotenv.2021.146351      View     Lemus-Canovas, M., Lopez-Bustins, J.A. (2021) “Assessing internal changes in the future structure of dry–hot compound events. The case of the Pyrenees” Environmental Research Letters.  DOI: 10.1088/1748-9326/ac1c88      View     Lemus-Canovas, M., López-Bustins, J.A., Martin-Vide, J., Halifa-Marín, A., Insua-Costa, D., Martinez-Artigas, J., Trapero, L., Serrano-Notivoli, R., Cuadrat, J.M. (2021) “Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale” Global and Planetary Change.  DOI: 10.1016/j.gloplacha.2021.103499      View     Martínez-Artigas, J., Lemus-Canovas, M., Lopez-Bustins, J.A. (2021) “Precipitation in peninsular Spain. Influence of teleconnection indices and spatial regionalisation” International Journal of Climatology.  DOI: 10.1002/joc.7028      View     Peña-Angulo, D., Gonzalez-Hidalgo, J.C., Sandonís, L., Beguería, S., Tomas-Burguera, M., López-Bustins, J.A., Lemus-Canovas, M., Martin-Vide, J. (2021) “Seasonal temperature trends on the Spanish mainland. A secular study (1916–2015)” International Journal of Climatology.  DOI: 10.1002/joc.6905      View     Lopez-Bustins, J.A., Lemus-Canovas, M. (2020) “The influence of the Western Mediterranean Oscillation upon the spatio-temporal variability of precipitation over Catalonia (northeastern of the Iberian Peninsula)” Atmospheric Research.  DOI: 10.1016/j.atmosres.2019.104819      View     Lemus-Canovas, M., Martin-Vide, J., Moreno-Garcia, M.C., Lopez-Bustins, J.A. (2020) “Estimating Barcelona’s metropolitan daytime hot and cold poles using Landsat-8 Land Surface Temperature” Science of the Total Environment.  DOI: 10.1016/j.scitotenv.2019.134889      View     Lemus-Canovas, M., Lopez-Bustins, J.A., Trapero, L., Martin-Vide, J. (2019) “Combining circulation weather types and daily precipitation modelling to derive climatic precipitation regions in the Pyrenees” Atmospheric Research.  DOI: 10.1016/j.atmosres.2019.04.018      View     Lemus-Canovas, M., Ninyerola, M., Lopez-Bustins, J.A., Manguan, S., Garcia-Sellès, C. (2018) “A mixed application of an objective synoptic classification and spatial regression models for deriving winter precipitation regimes in the Eastern Pyrenees” International Journal of Climatology.  DOI: 10.1002/joc.5471      View"
+  },
+  {
+    "objectID": "research.html#conference-proceedings",
+    "href": "research.html#conference-proceedings",
+    "title": "Research",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings"
+  },
+  {
+    "objectID": "research.html#software",
+    "href": "research.html#software",
+    "title": "Research",
+    "section": "Software",
+    "text": "Software\n    Lemus-Canovas, M., Lopez-Bustins, J.A., Martin-Vide, J., Royé, D. (2019) “synoptReg: An R package for computing a synoptic climate classification and a spatial regionalization of environmental data” Environmental Modelling & Software.  DOI: 10.1016/j.envsoft.2019.07.006      View Code"
+  },
+  {
+    "objectID": "research.html#working-papers-preprints",
+    "href": "research.html#working-papers-preprints",
+    "title": "Research",
+    "section": "Working Papers & Preprints",
+    "text": "Working Papers & Preprints"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "University of Barcelona, MSc in Meteorology (guest lectures, 2019–2022)\nGuest lectures on the use of R for climate data analysis, including:\n\nReading and processing NetCDF files with metR\nSynoptic climate classification with synoptReg\nTrend analysis: Mann-Kendall test and Sen’s slope\nSpatial visualization with ggplot2\n\n\n\n\n\nOpen University of Catalonia (UOC) — BSc student\nCurrently enrolled in the BSc in Applied Data Science, with coursework covering:\n\nStatistical learning and machine learning\nData wrangling and visualization (Python, R)\nBig data and cloud computing"
+  },
+  {
+    "objectID": "teaching.html#courses-guest-lectures",
+    "href": "teaching.html#courses-guest-lectures",
+    "title": "Teaching",
+    "section": "",
+    "text": "University of Barcelona, MSc in Meteorology (guest lectures, 2019–2022)\nGuest lectures on the use of R for climate data analysis, including:\n\nReading and processing NetCDF files with metR\nSynoptic climate classification with synoptReg\nTrend analysis: Mann-Kendall test and Sen’s slope\nSpatial visualization with ggplot2\n\n\n\n\n\nOpen University of Catalonia (UOC) — BSc student\nCurrently enrolled in the BSc in Applied Data Science, with coursework covering:\n\nStatistical learning and machine learning\nData wrangling and visualization (Python, R)\nBig data and cloud computing"
+  },
+  {
+    "objectID": "teaching.html#workshops",
+    "href": "teaching.html#workshops",
+    "title": "Teaching",
+    "section": "Workshops",
+    "text": "Workshops\nIntroduction to R for Climate Scientists\nAndorra Research + Innovation, 2022\nHalf-day workshop covering data import, transformation, and visualization of climate gridded datasets in R using tidyverse and metR."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Download PDF"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "Education",
+    "text": "Education\nPhD in Geography (Climatology)\nUniversity of Barcelona, 2015–2021\nDissertation: Extreme Precipitation Events in the Pyrenees: A Multi-Scale Analysis\nSupervisors: Joan A. López-Bustins, Javier Martin-Vide\nBSc in Applied Data Science (in progress)\nOpen University of Catalonia (UOC), 2021–present\nMSc in Meteorology\nUniversity of Barcelona"
+  },
+  {
+    "objectID": "cv.html#positions",
+    "href": "cv.html#positions",
+    "title": "CV",
+    "section": "Positions",
+    "text": "Positions\nPostdoctoral Researcher\nAndorra Research + Innovation, 2022–present\nResearch on climate change and high-resolution climate projections for the Pyrenees.\nPredoctoral Researcher\nUniversity of Barcelona (Climatology Group), 2015–2021"
+  },
+  {
+    "objectID": "cv.html#selected-publications",
+    "href": "cv.html#selected-publications",
+    "title": "CV",
+    "section": "Selected Publications",
+    "text": "Selected Publications\nSee the full list on my Research page or Google Scholar."
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "CV",
+    "section": "Skills",
+    "text": "Skills\n\n\n\nCategory\nTools\n\n\n\n\nProgramming\nR, Python\n\n\nClimate data\nNetCDF, ERA5, EURO-CORDEX, STEAD\n\n\nR packages\ntidyverse, metR, synoptReg, ggplot2\n\n\nVersion control\nGit, GitHub\n\n\nWriting\nRMarkdown, Quarto, LaTeX"
+  },
+  {
+    "objectID": "cv.html#awards-grants",
+    "href": "cv.html#awards-grants",
+    "title": "CV",
+    "section": "Awards & Grants",
+    "text": "Awards & Grants\n\nFI Predoctoral Fellowship, Generalitat de Catalunya (AGAUR), 2017–2021\n\n\nr source(\"_common.R\"); last_updated()"
+  },
+  {
+    "objectID": "blog/posts/2020-07-09-trends-climate-grid/index.html",
+    "href": "blog/posts/2020-07-09-trends-climate-grid/index.html",
+    "title": "Computing trends in a climate grid with Tidyverse",
+    "section": "",
+    "text": "It is possible to read a NetCDF file in a Tidyverse way through the metR package created by Elio Campitelli. This library also contains many useful functions for visualizing and analyzing weather and climate data.\nIn this tutorial, we will work with a daily grid of 5×5 km of the maximum temperature of the Balearic Islands (Spain) from the STEAD dataset (Serrano-Notivoli 2019).\n\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(metR)\nlibrary(trend)\nlibrary(pals) # color palettes\n\nWe use GlanceNetCDF() to inspect the file and ReadNetCDF() to read it into a data.frame:\n\nfile &lt;- \"tmax_bal.nc\"\n\n# Inspect the NetCDF structure\nvariable &lt;- GlanceNetCDF(file = file)\nvariable\n\n# Read the NetCDF as a data.frame\ntx &lt;- ReadNetCDF(\n  file = file,\n  vars = c(var = names(variable$vars[1])),\n  out = \"data.frame\"\n)"
+  },
+  {
+    "objectID": "blog/posts/2020-07-09-trends-climate-grid/index.html#reading-a-netcdf-in-the-tidyverse-style",
+    "href": "blog/posts/2020-07-09-trends-climate-grid/index.html#reading-a-netcdf-in-the-tidyverse-style",
+    "title": "Computing trends in a climate grid with Tidyverse",
+    "section": "",
+    "text": "It is possible to read a NetCDF file in a Tidyverse way through the metR package created by Elio Campitelli. This library also contains many useful functions for visualizing and analyzing weather and climate data.\nIn this tutorial, we will work with a daily grid of 5×5 km of the maximum temperature of the Balearic Islands (Spain) from the STEAD dataset (Serrano-Notivoli 2019).\n\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(metR)\nlibrary(trend)\nlibrary(pals) # color palettes\n\nWe use GlanceNetCDF() to inspect the file and ReadNetCDF() to read it into a data.frame:\n\nfile &lt;- \"tmax_bal.nc\"\n\n# Inspect the NetCDF structure\nvariable &lt;- GlanceNetCDF(file = file)\nvariable\n\n# Read the NetCDF as a data.frame\ntx &lt;- ReadNetCDF(\n  file = file,\n  vars = c(var = names(variable$vars[1])),\n  out = \"data.frame\"\n)"
+  },
+  {
+    "objectID": "blog/posts/2020-07-09-trends-climate-grid/index.html#data-management-annual-aggregation",
+    "href": "blog/posts/2020-07-09-trends-climate-grid/index.html#data-management-annual-aggregation",
+    "title": "Computing trends in a climate grid with Tidyverse",
+    "section": "Data management: annual aggregation",
+    "text": "Data management: annual aggregation\nAfter filtering NA values, we aggregate daily data to annual means per grid cell:\n\ntx &lt;- tx %&gt;%\n  filter(!is.na(var)) %&gt;%\n  as_tibble()\n\ntx_annual &lt;- tx %&gt;%\n  mutate(Time = as_date(Time)) %&gt;%\n  mutate(year = year(Time)) %&gt;%\n  group_by(year, lon, lat) %&gt;%\n  summarise(annual_tx = mean(var)) %&gt;%\n  ungroup()"
+  },
+  {
+    "objectID": "blog/posts/2020-07-09-trends-climate-grid/index.html#trend-computation-and-statistical-significance",
+    "href": "blog/posts/2020-07-09-trends-climate-grid/index.html#trend-computation-and-statistical-significance",
+    "title": "Computing trends in a climate grid with Tidyverse",
+    "section": "Trend computation and statistical significance",
+    "text": "Trend computation and statistical significance\nWe apply the Sen’s slope (magnitude of trend per decade) and the Mann-Kendall test (statistical significance) at each grid cell:\n\ntx_trend &lt;- tx_annual %&gt;%\n  group_by(lon, lat) %&gt;%\n  summarise(\n    slope = sens.slope(annual_tx)$estimates * 10,  # per decade\n    sign  = mk.test(annual_tx)$p.value\n  )"
+  },
+  {
+    "objectID": "blog/posts/2020-07-09-trends-climate-grid/index.html#visualization",
+    "href": "blog/posts/2020-07-09-trends-climate-grid/index.html#visualization",
+    "title": "Computing trends in a climate grid with Tidyverse",
+    "section": "Visualization",
+    "text": "Visualization\n\nggplot() +\n  geom_tile(data = tx_trend, aes(x = lon, y = lat, fill = slope)) +\n  scale_fill_gradientn(\n    colors = rev(pals::linearlhot(100)),\n    name = \"ºC/10y\",\n    limits = c(0.1, 0.45)\n  ) +\n  geom_point(\n    data = filter(tx_trend, sign &lt; 0.01),\n    aes(x = lon, y = lat, color = \"Sig. trend (p &lt; 0.01)\"),\n    size = 0.4, show.legend = TRUE\n  ) +\n  scale_color_manual(values = c(\"black\"), name = \"\") +\n  coord_fixed(1.3) +\n  xlab(\"Longitude\") + ylab(\"Latitude\") +\n  labs(\n    title = \"Decadal trend of maximum temperature in the Balearic Islands\",\n    subtitle = \"(1971–2014)\",\n    caption = \"Database: STEAD (Serrano-Notivoli, 2019)\"\n  ) +\n  theme_bw() +\n  guides(fill = guide_colourbar(barwidth = 9, barheight = 0.5, title.position = \"right\")) +\n  theme(legend.position = \"bottom\")\n\nIf you have any questions, feel free to leave a comment or reach out!"
+  }
+]
