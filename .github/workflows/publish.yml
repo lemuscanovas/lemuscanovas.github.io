@@ -20,18 +20,8 @@ jobs:
           use-public-rspm: true
 
       - name: Install R dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          packages: |
-            any::htmltools
-            any::stringr
-            any::dplyr
-            any::readr
-            any::glue
-            any::here
-            any::markdown
-            any::knitr
-            any::rmarkdown
+        run: |
+          Rscript -e "install.packages(c('htmltools','stringr','dplyr','readr','glue','here','markdown','knitr','rmarkdown','bs4cards'), repos='https://packagemanager.posit.co/cran/__linux__/jammy/latest')"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

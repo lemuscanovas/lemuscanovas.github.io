@@ -11,6 +11,7 @@ Imports:
     here,
     markdown,
     knitr,
-    rmarkdown
+    rmarkdown,
+    bs4cards
 Remotes:
 Encoding: UTF-8
