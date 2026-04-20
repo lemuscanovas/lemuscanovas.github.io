@@ -46,7 +46,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "synoptReg\n\nR package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.\n\n\n\n\n\n\n\n\nclimaemet\n\nR package (rOpenSpain project) to download and visualize climate data from AEMET (Spanish Meteorological Agency) API.\n\n\n\n\n\n\n\n\nPyrenees Climate\n\nHigh-resolution climate projections for the Pyrenees combining dynamical downscaling with observational data to characterize future climate scenarios at local and regional scale.\n\n\n\n\n\n\n\n\nCompound Events\n\nResearch on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration."
+    "text": "synoptReg\n\n\nR package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.\n\n\n\n\n\n\n  \n\n\nclimaemet\n\n\nR package (rOpenSpain) to download and visualize climate data from AEMET (Spanish Meteorological Agency) API.\n\n\n\n\n\n\n  \n\n\nPyrenees Climate\n\n\nHigh-resolution climate projections for the Pyrenees combining dynamical downscaling with observational data to characterize future climate scenarios.\n\n\n\n\n\n\n  \n\n\nCompound Events\n\n\nResearch on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration."
   },
   {
     "objectID": "about.html",
