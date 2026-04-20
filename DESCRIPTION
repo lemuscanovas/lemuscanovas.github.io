@@ -9,6 +9,8 @@ Imports:
     readr,
     glue,
     here,
-    markdown
+    markdown,
+    knitr,
+    rmarkdown
 Remotes:
 Encoding: UTF-8
