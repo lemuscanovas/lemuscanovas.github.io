@@ -6,6 +6,7 @@ execute:
   warning: false
 about:
   template: trestles
+  image-shape: round
   links:
     - text: '<i class="ai ai-cv fa-lg"></i>'
       href: cv.qmd

@@ -27,7 +27,7 @@ website:
   search:
     location: navbar
     type: overlay
-  back-to-top-navigation: true
+  back-to-top-navigation: false
   open-graph:
     locale: en_US
     site-name: lemuscanovas.github.io
