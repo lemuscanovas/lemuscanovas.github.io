@@ -1,57 +1,28 @@
 ---
 title: Projects
-description: A collection of research software and projects in climate science and R programming.
+description: A collection of research projects and software in climate science and R programming.
+execute:
+  echo: false
+  message: false
+  warning: false
+format:
+  html:
+    css: css/strapless.css
 ---
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mt-2">
+```{r projects}
+source("_common.R")
 
-<div class="col">
-<div class="card h-100 shadow-sm">
-<a href="https://lemuscanovas.github.io/synoptreg/">
-<img src="images/projects/synoptreg.png" class="card-img-top" alt="synoptReg" style="object-fit: contain; height: 180px; background: white; padding: 1rem;">
-</a>
-<div class="card-body">
-<h5 class="card-title"><a href="https://lemuscanovas.github.io/synoptreg/" class="text-decoration-none">synoptReg</a></h5>
-<p class="card-text small">R package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.</p>
-</div>
-</div>
-</div>
+readr::read_csv(here::here("content", "projects.csv")) %>%
+  dplyr::select(-tags) %>%
+  bs4cards::cards(
+    title = title,
+    text = description,
+    link = url,
+    image = src,
+    label_colour = "#ffffff",
+    border_radius = 5
+  )
+```
 
-<div class="col">
-<div class="card h-100 shadow-sm">
-<a href="https://ropenspain.github.io/climaemet/">
-<img src="images/projects/climaemet.png" class="card-img-top" alt="climaemet" style="object-fit: contain; height: 180px; background: white; padding: 1rem;">
-</a>
-<div class="card-body">
-<h5 class="card-title"><a href="https://ropenspain.github.io/climaemet/" class="text-decoration-none">climaemet</a></h5>
-<p class="card-text small">R package (rOpenSpain) to download and visualize climate data from AEMET (Spanish Meteorological Agency) API.</p>
-</div>
-</div>
-</div>
-
-<div class="col">
-<div class="card h-100 shadow-sm">
-<a href="https://www.ari.ad/en/research/">
-<img src="images/projects/pyrenees.png" class="card-img-top" alt="Pyrenees Climate" style="object-fit: contain; height: 180px; background: white; padding: 1rem;">
-</a>
-<div class="card-body">
-<h5 class="card-title"><a href="https://www.ari.ad/en/research/" class="text-decoration-none">Pyrenees Climate</a></h5>
-<p class="card-text small">High-resolution climate projections for the Pyrenees combining dynamical downscaling with observational data to characterize future climate scenarios.</p>
-</div>
-</div>
-</div>
-
-<div class="col">
-<div class="card h-100 shadow-sm">
-<a href="https://doi.org/10.1088/1748-9326/ac1c88">
-<img src="images/projects/compound.png" class="card-img-top" alt="Compound Events" style="object-fit: contain; height: 180px; background: white; padding: 1rem;">
-</a>
-<div class="card-body">
-<h5 class="card-title"><a href="https://doi.org/10.1088/1748-9326/ac1c88" class="text-decoration-none">Compound Events</a></h5>
-<p class="card-text small">Research on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration.</p>
-</div>
-</div>
-</div>
-
-</div>
 

@@ -21,7 +21,7 @@ jobs:
 
       - name: Install R dependencies
         run: |
-          Rscript -e "install.packages(c('htmltools','stringr','dplyr','readr','glue','here','markdown','knitr','rmarkdown'), repos='https://packagemanager.posit.co/cran/__linux__/jammy/latest')"
+          Rscript -e "install.packages(c('htmltools','stringr','dplyr','readr','glue','here','markdown','knitr','rmarkdown','bs4cards'), repos='https://packagemanager.posit.co/cran/__linux__/jammy/latest')"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
