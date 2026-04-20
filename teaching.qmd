@@ -1,0 +1,37 @@
+---
+title: "Teaching"
+execute:
+  echo: false
+  warning: false
+---
+
+## Courses & Guest Lectures
+
+### R for Climate Analysis
+*University of Barcelona, MSc in Meteorology (guest lectures, 2019–2022)*
+
+Guest lectures on the use of R for climate data analysis, including:
+
+- Reading and processing NetCDF files with `metR`
+- Synoptic climate classification with `synoptReg`
+- Trend analysis: Mann-Kendall test and Sen's slope
+- Spatial visualization with `ggplot2`
+
+---
+
+### Applied Data Science
+*Open University of Catalonia (UOC) — BSc student*
+
+Currently enrolled in the BSc in Applied Data Science, with coursework covering:
+
+- Statistical learning and machine learning
+- Data wrangling and visualization (Python, R)
+- Big data and cloud computing
+
+---
+
+## Workshops
+
+**Introduction to R for Climate Scientists**  
+*Andorra Research + Innovation, 2022*  
+Half-day workshop covering data import, transformation, and visualization of climate gridded datasets in R using `tidyverse` and `metR`.

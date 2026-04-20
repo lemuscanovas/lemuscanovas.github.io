@@ -1,0 +1,101 @@
+/*-- scss:defaults --*/
+
+// Colors
+$primary:   #2C6E9B;
+$secondary: #6c757d;
+$body-bg:   #ffffff;
+$body-color: #333333;
+$link-color: $primary;
+$link-hover-color: darken($primary, 15%);
+
+// Fonts
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+$font-size-base: 1rem;
+$headings-font-weight: 600;
+
+/*-- scss:rules --*/
+
+// Navbar
+.navbar {
+  background-color: #2C6E9B !important;
+  border-bottom: 2px solid darken(#2C6E9B, 10%);
+
+  .navbar-brand,
+  .nav-link {
+    color: #fff !important;
+  }
+
+  .nav-link:hover {
+    color: #cde !important;
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+  }
+}
+
+// Hero section on index
+.quarto-about-trestles .about-entity .about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+// Publications
+.pub {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.pub:last-child {
+  border-bottom: none;
+}
+
+// Icon links (for publications)
+.icon-link {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid $primary;
+  color: $primary !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $primary;
+    color: #fff !important;
+  }
+}
+
+// Footer
+.nav-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  font-size: 0.85rem;
+  color: $secondary;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// Page content spacing
+.page-content {
+  padding-top: 1.5rem;
+}
+
+// Tables
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+th {
+  background-color: #f0f5f9;
+}

@@ -1,0 +1,48 @@
+---
+title: "Research"
+description: "My research focuses on climate change and climate variability in the Pyrenees, extreme precipitation events, synoptic climatology, and teleconnection patterns across the Iberian Peninsula and Mediterranean region."
+execute:
+  echo: false
+  message: false
+  warning: false
+format: html
+toc: true
+toc-location: left
+---
+
+<style>
+ol { margin-bottom: 5px; }
+p  { margin: 5px 0 0 0; }
+.pub { margin-bottom: 1rem; }
+</style>
+
+```{r setup}
+source("_common.R")
+pubs <- get_pubs()
+```
+
+<center>
+
+[View my full CV here](cv.qmd)
+
+`r htmltools::HTML(paste0(icon_link(icon = "ai ai-google-scholar", text = "Google Scholar", url = "https://scholar.google.com/citations?user=iOCaO7sAAAAJ"), icon_link(icon = "ai ai-orcid", text = "ORCID", url = "https://orcid.org/0000-0002-0925-3827"), icon_link(icon = "ai ai-researchgate", text = "Research Gate", url = "https://www.researchgate.net/profile/Marc-Lemus-Canovas")))`
+
+</center>
+
+<br>
+
+## Peer-Reviewed Journal Articles
+
+`r make_pub_list(pubs, "peer_reviewed")`
+
+## Conference Proceedings
+
+`r make_pub_list(pubs, "conference")`
+
+## Software
+
+`r make_pub_list(pubs, "software")`
+
+## Working Papers & Preprints
+
+`r make_pub_list(pubs, "working")`

@@ -1,0 +1,39 @@
+/.quarto/
+/_site/
+/_freeze/
+.Rproj.user
+.Rhistory
+.RData
+*.Rproj
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Old Hugo output (safe to delete manually)
+# admin/
+# author/
+# authors/
+# ca/
+# categories/
+# category/
+# courses/
+# en/
+# es/
+# home/
+# js/
+# post/
+# privacy/
+# project/
+# publication/
+# publication_types/
+# publication-type/
+# slides/
+# synoptreg/
+# tag/
+# tags/
+# talk/
+# terms/
+# zh/
+
+**/*.quarto_ipynb

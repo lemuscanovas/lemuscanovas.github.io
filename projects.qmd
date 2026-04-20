@@ -1,0 +1,39 @@
+---
+title: "Projects"
+execute:
+  echo: false
+  warning: false
+---
+
+## synoptReg
+
+**An R package for computing a synoptic climate classification and spatial regionalization**
+
+[![CRAN status](https://www.r-pkg.org/badges/version/synoptReg)](https://cran.r-project.org/package=synoptReg)
+[![GitHub](https://img.shields.io/badge/GitHub-lemuscanovas/synoptReg-blue?logo=github)](https://github.com/lemuscanovas/synoptReg)
+
+`synoptReg` is an R package that provides tools for:
+
+- Computing **synoptic climate classifications** using gridded atmospheric data (reanalyses)
+- Performing **spatial regionalization** of environmental variables (precipitation, temperature, etc.) based on their relationship with circulation types
+- Visualizing atmospheric patterns and their climatic signatures
+
+The package was developed during my PhD at the University of Barcelona and published in [*Environmental Modelling & Software*](https://doi.org/10.1016/j.envsoft.2019.07.006) (2019).
+
+**Links:** [Documentation](https://lemuscanovas.github.io/synoptreg/) · [CRAN](https://cran.r-project.org/package=synoptReg) · [GitHub](https://github.com/lemuscanovas/synoptReg)
+
+---
+
+## Pyrenees Climate Projections
+
+*Andorra Research + Innovation (ongoing)*
+
+High-resolution climate projections for the Pyrenees mountain range, combining dynamical downscaling with observational data to characterize future climate scenarios at the local and regional scale.
+
+---
+
+## Compound Climate Events
+
+Research on **dry–hot compound events** in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX regional climate model data.
+
+**Related publication:** [Lemus-Canovas & Lopez-Bustins (2021)](https://doi.org/10.1088/1748-9326/ac1c88)

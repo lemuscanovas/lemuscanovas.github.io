@@ -1,0 +1,34 @@
+---
+title: "Marc Lemus-Canovas"
+image: "images/profile.jpg"
+execute:
+  echo: false
+  warning: false
+about:
+  template: trestles
+  links:
+    - text: '<i class="ai ai-cv fa-lg"></i>'
+      href: cv.qmd
+    - icon: github
+      href: https://github.com/lemuscanovas
+    - text: '<i class="fa fa-brands fa-bluesky"></i>'
+      href: https://bsky.app/profile/lemuscanovas.bsky.social
+    - icon: linkedin
+      href: https://www.linkedin.com/in/marc-lemus-canovas
+    - text: '<i class="ai ai-google-scholar fa-lg"></i>'
+      href: https://scholar.google.com/citations?user=iOCaO7sAAAAJ
+    - text: '<i class="ai ai-researchgate fa-lg"></i>'
+      href: https://www.researchgate.net/profile/Marc-Lemus-Canovas
+    - text: '<i class="ai ai-orcid fa-lg"></i>'
+      href: https://orcid.org/0000-0002-0925-3827
+---
+
+```{r setup}
+source("_common.R")
+```
+
+### Welcome to my personal website!
+
+I am a postdoctoral researcher at [Andorra Research + Innovation](https://www.ari.ad/) (Andorra), studying **climate change and climate variability in the Pyrenees**, with a focus on high-resolution climate projections. I am also passionate about **R programming** and open science, and recently enrolled in a BSc in Applied Data Science at the Open University of Catalonia.
+
+This site is where I share R tips — mainly for climate analysis — along with my research and projects.

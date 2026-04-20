@@ -1,0 +1,41 @@
+---
+title: "Talks & Presentations"
+execute:
+  echo: false
+  warning: false
+---
+
+Below is a selection of conference presentations and invited talks.
+
+## 2022
+
+**Changes in compound monthly precipitation and temperature extremes and their relationship with teleconnection patterns in the Mediterranean**  
+*EGU General Assembly 2022*, Vienna / Online  
+[Abstract](https://doi.org/10.5194/egusphere-egu22-XXXX)
+
+---
+
+## 2021
+
+**Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale**  
+*10th International Conference on Climate and Water*, Tampere, Finland
+
+**Assessing internal changes in the future structure of dry–hot compound events in the Pyrenees**  
+*EGU General Assembly 2021*, Online  
+
+---
+
+## 2019
+
+**synoptReg: An R package for computing a synoptic climate classification and spatial regionalization**  
+*Jornades Catalanes de Climatologia*, Barcelona, Spain
+
+**Combining circulation weather types and daily precipitation modelling to derive climatic precipitation regions in the Pyrenees**  
+*International Conference of Alpine Meteorology (ICAM) 2019*, Innsbruck, Austria
+
+---
+
+## 2018
+
+**A mixed application of an objective synoptic classification and spatial regression models for deriving winter precipitation regimes in the Eastern Pyrenees**  
+*13th Annual Meeting of the European Meteorological Society (EMS)*, Budapest, Hungary

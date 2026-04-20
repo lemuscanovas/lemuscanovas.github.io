@@ -1,0 +1,14 @@
+Package: lemuscanovas.github.io
+Title: Marc Lemus-Canovas Personal Website
+Version: 1.0.0
+Description: Quarto website source for lemuscanovas.github.io
+Imports:
+    htmltools,
+    stringr,
+    dplyr,
+    readr,
+    glue,
+    here,
+    markdown
+Remotes:
+Encoding: UTF-8

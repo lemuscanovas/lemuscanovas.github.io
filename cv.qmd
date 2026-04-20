@@ -1,0 +1,64 @@
+---
+title: "CV"
+execute:
+  echo: false
+  warning: false
+---
+
+<center>
+[<i class="fa fa-file-pdf"></i> Download PDF](content/cv_lemus-canovas.pdf){.btn .btn-outline-primary target="_blank"}
+</center>
+
+<br>
+
+## Education
+
+**PhD in Geography (Climatology)**  
+*University of Barcelona, 2015–2021*  
+Dissertation: *Extreme Precipitation Events in the Pyrenees: A Multi-Scale Analysis*  
+Supervisors: Joan A. López-Bustins, Javier Martin-Vide
+
+**BSc in Applied Data Science** *(in progress)*  
+*Open University of Catalonia (UOC), 2021–present*
+
+**MSc in Meteorology**  
+*University of Barcelona*
+
+---
+
+## Positions
+
+**Postdoctoral Researcher**  
+*Andorra Research + Innovation, 2022–present*  
+Research on climate change and high-resolution climate projections for the Pyrenees.
+
+**Predoctoral Researcher**  
+*University of Barcelona (Climatology Group), 2015–2021*
+
+---
+
+## Selected Publications
+
+See the full list on my [Research](research.qmd) page or [Google Scholar](https://scholar.google.com/citations?user=iOCaO7sAAAAJ).
+
+---
+
+## Skills
+
+| Category | Tools |
+|---|---|
+| Programming | R, Python |
+| Climate data | NetCDF, ERA5, EURO-CORDEX, STEAD |
+| R packages | tidyverse, metR, synoptReg, ggplot2 |
+| Version control | Git, GitHub |
+| Writing | RMarkdown, Quarto, LaTeX |
+
+---
+
+## Awards & Grants
+
+- **FI Predoctoral Fellowship**, Generalitat de Catalunya (AGAUR), 2017–2021
+
+---
+
+`r source("_common.R"); last_updated()`
