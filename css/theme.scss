@@ -1,101 +1,252 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900";
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,600;0,800;0,900&display=swap&text=0123456789";
+
 /*-- scss:defaults --*/
 
-// Colors
-$primary:   #2C6E9B;
-$secondary: #6c757d;
-$body-bg:   #ffffff;
-$body-color: #333333;
-$link-color: $primary;
-$link-hover-color: darken($primary, 15%);
-
-// Fonts
-$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-$font-size-base: 1rem;
-$headings-font-weight: 600;
+$primary-color: #5480a7;
+$blue: #5480a7;
+$primary-color-dark: #2c3f51;
+$secondary-color: #56A754;
+$secondary-color-trans: rgba(86, 167, 84, 0.2);
+$tertiary-color: #A77B54;
+$link-color: $primary-color;
+$body-bg: #f2f6f9;
+$body-color: $primary-color-dark;
+$footer-bg: $primary-color;
+$footer-fg: white;
+$navbar-bg: $body-bg;
+$navbar-fg: $primary-color;
+$navbar-hl: $secondary-color;
+$dropdown-link-color: $primary-color;
+$navbar-font-family: "Raleway";
+$headings-font-family: "Raleway";
+$headings-color: $primary-color-dark;
+$font-family-base: "Raleway";
+$code-block-bg: white;
+$code-block-border: false;
+$code-block-border-right: $navbar-bg !important;
+$code-block-border-radius: 5px;
+$code-color: black;
+$code-bg: $code-block-bg;
+$code-border-radius: 25px;
+$tabset-border-color: $navbar-bg;
+$border-color: $navbar-bg;
+$link-color: $primary-color;
+$link-hover-color: $secondary-color;
+$pagination-active-bg: $primary-color;
+$pagination-active-color: white;
+$pagination-active-border-color: $primary-color;
 
 /*-- scss:rules --*/
 
-// Navbar
-.navbar {
-  background-color: #2C6E9B !important;
-  border-bottom: 2px solid darken(#2C6E9B, 10%);
-
-  .navbar-brand,
-  .nav-link {
-    color: #fff !important;
-  }
-
-  .nav-link:hover {
-    color: #cde !important;
-  }
-
-  .navbar-toggler {
-    border-color: rgba(255,255,255,0.5);
-  }
+/* Raleway numbers aren't aligned, so use Roboto for numbers only */
+body {
+  font-family: "Roboto", $font-family-base, sans-serif;
 }
 
-// Hero section on index
-.quarto-about-trestles .about-entity .about-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+div.quarto-post .metadata {
+  font-family: "Roboto", $font-family-base, sans-serif;
 }
 
-// Publications
+#title-block-header {
+  margin-block-end: 2rem;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "Roboto", $font-family-base, sans-serif;
+  font-weight: 800;
+}
+
+/* About page buttons */
+div.quarto-about-trestles .about-entity .about-link {
+  background-color: $primary-color;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: solid 1.5px;
+  border-color: $primary-color;
+}
+
+div.quarto-about-trestles .about-entity .about-link:hover {
+  background-color: $secondary-color;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: solid 1.5px;
+  border-color: $secondary-color;
+}
+
+/* Profile image circular */
+div.quarto-about-trestles .about-entity .about-image {
+  border-radius: 50% !important;
+  object-fit: cover;
+  border: 4px solid $primary-color;
+}
+
+a {
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.nav-link {
+  font-weight: 700;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: $secondary-color;
+}
+
+.nav-link.active {
+  color: $secondary-color !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+hr {
+  margin: 0rem 0;
+}
+
+/* Icon link buttons - publications */
+.icon-link {
+  background-color: $primary-color;
+  color: white;
+  padding: 1px 4px 1px 4px;
+  margin: 1px 1px 1px 1px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  background-color: $secondary-color;
+  color: white;
+  box-shadow: 0px 10px 15px $secondary-color-trans;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Publications */
 .pub {
   margin-bottom: 1.2rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba($blue, 0.15);
 }
 
 .pub:last-child {
   border-bottom: none;
 }
 
-// Icon links (for publications)
-.icon-link {
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-top: 0.3rem;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
-  border-radius: 4px;
-  border: 1px solid $primary;
-  color: $primary !important;
-  text-decoration: none !important;
-  white-space: nowrap;
-
-  &:hover {
-    background-color: $primary;
-    color: #fff !important;
-  }
+/* Tables */
+thead, tbody, tfoot, tr, td, th {
+  border-style: none;
+  padding-bottom: 2px !important;
 }
 
-// Footer
-.nav-footer {
-  background-color: #f8f9fa;
-  border-top: 1px solid #dee2e6;
-  font-size: 0.85rem;
-  color: $secondary;
-
-  a {
-    color: $primary;
-    text-decoration: none;
-    &:hover { text-decoration: underline; }
-  }
+table[data-quarto-disable-processing] {
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-// Page content spacing
-.page-content {
-  padding-top: 1.5rem;
+table[data-quarto-disable-processing] thead tr {
+  background-color: $primary-color;
 }
 
-// Tables
-table {
-  width: 100%;
+table[data-quarto-disable-processing] thead th {
+  color: white !important;
+  border-color: $primary-color !important;
+}
+
+table[data-quarto-disable-processing] tbody tr:nth-child(even) {
+  background-color: rgba($blue, 0.06);
+}
+
+table[data-quarto-disable-processing] tbody tr:hover {
+  background-color: rgba($blue, 0.15);
+  transition: background-color 0.15s ease;
+}
+
+/* Callout notes */
+div.callout-note.callout {
+  border: 1px solid $primary-color;
+}
+
+div.callout-note.callout-style-default>.callout-header {
+  background-color: rgba($blue, 0.12);
+  color: $primary-color-dark;
+}
+
+/* TOC sidebar */
+.sidebar nav[role=doc-toc] ul>li>ul>li {
+  font-size: 0.85em;
+}
+
+/* Margin text */
+aside, .column-margin {
+  color: $tertiary-color;
+  font-size: .825rem;
+}
+
+blockquote {
+  border-left: 0.25rem solid $tertiary-color;
+}
+
+blockquote p {
+  padding: 3px 3px 3px 3px;
+  margin: 0 2px 0 2px;
+  border-radius: 5px;
+  padding-left: 2em;
+  font-style: italic;
+  color: $tertiary-color;
+}
+
+/* Inline code pill */
+:not(pre) > code {
+  background-color: rgba($blue, 0.08);
+  color: $primary-color;
+  border: 1px solid rgba($blue, 0.22);
+  border-radius: 5px;
+  padding: 0.1em 0.4em;
+  font-size: 0.875em;
+}
+
+div.sourceCode,
+div.cell-output {
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+pre {
+  border-radius: 5px;
+  color: #fff;
+  background-color: $primary-color-dark;
+  padding: 5px 5px 5px 18px;
+}
+
+/* Add spacing below images */
+img {
   margin-bottom: 1rem;
 }
 
-th {
-  background-color: #f0f5f9;
+/* Footer */
+.nav-footer {
+  background-color: $primary-color;
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+  }
 }
