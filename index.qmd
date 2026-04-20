@@ -28,8 +28,12 @@ about:
 source("_common.R")
 ```
 
-### Welcome to my personal website!
+### About
 
-I am a postdoctoral researcher at [Andorra Research + Innovation](https://www.ari.ad/) (Andorra), studying **climate change and climate variability in the Pyrenees**, with a focus on high-resolution climate projections. I am also passionate about **R programming** and open science, and recently enrolled in a BSc in Applied Data Science at the Open University of Catalonia.
+I am a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcelona Supercomputing Center](https://www.bsc.es/) (Earth Sciences Department). My research focuses on understanding the link between **atmospheric dynamics and extreme meteorological events** — compound heat and drought events, extreme precipitation, and their attribution to climate change — with a particular emphasis on mountain areas (Pyrenees, Alps).
 
-This site is where I share R tips — mainly for climate analysis — along with my research and projects.
+I hold a **PhD in Geography** from the University of Barcelona (2022), where I was awarded the *Extraordinary Doctorate Prize*. I have previously held postdoctoral positions at [EURAC Research](https://www.eurac.edu/) (Italy), [Andorra Research + Innovation](https://www.ari.ad/), and the University of Santiago de Compostela.
+
+I am the principal investigator of [HIPEAtMount](https://www.eurac.edu/) (€172,750, Province of Bolzano), investigating the attribution of extreme precipitation events in the Alps, in collaboration with ETH Zürich. I am also coordinating an international network (KNMI, IPSL, SLF, Oxford) to develop an R/Python package for extreme weather attribution using flow analogues.
+
+**H-index:** 14 (Scopus) · **Citations:** 500+ (Scopus), 677 (Google Scholar) · **29 publications** (13 as first author)
