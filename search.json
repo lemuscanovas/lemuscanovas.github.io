@@ -46,7 +46,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "synoptReg\n\n\nR package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.\n\n\n\n\n\n\n  \n\n\nclimaemet\n\n\nR package (rOpenSpain) to download and visualize climate data from AEMET (Spanish Meteorological Agency) API.\n\n\n\n\n\n\n  \n\n\nPyrenees Climate\n\n\nHigh-resolution climate projections for the Pyrenees combining dynamical downscaling with observational data to characterize future climate scenarios.\n\n\n\n\n\n\n  \n\n\nCompound Events\n\n\nResearch on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration."
+    "text": "synoptReg\n\nR package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.\n\n\n\n\n\n\n\n\nclimaemet\n\nR package (rOpenSpain) to download and visualize climate data from the Spanish Meteorological Agency (AEMET) API.\n\n\n\n\n\n\n\n\nHIPEAtMount\n\nAttribution of high-impact precipitation events to climate change in the European Alps. PI project funded by the Province of Bolzano (€172,750). Collaboration with ETH Zürich.\n\n\n\n\n\n\n\n\nATOC\n\nAttribution of the unprecedented August 2023 Barcelona heatwave to observed and projected global warming. PI project funded by Barcelona City Council (€24,500).\n\n\n\n\n\n\n\n\nCompound Events\n\nResearch on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX data."
   },
   {
     "objectID": "about.html",
