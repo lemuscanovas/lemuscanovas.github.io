@@ -13,7 +13,7 @@ about:
     - text: '<i class="fa fa-brands fa-bluesky"></i>'
       href: https://bsky.app/profile/lemuscanovas.bsky.social
     - icon: linkedin
-      href: https://www.linkedin.com/in/marc-lemus-canovas
+      href: https://es.linkedin.com/in/marc-lemus-i-c%C3%A1novas-a95014103
     - text: '<i class="ai ai-google-scholar fa-lg"></i>'
       href: https://scholar.google.com/citations?user=iOCaO7sAAAAJ
     - text: '<i class="ai ai-researchgate fa-lg"></i>'
