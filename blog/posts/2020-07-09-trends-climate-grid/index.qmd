@@ -3,7 +3,6 @@ title: "Computing trends in a climate grid with Tidyverse"
 description: "A step-by-step tutorial on reading NetCDF climate data with the `metR` package in R and computing Mann-Kendall trend tests and Sen's slope on a spatial grid."
 date: "2020-07-09"
 categories: [R, Tidyverse, Climate, Trends, NetCDF]
-image: "trend_map.png"
 execute:
   eval: false
   echo: true
