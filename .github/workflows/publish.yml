@@ -19,9 +19,17 @@ jobs:
           r-version: "4.3"
           use-public-rspm: true
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcurl4-openssl-dev libssl-dev libxml2-dev \
+            libfontconfig1-dev libharfbuzz-dev libfribidi-dev \
+            libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+
       - name: Install R dependencies
         run: |
-          Rscript -e "install.packages(c('htmltools','stringr','dplyr','readr','glue','here','markdown','knitr','rmarkdown'), repos='https://packagemanager.posit.co/cran/__linux__/jammy/latest')"
+          Rscript -e "install.packages(c('htmltools','stringr','dplyr','readr','glue','here','markdown','knitr','rmarkdown','jsonlite','yaml','xml2','curl','openssl'), repos='https://packagemanager.posit.co/cran/__linux__/jammy/latest')"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

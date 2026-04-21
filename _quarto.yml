@@ -18,6 +18,9 @@ project:
     - "images/"
     - "project-items/"
 
+execute:
+  freeze: auto
+
 website:
   title: "Marc Lemus-Canovas"
   description: "Postdoctoral Researcher in Climate Change | Pyrenees | R programming"
