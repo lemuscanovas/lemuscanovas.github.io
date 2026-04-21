@@ -15,6 +15,7 @@ project:
     - "css/"
     - "images/"
     - "project-items/"
+    - "synoptreg/"
 
 execute:
   freeze: auto
