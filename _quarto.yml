@@ -8,7 +8,6 @@ project:
     - "projects.qmd"
     - "teaching.qmd"
     - "talks.qmd"
-    - "cv.qmd"
     - "blog/index.qmd"
     - "blog/**/*.qmd"
     - "404.qmd"
@@ -50,12 +49,10 @@ website:
         href: talks.qmd
       - text: "Blog"
         href: blog/index.qmd
-      - text: "CV"
-        href: cv.qmd
 
   page-footer:
     center:
-      - text: "<a href='https://lemuscanovas.github.io/cv.html'>CV</a>
+      - text: "<a href='https://lemuscanovas.github.io/research.html'>Research</a>
         &nbsp;<a href='https://github.com/lemuscanovas' target='blank'><i class='bi bi-github'></i></a>
         &nbsp;<a href='https://bsky.app/profile/lemuscanovas.bsky.social' target='blank'><i class='fa fa-brands fa-bluesky'></i></a>
         &nbsp;<a href='https://www.linkedin.com/in/marc-lemus-canovas' target='blank'><i class='bi bi-linkedin'></i></a>
