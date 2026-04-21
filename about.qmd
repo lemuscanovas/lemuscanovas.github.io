@@ -18,12 +18,12 @@ I am a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcelona Supercomputin
 
 I hold a **PhD in Geography** (Extraordinary Doctorate Prize) from the University of Barcelona, and have held postdoctoral positions at EURAC Research (Italy), Andorra Research+Innovation (Andorra), and the University of Santiago de Compostela (Spain). As Principal Investigator, I have secured competitive funding for the **Flash4CastImp** project (Marie Skłodowska-Curie Actions, Horizon Europe; 2027–2029), the **HIPEAtMount** project (Province of Bolzano; 2024–2026), and the **ATOC** project (Barcelona City Council; 2023–2024).
 
-I am the author of [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for synoptic climate classification widely used in climatological research. I also participated in the review process of the Sixth IPCC Assessment Report.
+I am the author of [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for synoptic climate classification widely used in climatological research.
 
 # Research Interests
 
 - Synoptic climatology and atmospheric circulation
-- Extreme weather events: heatwaves, compound droughts, extreme precipitation
+- Extreme weather events: heatwaves, droughts, extreme precipitation
 - Climate change attribution in mountain regions (Alps, Pyrenees)
 - R programming and open-source tools for climate science
 
@@ -45,11 +45,12 @@ Barcelona Supercomputing Center — Earth Sciences Department, Spain
 | Apr 2018 – Sep 2018 | Predoctoral Researcher APIF | University of Barcelona, Dept. of Geography |
 | Oct 2017 – Nov 2017 | JAE-Intro Fellow | Spanish National Research Council, Institute of Geosciences |
 
-*Research stays during PhD: University of Lisbon (3 mo), University of Porto (1 mo), University of Santiago de Compostela (1 mo). Scientific secondment: ETH Zurich — Hydrology & Climate Impacts in Mountain Regions Group (3 mo, Sep–Dec 2025).*
+*Research stays during PhD: University of Lisbon (3 mo), University of Porto (1 mo), University of Santiago de Compostela (1 mo). 
+*Postdoctoral research stays: ETH Zurich — Hydrology & Climate Impacts in Mountain Regions Group (3 mo).*
 
 # Education
 
-**PhD in Geography** · University of Barcelona, Spain · 2022 *(Extraordinary Doctorate Prize)*  
+**PhD in Geography** · University of Barcelona, Spain · 2022 
 **MSc in Remote Sensing and GIS** · Autonomous University of Barcelona, Spain · 2017  
 **BSc in Geography** · University of Barcelona, Spain · 2016
 
@@ -64,7 +65,7 @@ Three 25-hour courses on spatial data analysis with R, Faculty of Geography and 
 
 - 1 Bachelor thesis (Inés Torres Batlló, Universitat de Barcelona, Spain)
 - 2 Master theses (Albert Salvadó Badia, Universitat de Barcelona, Spain; Bhumi Gagnani, TU Dresden, Germany)
-- Co-supervising Dimitar Yanakiev (PhD student, Universidad de Salamanca)
+- 1 PhD Student (ongoing: Dimitar Yanakiev, Universidad de Salamanca, Spain)
 
 **Other academic activities:**
 
