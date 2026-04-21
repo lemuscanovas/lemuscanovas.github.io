@@ -38,6 +38,22 @@ a.pill:hover {
   display: inline-flex !important;
   align-items: center;
 }
+.pub-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.pub-content {
+  flex: 1;
+  min-width: 0;
+}
+.pub-badge {
+  flex-shrink: 0;
+  width: 58px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.15rem;
+}
 .badge-invited   { background:#5480a7; color:#fff; font-size:.72em; padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
 .badge-highlight { background:#56A754; color:#fff; font-size:.72em; padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
 .badge-award     { background:#c0762a; color:#fff; font-size:.72em; padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
@@ -109,158 +125,220 @@ My research focuses on understanding the link between **atmospheric dynamics** a
 <ol>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Bonsoms, Josep, González-Herrero, Sergi, Fettweis, Xavier, <strong>Lemus-Cánovas, Marc</strong>, Oliva, Marc, &amp; López-Moreno, Juan I. (2026) "Record-breaking Greenland ice sheet melt events under recent and future climate" <em>Nature Communications</em>, 17, 3605. DOI: <a href="https://doi.org/10.1038/s41467-026-69543-5">10.1038/s41467-026-69543-5</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1038/s41467-026-69543-5" class="altmetric-embed"></span><a href="https://doi.org/10.1038/s41467-026-69543-5" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1038/s41467-026-69543-5" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1038/s41467-026-69543-5" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Crespi, Alice, Maines, Elena, Terzi, Stefano, &amp; Pittore, Massimiliano. (2025) "More intense heatwaves under drier conditions: a compound event analysis in the Adige River basin (Eastern Italian Alps)" <em>Hydrology and Earth System Sciences</em>, 29, 6781–6809. DOI: <a href="https://doi.org/10.5194/hess-29-6781-2025">10.5194/hess-29-6781-2025</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.5194/hess-29-6781-2025" class="altmetric-embed"></span><a href="https://doi.org/10.5194/hess-29-6781-2025" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.5194/hess-29-6781-2025" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.5194/hess-29-6781-2025" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Albalat, A., Trapero, L., <strong>Lemus-Canovas, M.</strong>, &amp; Pons, M. (2025) "Characterizing past and current snow seasons through the application of a new multivariate snow index" <em>Journal of Hydrology</em>, 657, 133050. DOI: <a href="https://doi.org/10.1016/j.jhydrol.2025.133050">10.1016/j.jhydrol.2025.133050</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.jhydrol.2025.133050" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.jhydrol.2025.133050" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.jhydrol.2025.133050" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.jhydrol.2025.133050" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Gonzalez-Herrero, Sergi, Trapero, Laura, Albalat, Anna, Insua-Costa, Damian, Senande-Rivera, Martin, &amp; Miguez-Macho, Gonzalo. (2025) "Exploring the interplay between observed warming, atmospheric circulation, and soil–atmosphere feedbacks on heatwaves in a temperate mountain region" <em>Natural Hazards and Earth System Sciences</em>, 25, 2503–2518. DOI: <a href="https://doi.org/10.5194/nhess-25-2503-2025">10.5194/nhess-25-2503-2025</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.5194/nhess-25-2503-2025" class="altmetric-embed"></span><a href="https://doi.org/10.5194/nhess-25-2503-2025" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.5194/nhess-25-2503-2025" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.5194/nhess-25-2503-2025" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
-<p>Martín-Vide, Javier, Gonzalez-Hidalgo, José Carlos, Moreno-García, M. Carmen, Beguería, Santiago, Cordobilla, M. J., Balagué, Xavier, Cuscó, Eduard, Peña-Angulo, Dhais, <strong>Lemus, Marc</strong>, &amp; Trullenque, Víctor. (2025) "Spatial patterns of statistical relationship between the North Atlantic Oscillation and the Western Mediterranean Oscillation, and precipitation in Peninsular Spain" <em>Atmósfera</em>, 39. DOI: <a href="https://doi.org/10.20937/atm.53490">10.20937/atm.53490</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.20937/atm.53490" class="altmetric-embed"></span><a href="https://doi.org/10.20937/atm.53490" class="pill">DOI</a></div>
+<div class="pub-row"><div class="pub-content">
+<p>Martín-Vide, Javier, Gonzalez-Hidalgo, José Carlos, Moreno-García, M. Carmen, Beguîría, Santiago, Cordobilla, M. J., Balagüé, Xavier, Cuscó, Eduard, Peña-Angulo, Dhais, <strong>Lemus, Marc</strong>, &amp; Trullenque, Víctor. (2025) "Spatial patterns of statistical relationship between the North Atlantic Oscillation and the Western Mediterranean Oscillation, and precipitation in Peninsular Spain" <em>Atmósfera</em>, 39. DOI: <a href="https://doi.org/10.20937/atm.53490">10.20937/atm.53490</a></p>
+<div class="pub-meta"><a href="https://doi.org/10.20937/atm.53490" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.20937/atm.53490" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Bonsoms, Josep, López-Moreno, Juan I., <strong>Lemus-Cánovas, Marc</strong>, &amp; Oliva, Marc. (2025) "Future winter snowfall and extreme snow events in the Pyrenees" <em>Atmospheric Research</em>, 315, 107912. DOI: <a href="https://doi.org/10.1016/j.atmosres.2025.107912">10.1016/j.atmosres.2025.107912</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2025.107912" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.atmosres.2025.107912" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.atmosres.2025.107912" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2025.107912" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Llasat, María Carmen, Llasat-Botija, Montserrat, Pardo, Erika, Marcos-Matamoros, Raül, &amp; <strong>Lemus-Canovas, Marc</strong>. (2024) "Floods in the Pyrenees: a global view through a regional database" <em>Natural Hazards and Earth System Sciences</em>, 24, 3423–3443. DOI: <a href="https://doi.org/10.5194/nhess-24-3423-2024">10.5194/nhess-24-3423-2024</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.5194/nhess-24-3423-2024" class="altmetric-embed"></span><a href="https://doi.org/10.5194/nhess-24-3423-2024" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.5194/nhess-24-3423-2024" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.5194/nhess-24-3423-2024" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>González-Herrero, Sergi, <strong>Lemus-Canovas, Marc</strong>, &amp; Pereira, Paulo. (2024) "Climate change in cold regions" <em>Science of The Total Environment</em>, 933, 173127. DOI: <a href="https://doi.org/10.1016/j.scitotenv.2024.173127">10.1016/j.scitotenv.2024.173127</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.scitotenv.2024.173127" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.scitotenv.2024.173127" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.scitotenv.2024.173127" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.scitotenv.2024.173127" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Insua-Costa, Damián, <strong>Lemus-Cánovas, Marc</strong>, González-Alemán, Juan J., Senande-Rivera, Martín, Llasat, María del Carmen, Miguez-Macho, Gonzalo, &amp; Miralles, Diego G. (2024) "Extraordinary 2021 snowstorm in Spain reveals critical threshold response to anthropogenic climate change" <em>Communications Earth &amp; Environment</em>, 5. DOI: <a href="https://doi.org/10.1038/s43247-024-01503-7">10.1038/s43247-024-01503-7</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1038/s43247-024-01503-7" class="altmetric-embed"></span><a href="https://doi.org/10.1038/s43247-024-01503-7" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1038/s43247-024-01503-7" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1038/s43247-024-01503-7" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Montesinos-Ciuró, E., Cearreta-Innocenti, T., Serrano-Notivoli, Roberto, &amp; Royé, Dominic. (2024) "Attribution of the unprecedented heat event of August 2023 in Barcelona (Spain) to observed and projected global warming" <em>Urban Climate</em>, 56, 102019. DOI: <a href="https://doi.org/10.1016/j.uclim.2024.102019">10.1016/j.uclim.2024.102019</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.uclim.2024.102019" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.uclim.2024.102019" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.uclim.2024.102019" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.uclim.2024.102019" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Alonso-González, Esteban, Bonsoms, Josep, &amp; López-Moreno, Juan I. (2024) "Daily concentration of snowfalls in the mountains of the Iberian Peninsula" <em>International Journal of Climatology</em>, 44, 485–500. DOI: <a href="https://doi.org/10.1002/joc.8338">10.1002/joc.8338</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1002/joc.8338" class="altmetric-embed"></span><a href="https://doi.org/10.1002/joc.8338" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1002/joc.8338" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1002/joc.8338" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Insua-Costa, Damián, Trigo, Ricardo M., &amp; Miralles, Diego G. (2024) "Record-shattering 2023 Spring heatwave in western Mediterranean amplified by long-term drought" <em>npj Climate and Atmospheric Science</em>, 7. DOI: <a href="https://doi.org/10.1038/s41612-024-00569-6">10.1038/s41612-024-00569-6</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1038/s41612-024-00569-6" class="altmetric-embed"></span><a href="https://doi.org/10.1038/s41612-024-00569-6" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1038/s41612-024-00569-6" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1038/s41612-024-00569-6" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Rodríguez, Oriol, &amp; <strong>Lemus-Canovas, Marc</strong>. (2023) "Synoptic patterns triggering tornadic storms on the Iberian Peninsula and the Balearic Islands" <em>Atmospheric Research</em>, 285, 106634. DOI: <a href="https://doi.org/10.1016/j.atmosres.2023.106634">10.1016/j.atmosres.2023.106634</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2023.106634" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.atmosres.2023.106634" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.atmosres.2023.106634" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2023.106634" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Miró, Juan Javier, <strong>Lemus-Canovas, Marc</strong>, Serrano-Notivoli, Roberto, Olcina Cantos, Jorge, Estrela, Maria J., Martin-Vide, Javier, Sarricolea, Pablo, &amp; Meseguer-Ruiz, Oliver. (2022) "A component-based approximation for trend detection of intense rainfall in the Spanish Mediterranean coast" <em>Weather and Climate Extremes</em>, 38, 100513. DOI: <a href="https://doi.org/10.1016/j.wace.2022.100513">10.1016/j.wace.2022.100513</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.wace.2022.100513" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.wace.2022.100513" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.wace.2022.100513" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.wace.2022.100513" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Serrano-Notivoli, Roberto, <strong>Lemus-Canovas, Marc</strong>, Barrao, Samuel, Sarricolea, Pablo, Meseguer-Ruiz, Oliver, &amp; Tejedor, Ernesto. (2022) "Heat and cold waves in mainland Spain: Origins, characteristics, and trends" <em>Weather and Climate Extremes</em>, 37, 100471. DOI: <a href="https://doi.org/10.1016/j.wace.2022.100471">10.1016/j.wace.2022.100471</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.wace.2022.100471" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.wace.2022.100471" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.wace.2022.100471" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.wace.2022.100471" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Sánchez-Almodóvar, Esther, Martin-Vide, Javier, Olcina-Cantos, Jorge, &amp; <strong>Lemus-Canovas, Marc</strong>. (2022) "Are Atmospheric Situations Now More Favourable for Heavy Rainfall in the Spanish Mediterranean? Analysis of Episodes in the Alicante Province (1981–2020)" <em>Atmosphere</em>, 13(9), 1410. DOI: <a href="https://doi.org/10.3390/atmos13091410">10.3390/atmos13091410</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.3390/atmos13091410" class="altmetric-embed"></span><a href="https://doi.org/10.3390/atmos13091410" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.3390/atmos13091410" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.3390/atmos13091410" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Halifa-Marín, Amar, Torres-Vázquez, Miguel A., Pravia-Sarabia, Enrique, <strong>Lemus-Canovas, Marc</strong>, Jiménez-Guerrero, Pedro, &amp; Montávez, Juan Pedro. (2022) "A multivariate-driven approach for disentangling the reduction in near-natural Iberian water resources post-1980" <em>Hydrology and Earth System Sciences</em>, 26, 4251–4263. DOI: <a href="https://doi.org/10.5194/hess-26-4251-2022">10.5194/hess-26-4251-2022</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.5194/hess-26-4251-2022" class="altmetric-embed"></span><a href="https://doi.org/10.5194/hess-26-4251-2022" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.5194/hess-26-4251-2022" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.5194/hess-26-4251-2022" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>. (2022) "Changes in compound monthly precipitation and temperature extremes and their relationship with teleconnection patterns in the Mediterranean" <em>Journal of Hydrology</em>, 608, 127580. DOI: <a href="https://doi.org/10.1016/j.jhydrol.2022.127580">10.1016/j.jhydrol.2022.127580</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.jhydrol.2022.127580" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.jhydrol.2022.127580" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.jhydrol.2022.127580" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.jhydrol.2022.127580" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
-<p>Martin-Vide, Javier, Lopez-Bustins, Joan-Albert, <strong>Lemus, Marc</strong>, Moreno-Garcia, M. Carmen, Balagué, Xavier, Gonzalez-Hidalgo, José Carlos, Beguería, Santiago, Peña-Angulo, Dhais, &amp; Trullenque, Víctor. (2022) "The consecutive disparity of precipitation in conterminous Spain" <em>Theoretical and Applied Climatology</em>, 147, 1151–1161. DOI: <a href="https://doi.org/10.1007/s00704-021-03877-6">10.1007/s00704-021-03877-6</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1007/s00704-021-03877-6" class="altmetric-embed"></span><a href="https://doi.org/10.1007/s00704-021-03877-6" class="pill">DOI</a></div>
+<div class="pub-row"><div class="pub-content">
+<p>Martin-Vide, Javier, Lopez-Bustins, Joan-Albert, <strong>Lemus, Marc</strong>, Moreno-Garcia, M. Carmen, Balagüé, Xavier, Gonzalez-Hidalgo, José Carlos, Beguîría, Santiago, Peña-Angulo, Dhais, &amp; Trullenque, Víctor. (2022) "The consecutive disparity of precipitation in conterminous Spain" <em>Theoretical and Applied Climatology</em>, 147, 1151–1161. DOI: <a href="https://doi.org/10.1007/s00704-021-03877-6">10.1007/s00704-021-03877-6</a></p>
+<div class="pub-meta"><a href="https://doi.org/10.1007/s00704-021-03877-6" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1007/s00704-021-03877-6" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>. (2021) "Barcelona intense urban activity greatly limited the role of the atmosphere in driving NO₂ concentration in 2018" <em>Environmental Research Communications</em>, 3(10), 105006. DOI: <a href="https://doi.org/10.1088/2515-7620/ac2fbb">10.1088/2515-7620/ac2fbb</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1088/2515-7620/ac2fbb" class="altmetric-embed"></span><a href="https://doi.org/10.1088/2515-7620/ac2fbb" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1088/2515-7620/ac2fbb" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1088/2515-7620/ac2fbb" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Francos, Marcos, &amp; <strong>Lemus-Canovas, Marc</strong>. (2021) "Field observations and remote sensing techniques for evaluation of vegetal recovery after different wildfire severity in a Mediterranean ecosystem" <em>Revista Bosque</em>, 42(2), 245–258.</p>
 <div class="pub-meta"><a href="https://revistabosque.org/index.php/bosque/article/view/1058" class="pill">View</a></div>
+</div><div class="pub-badge"></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Insua-Costa, Damián, <strong>Lemus-Cánovas, Marc</strong>, Miguez-Macho, Gonzalo, &amp; Llasat, María Carmen. (2021) "Climatology and ranking of hazardous precipitation events in the western Mediterranean area" <em>Atmospheric Research</em>, 255, 105521. DOI: <a href="https://doi.org/10.1016/j.atmosres.2021.105521">10.1016/j.atmosres.2021.105521</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2021.105521" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.atmosres.2021.105521" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.atmosres.2021.105521" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2021.105521" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, &amp; Lopez-Bustins, Joan Albert. (2021) "Assessing internal changes in the future structure of dry–hot compound events: the case of the Pyrenees" <em>Natural Hazards and Earth System Sciences</em>, 21, 1721–1738. DOI: <a href="https://doi.org/10.5194/nhess-21-1721-2021">10.5194/nhess-21-1721-2021</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.5194/nhess-21-1721-2021" class="altmetric-embed"></span><a href="https://doi.org/10.5194/nhess-21-1721-2021" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.5194/nhess-21-1721-2021" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.5194/nhess-21-1721-2021" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Lopez-Bustins, Joan Albert, Martín-Vide, Javier, Halifa-Marin, Amar, Insua-Costa, Damián, Martinez-Artigas, Joan, Trapero, Laura, Serrano-Notivoli, Roberto, &amp; Cuadrat, José María. (2021) "Characterisation of Extreme Precipitation Events in the Pyrenees: From the Local to the Synoptic Scale" <em>Atmosphere</em>, 12(6), 665. DOI: <a href="https://doi.org/10.3390/atmos12060665">10.3390/atmos12060665</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.3390/atmos12060665" class="altmetric-embed"></span><a href="https://doi.org/10.3390/atmos12060665" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.3390/atmos12060665" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.3390/atmos12060665" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
-<p>Peña-Angulo, Dhais, Gonzalez-Hidalgo, José Carlos, Sandonís, Leire, Beguería, Santiago, Tomas-Burguera, Miquel, López-Bustins, Joan Albert, <strong>Lemus-Canovas, Marc</strong>, &amp; Martin-Vide, Javier. (2021) "Seasonal temperature trends on the Spanish mainland: A secular study (1916–2015)" <em>International Journal of Climatology</em>, 41(5), 3071–3084. DOI: <a href="https://doi.org/10.1002/joc.7006">10.1002/joc.7006</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1002/joc.7006" class="altmetric-embed"></span><a href="https://doi.org/10.1002/joc.7006" class="pill">DOI</a></div>
+<div class="pub-row"><div class="pub-content">
+<p>Peña-Angulo, Dhais, Gonzalez-Hidalgo, José Carlos, Sandomís, Leire, Beguîría, Santiago, Tomas-Burguera, Miquel, López-Bustins, Joan Albert, <strong>Lemus-Canovas, Marc</strong>, &amp; Martin-Vide, Javier. (2021) "Seasonal temperature trends on the Spanish mainland: A secular study (1916–2015)" <em>International Journal of Climatology</em>, 41(5), 3071–3084. DOI: <a href="https://doi.org/10.1002/joc.7006">10.1002/joc.7006</a></p>
+<div class="pub-meta"><a href="https://doi.org/10.1002/joc.7006" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1002/joc.7006" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Martinez-Artigas, Joan, <strong>Lemus-Canovas, Marc</strong>, &amp; Lopez-Bustins, Joan Albert. (2021) "Precipitation in peninsular Spain: Influence of teleconnection indices and spatial regionalisation" <em>International Journal of Climatology</em>, 41(S1). DOI: <a href="https://doi.org/10.1002/joc.6770">10.1002/joc.6770</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1002/joc.6770" class="altmetric-embed"></span><a href="https://doi.org/10.1002/joc.6770" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1002/joc.6770" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1002/joc.6770" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p>Lopez-Bustins, Joan A., &amp; <strong>Lemus-Canovas, Marc</strong>. (2020) "The influence of the Western Mediterranean Oscillation upon the spatio-temporal variability of precipitation over Catalonia (northeastern of the Iberian Peninsula)" <em>Atmospheric Research</em>, 236, 104819. DOI: <a href="https://doi.org/10.1016/j.atmosres.2019.104819">10.1016/j.atmosres.2019.104819</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2019.104819" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.atmosres.2019.104819" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.atmosres.2019.104819" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2019.104819" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
-<p><strong>Lemus-Canovas, Marc</strong>, Martin-Vide, Javier, Moreno-Garcia, M. Carmen, &amp; Lopez-Bustins, Joan A. (2020) "Estimating Barcelona's metropolitan daytime hot and cold poles using Landsat-8 Land Surface Temperature" <em>Science of The Total Environment</em>, 699, 134307. DOI: <a href="https://doi.org/10.1016/j.scitotenv.2019.134307">10.1016/j.scitotenv.2019.134307</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.scitotenv.2019.134307" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.scitotenv.2019.134307" class="pill">DOI</a></div>
+<div class="pub-row"><div class="pub-content">
+<p><strong>Lemus-Canovas, Marc</strong>, Martin-Vide, Javier, Moreno-Garcia, M. Carmen, &amp; Lopez-Bustins, Joan A. (2020) "Estimating Barcelona’s metropolitan daytime hot and cold poles using Landsat-8 Land Surface Temperature" <em>Science of The Total Environment</em>, 699, 134307. DOI: <a href="https://doi.org/10.1016/j.scitotenv.2019.134307">10.1016/j.scitotenv.2019.134307</a></p>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.scitotenv.2019.134307" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.scitotenv.2019.134307" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Lopez-Bustins, Joan A., Martin-Vide, Javier, &amp; Royé, Dominic. (2019) "synoptReg: An R package for computing a synoptic climate classification and a spatial regionalization of environmental data" <em>Environmental Modelling &amp; Software</em>, 118, 114–119. DOI: <a href="https://doi.org/10.1016/j.envsoft.2019.04.006">10.1016/j.envsoft.2019.04.006</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.envsoft.2019.04.006" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.envsoft.2019.04.006" class="pill">DOI</a><a href="https://github.com/lemuscanovas/synoptReg" class="pill">GitHub</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.envsoft.2019.04.006" class="pill">DOI</a><a href="https://github.com/lemuscanovas/synoptReg" class="pill">GitHub</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.envsoft.2019.04.006" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Lopez-Bustins, Joan A., Trapero, Laura, &amp; Martin-Vide, Javier. (2019) "Combining circulation weather types and daily precipitation modelling to derive climatic precipitation regions in the Pyrenees" <em>Atmospheric Research</em>, 220, 181–193. DOI: <a href="https://doi.org/10.1016/j.atmosres.2019.01.018">10.1016/j.atmosres.2019.01.018</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2019.01.018" class="altmetric-embed"></span><a href="https://doi.org/10.1016/j.atmosres.2019.01.018" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1016/j.atmosres.2019.01.018" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1016/j.atmosres.2019.01.018" class="altmetric-embed"></span></div></div>
 </li>
 
 <li>
+<div class="pub-row"><div class="pub-content">
 <p><strong>Lemus-Canovas, Marc</strong>, Ninyerola, Miquel, Lopez-Bustins, Joan A., Manguan, Santiago, &amp; Garcia-Sellés, Carles. (2019) "A mixed application of an objective synoptic classification and spatial regression models for deriving winter precipitation regimes in the Eastern Pyrenees" <em>International Journal of Climatology</em>, 39(4), 2244–2259. DOI: <a href="https://doi.org/10.1002/joc.5948">10.1002/joc.5948</a></p>
-<div class="pub-meta"><span data-badge-type="donut" data-doi="10.1002/joc.5948" class="altmetric-embed"></span><a href="https://doi.org/10.1002/joc.5948" class="pill">DOI</a></div>
+<div class="pub-meta"><a href="https://doi.org/10.1002/joc.5948" class="pill">DOI</a></div>
+</div><div class="pub-badge"><span data-badge-type="donut" data-doi="10.1002/joc.5948" class="altmetric-embed"></span></div></div>
 </li>
 
 </ol>
@@ -419,8 +497,6 @@ Recognized with the **Best Poster Award** at the 7th International Conference on
 <div class="pub-meta">
 <a href="https://github.com/lemuscanovas/climattR" class="pill">GitHub</a>
 </div>
-
-Developed in coordination with an international network of researchers (KNMI, IPSL, SLF, Oxford) since May 2025.
 
 ---
 
