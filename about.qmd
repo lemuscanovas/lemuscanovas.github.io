@@ -18,7 +18,7 @@ Marc Lemus-Canovas is a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcel
 
 He holds a **PhD in Geography** (Extraordinary Doctorate Prize) from the University of Barcelona, and has held postdoctoral positions at EURAC Research (Italy), Andorra Research+Innovation (Andorra), and the University of Santiago de Compostela (Spain). As Principal Investigator, he has secured competitive funding for the **Flash4CastImp** project (Marie Skłodowska-Curie Actions, Horizon Europe; 2027–2029), the **HIPEAtMount** project (Province of Bolzano; 2024–2026), and the **ATOC** project (Barcelona City Council; 2023–2024).
 
-He is the author of [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for synoptic climate classification widely used in climatological research. Since May 2025 he coordinates an international network (KNMI, IPSL, SLF, Oxford) to develop an R/Python package for extreme weather attribution using the flow analogues technique. He also participated in the review process of the Sixth IPCC Assessment Report.
+He is the author of [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for synoptic climate classification widely used in climatological research. He also participated in the review process of the Sixth IPCC Assessment Report.
 
 # Research Interests
 
