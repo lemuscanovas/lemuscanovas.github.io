@@ -55,6 +55,27 @@ Barcelona Supercomputing Center — Earth Sciences Department, Spain
 **MSc in Remote Sensing and GIS** · Autonomous University of Barcelona, Spain · 2017  
 **BSc in Geography** · University of Barcelona, Spain · 2016
 
+# Teaching & Supervision
+
+**University teaching:** 270 hours at the University of Barcelona; 42 hours in master's programs
+
+**Courses taught:**  
+Three 25-hour courses on spatial data analysis with R, Faculty of Geography and History, University of Barcelona (2019–2021)
+
+**Supervision:**
+
+- 1 Bachelor thesis (Inés Torres Batlló, UB, Spain)
+- 2 Master theses (Albert Salvadó Badia, UB, Spain; Bhumi Gagnani, TU Dresden, Germany — HIPEAtMount project)
+- Co-supervising Dimitar Yanakiev (PhD student, Universidad de Salamanca)
+
+**Other academic activities:**
+
+- Jury member for doctoral thesis of Ema Gaitán Fernández, Universidad San Jorge, Zaragoza (2023)
+- Reviewer, Sixth IPCC Assessment Report
+- Evaluator for competitive research projects, Spanish State Research Agency (AEI)
+- Journal Editor, Special Issues: "Climate change in cold regions" (*Science of The Total Environment*) & "Spatiotemporal Variability of Precipitation Concentration" (*Atmosphere*)
+- Organizer, public outreach event *"Calor extrema a Barcelona: Desafiaments climàtics i solucions urbanes"*, Royal Academy of Sciences and Arts of Barcelona
+
 # Contact
 
 Feel free to reach out via [email](mailto:lemuscanovas@gmail.com) or through any of the social links at the bottom of this page.
