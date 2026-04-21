@@ -1,0 +1,74 @@
+/* projects.css - Card styling for the projects listing page */
+
+/* Remove default title block */
+#title-block-header .quarto-title .title {
+  font-size: 2rem;
+  margin-bottom: 0.25em;
+}
+
+/* Grid cards */
+.quarto-grid-item.card {
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.quarto-grid-item.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+  transform: translateY(-3px);
+}
+
+/* Card image */
+.quarto-grid-item .thumbnail-image.card-img {
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Card title */
+.quarto-grid-item .listing-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2c3f51;
+  margin-bottom: 0.4rem;
+}
+
+.quarto-grid-item .listing-title a {
+  color: #5480a7;
+  text-decoration: none;
+}
+
+.quarto-grid-item .listing-title a:hover {
+  color: #56A754;
+  text-decoration: underline;
+}
+
+/* Card subtitle / description */
+.quarto-grid-item .listing-subtitle,
+.quarto-grid-item .card-subtitle {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.45;
+  margin-bottom: 0.6rem;
+}
+
+/* Category tags */
+.quarto-grid-item .listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.quarto-grid-item .listing-category {
+  background-color: #e8f0f7;
+  color: #5480a7;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  cursor: default;
+}

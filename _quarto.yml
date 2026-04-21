@@ -16,6 +16,7 @@ project:
     - "content/"
     - "css/"
     - "images/"
+    - "project-items/"
 
 website:
   title: "Marc Lemus-Canovas"

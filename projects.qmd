@@ -1,28 +1,21 @@
 ---
 title: Projects
-description: A collection of research projects and software in climate science and R programming.
-execute:
-  echo: false
-  message: false
-  warning: false
+description: "Research projects, software, and tools in climate science and R programming."
+listing:
+  contents:
+    - "project-items/metadata.yml"
+  type: grid
+  fields: [image, title, subtitle, categories]
+  sort: "date desc"
+  filter-ui: false
+  sort-ui: false
+  image-height: "200px"
+  grid-columns: 3
 format:
   html:
-    css: css/strapless.css
----
+    page-layout: full
+    css: css/projects.css
+title-block-banner: false
 
-```{r projects}
-source("_common.R")
-
-readr::read_csv(here::here("content", "projects.csv")) %>%
-  dplyr::select(-tags) %>%
-  bs4cards::cards(
-    title = title,
-    text = description,
-    link = url,
-    image = src,
-    label_colour = "#ffffff",
-    border_radius = 5
-  )
-```
 
 
