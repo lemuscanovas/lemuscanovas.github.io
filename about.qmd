@@ -12,34 +12,51 @@ execute:
 source("_common.R")
 ```
 
-Welcome! I am a climate researcher and R enthusiast. See my [CV](cv.qmd) for full details.
-
 # Short Bio
 
-Marc Lemus-Canovas is a Postdoctoral Researcher at [Andorra Research + Innovation](https://www.ari.ad/) (Andorra). His research focuses on **climate change and climate variability in the Pyrenees**, with particular emphasis on high-resolution climate projections for this mountain region. He holds a PhD in Geography (Climatology) from the University of Barcelona, where he studied extreme precipitation events, synoptic climatology, and climate teleconnections across the Iberian Peninsula and the Pyrenees.
+Marc Lemus-Canovas is a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcelona Supercomputing Center](https://www.bsc.es/) (Earth Sciences Department, Spain) since February 2026. His research focuses on understanding the link between **atmospheric dynamics** and **extreme meteorological events** — heatwaves, compound droughts, and extreme precipitation — with particular emphasis on the **European Alps** and the **Mediterranean** region. He develops synoptic classification and attribution methods to quantify the role of climate change in shaping these extremes.
+
+He holds a **PhD in Geography** (Extraordinary Doctorate Prize) from the University of Barcelona, and has held postdoctoral positions at EURAC Research (Italy), Andorra Research+Innovation (Andorra), and the University of Santiago de Compostela (Spain). As Principal Investigator, he has secured over **€197,000** in competitive funding, including the **HIPEAtMount** project (Province of Bolzano, €172,750) and the **ATOC** project (Barcelona City Council, €24,500). His proposal was also recognized with the **Seal of Excellence** in the Marie Skłodowska-Curie European Fellowship call.
+
+He is the author of [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for synoptic climate classification widely used in climatological research. Since May 2025 he coordinates an international network (KNMI, IPSL, SLF, Oxford) to develop an R/Python package for extreme weather attribution using the flow analogues technique. He also participated in the review process of the Sixth IPCC Assessment Report.
 
 # Research Interests
 
-- Climate variability and change in mountain regions
-- Extreme precipitation events and compound events
-- Teleconnection patterns (WeMO, NAO, AMO…)
-- Synoptic climatology and circulation weather types
-- Urban climatology (Barcelona Metropolitan Area)
-- High-resolution climate projections for the Pyrenees
-- R programming and open-source tools for climate analysis
+- Synoptic climatology and atmospheric circulation
+- Extreme weather events: heatwaves, compound droughts, extreme precipitation
+- Climate change attribution in mountain regions (Alps, Pyrenees)
+- Compound event analysis
+- Urban climatology
+- R programming and open-source tools for climate science
 
-# The synoptReg R Package
+# Current Position
 
-As part of his doctoral work, Marc developed [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for computing synoptic climate classifications and performing spatial regionalization of environmental data. The package is available on [CRAN](https://cran.r-project.org/package=synoptReg) and [GitHub](https://github.com/lemuscanovas/synoptReg).
+**Beatriu de Pinós Postdoctoral Fellow** · *since February 2026*  
+Barcelona Supercomputing Center — Earth Sciences Department, Spain
 
-# R Programming & Data Science
+# Previous Positions
 
-R is central to both Marc's research and his passion for open and reproducible science. He is enrolled in a **BSc in Applied Data Science** at the [Open University of Catalonia (UOC)](https://www.uoc.edu/), deepening his expertise in data analysis, machine learning, and statistical modelling.
+| Period | Position | Institution |
+|---|---|---|
+| Oct 2024 – Feb 2026 | Seal of Excellence Postdoctoral Fellow | EURAC Research, Center for Climate Change and Transformation, Italy |
+| Oct 2023 – Sep 2024 | Postdoctoral Researcher (Xunta de Galicia) + Visiting Postdoc | Univ. of Santiago de Compostela / EURAC Research, Italy |
+| Oct 2022 – Sep 2023 | Postdoctoral Researcher (Xunta de Galicia) + Visiting Postdoc | Univ. of Santiago de Compostela / Andorra Research+Innovation |
+| May 2022 – Aug 2022 | Postdoctoral Researcher | Andorra Research+Innovation |
+| Nov 2021 – Feb 2022 | Adjunct Professor | University of Barcelona, Dept. of Geography |
+| Oct 2018 – Oct 2021 | Predoctoral Researcher FPU | University of Barcelona, Dept. of Geography |
+| Apr 2018 – Sep 2018 | Predoctoral Researcher APIF | University of Barcelona, Dept. of Geography |
+| Oct 2017 – Nov 2017 | JAE-Intro Fellow | Spanish National Research Council, Institute of Geosciences |
 
-This website serves as a place to share R tutorials and tips — mainly focused on climate data analysis, but also covering general data science workflows.
+*Research stays during PhD: University of Lisbon (3 mo), University of Porto (1 mo), University of Santiago de Compostela (1 mo). Scientific secondment: ETH Zurich — Hydrology & Climate Impacts in Mountain Regions Group (Sep–Dec 2025).*
+
+# Education
+
+**PhD in Geography** · University of Barcelona, Spain · 2022 *(Extraordinary Doctorate Prize)*  
+**MSc in Remote Sensing and GIS** · Autonomous University of Barcelona, Spain · 2017  
+**BSc in Geography** · University of Barcelona, Spain · 2016
 
 # Contact
 
-Feel free to reach out via [email](mailto:marc.lemus@ari.ad) or through any of the social links at the bottom of this page.
+Feel free to reach out via [email](mailto:lemuscanovas@gmail.com) or through any of the social links at the bottom of this page.
 
 `r last_updated()`
