@@ -45,15 +45,15 @@ Barcelona Supercomputing Center — Earth Sciences Department, Spain
 
 **As Principal Investigator:**
 
-1. **HIPEAtMount** — Tailored attribution of high-impact precipitation events to anthropogenic climate change in mountain areas. Province of Bolzano/Bozen, Italy. 2024–2026. **€172,750**
-2. **ATOC** — Heat wave attribution to climate change in Barcelona. Barcelona City Council. 2023–2024. **€24,500**
+1. **HIPEAtMount** — Tailored attribution of high-impact precipitation events to anthropogenic climate change in mountain areas. Province of Bolzano/Bozen, Italy. 2024–2026.
+2. **ATOC** — Heat wave attribution to climate change in Barcelona. Barcelona City Council. 2023–2024.
 
 **As Collaborator:**
 
-3. **EO4Multihazards** — Earth Observation for Multi-Hazard Risk Assessments. European Space Agency. PI: Terzi, S. 2023–2025. €1M (share €144,000 to EURAC)
+3. **EO4Multihazards** — Earth Observation for Multi-Hazard Risk Assessments. European Space Agency. PI: Terzi, S. 2023–2025.
 4. **FutureMed** — Transdisciplinary network bridging climate science and societal impacts. COST. PI: Khodayar, S. 2023–2027
-5. **EXE** — Compound dry and warm events in mainland Spain. Spanish Ministry of Science and Innovation. PI: Martin-Vide, J. 2021–2024. €66,500
-6. **CLICES** — Climate of the last century in Spanish mainland. Spanish Ministry of Science and Innovation. PI: Martin-Vide, J. & Lopez-Bustins, J.A. 2018–2020. €78,000
+5. **EXE** — Compound dry and warm events in mainland Spain. Spanish Ministry of Science and Innovation. PI: Martin-Vide, J. 2021–2024.
+6. **CLICES** — Climate of the last century in Spanish mainland. Spanish Ministry of Science and Innovation. PI: Martin-Vide, J. & Lopez-Bustins, J.A. 2018–2020.
 
 ---
 
@@ -61,9 +61,9 @@ Barcelona Supercomputing Center — Earth Sciences Department, Spain
 
 - **Beatriu de Pinós Fellowship** (2026) — Generalitat de Catalunya / Barcelona Supercomputing Center
 - **Seal of Excellence**, Marie Skłodowska-Curie European Fellowship call
-- **HIPEAtMount grant** (2024) — Province of Bolzano, Italy (€172,750)
-- **International Eduard Fontserè Meteorology Prize** (€2,500)
-- **Antoni M. Badia i Margarit Prize** (€1,600)
+- **HIPEAtMount grant** (2024) — Province of Bolzano, Italy
+- **International Eduard Fontserè Meteorology Prize**
+- **Antoni M. Badia i Margarit Prize**
 - **Extraordinary Doctorate Prize** — University of Barcelona, 2022
 - **Best Poster Award** — 7th International Conference on Meteorology and Climatology of the Mediterranean (MetMed), 2019
 - **FPU Predoctoral Fellowship** (FPU2017/02166) — Spanish Ministry of Education, 2018–2022
