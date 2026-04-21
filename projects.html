@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A collection of research projects and software in climate science and R programming.">
+<meta name="description" content="Research projects, software, and tools in climate science and R programming.">
 
 <title>Projects – Marc Lemus-Canovas</title>
 <style>
@@ -35,6 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-image","listing-categories","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Academicons (for Google Scholar, ORCID, ResearchGate, CV icons) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -78,16 +109,45 @@ ul.task-list li input[type="checkbox"] {
 <!-- Font Awesome (for additional icons) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="css/strapless.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="css/projects.css">
 <meta property="og:title" content="Projects – Marc Lemus-Canovas">
-<meta property="og:description" content="A collection of research projects and software in climate science and R programming.">
-<meta property="og:image" content="https://lemuscanovas.github.io/images/projects/synoptreg.png">
+<meta property="og:description" content="Research projects, software, and tools in climate science and R programming.">
+<meta property="og:image" content="https://lemuscanovas.github.io/../images/projects/hipeatmount.png">
 <meta property="og:site_name" content="Marc Lemus-Canovas">
 <meta property="og:locale" content="en_US">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -140,12 +200,12 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -154,12 +214,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    A collection of research projects and software in climate science and R programming.
+    Research projects, software, and tools in climate science and R programming.
   </div>
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -171,73 +231,128 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<div class="row p-0 row-cols-1 row-cols-md-2 row-cols-lg-3" style="margin-left: -.2rem; margin-right: -.2rem; margin-top: 1rem; margin-bottom: 1rem; ">
-<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: 1rem 1rem 1rem 1rem ;">
-<a href="https://lemuscanovas.github.io/synoptreg/" style="color: inherit;">
-<img src="images/projects/synoptreg.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: 1rem 1rem 0 0 ;">
-</a>
-<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFFF; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 1rem 1rem ;">
-<a href="https://lemuscanovas.github.io/synoptreg/">
-<h5 class="card-title my-auto px-3 pt-3 pb-1 anchored">synoptReg</h5>
-</a>
-<p class="card-text my-auto px-3 pb-3 pt-1">R package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.</p>
-</div>
-</div>
-<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: 1rem 1rem 1rem 1rem ;">
-<a href="https://ropenspain.github.io/climaemet/" style="color: inherit;">
-<img src="images/projects/climaemet.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: 1rem 1rem 0 0 ;">
-</a>
-<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFFF; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 1rem 1rem ;">
-<a href="https://ropenspain.github.io/climaemet/">
-<h5 class="card-title my-auto px-3 pt-3 pb-1 anchored">climaemet</h5>
-</a>
-<p class="card-text my-auto px-3 pb-3 pt-1">R package (rOpenSpain) to download and visualize climate data from the Spanish Meteorological Agency (AEMET) API.</p>
-</div>
-</div>
-<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: 1rem 1rem 1rem 1rem ;">
-<a href="https://www.eurac.edu/en/pages/project-detail?id=HIPEATMOUNT" style="color: inherit;">
-<img src="images/projects/hipeatmount.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: 1rem 1rem 0 0 ;">
-</a>
-<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFFF; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 1rem 1rem ;">
-<a href="https://www.eurac.edu/en/pages/project-detail?id=HIPEATMOUNT">
-<h5 class="card-title my-auto px-3 pt-3 pb-1 anchored">HIPEAtMount</h5>
-</a>
-<p class="card-text my-auto px-3 pb-3 pt-1">Attribution of high-impact precipitation events to climate change in the European Alps. PI project funded by the Province of Bolzano (€172,750). Collaboration with ETH Zürich.</p>
-</div>
-</div>
-<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: 1rem 1rem 1rem 1rem ;">
-<a href="https://doi.org/10.1016/j.uclim.2024.102019" style="color: inherit;">
-<img src="images/projects/atoc.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: 1rem 1rem 0 0 ;">
-</a>
-<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFFF; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 1rem 1rem ;">
-<a href="https://doi.org/10.1016/j.uclim.2024.102019">
-<h5 class="card-title my-auto px-3 pt-3 pb-1 anchored">ATOC</h5>
-</a>
-<p class="card-text my-auto px-3 pb-3 pt-1">Attribution of the unprecedented August 2023 Barcelona heatwave to observed and projected global warming. PI project funded by Barcelona City Council (€24,500).</p>
-</div>
-</div>
-<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: 1rem 1rem 1rem 1rem ;">
-<a href="https://doi.org/10.5194/nhess-21-1721-2021" style="color: inherit;">
-<img src="images/projects/compound.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: 1rem 1rem 0 0 ;">
-</a>
-<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: #FFFFFFFF; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 1rem 1rem ;">
-<a href="https://doi.org/10.5194/nhess-21-1721-2021">
-<h5 class="card-title my-auto px-3 pt-3 pb-1 anchored">Compound Events</h5>
-</a>
-<p class="card-text my-auto px-3 pb-3 pt-1">Research on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX data.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="UmVzZWFyY2glMkNQSQ==" data-listing-date-sort="1727740800000">
+<a href="https://www.eurac.edu/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../images/projects/hipeatmount.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HIPEAtMount
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UEk='); return false;">PI</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Attribution of high-impact precipitation events to climate change in the European Alps. PI project funded by the Province of Bolzano (€172,750). Collaboration with ETH…</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="UmVzZWFyY2glMkNQSQ==" data-listing-date-sort="1672531200000">
+<a href="https://doi.org/10.1016/j.uclim.2024.102019" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../images/projects/atoc.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ATOC
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UEk='); return false;">PI</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Attribution of the unprecedented August 2023 Barcelona heatwave to observed and projected global warming. PI project funded by Barcelona City Council (€24,500).</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="UmVzZWFyY2g=" data-listing-date-sort="1622505600000">
+<a href="https://doi.org/10.5194/nhess-21-1721-2021" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../images/projects/compound.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Compound Events
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Research on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX…</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="UiUyQ1NvZnR3YXJl" data-listing-date-sort="1614556800000">
+<a href="https://ropenspain.github.io/climaemet/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../images/projects/climaemet.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+climaemet
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmU='); return false;">Software</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>R package (rOpenSpain) to download and visualize climate data from the Spanish Meteorological Agency (AEMET) open data API.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="UiUyQ1NvZnR3YXJl" data-listing-date-sort="1554508800000">
+<a href="https://lemuscanovas.github.io/synoptreg/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../images/projects/synoptreg.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+synoptReg
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmU='); return false;">Software</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>R package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
