@@ -25,7 +25,7 @@ website:
   description: "Postdoctoral Researcher in Climate Change | Pyrenees | R programming"
   image: images/profile.jpg
   site-url: https://lemuscanovas.github.io
-  favicon: images/favicon.ico
+  favicon: images/favicon.png
   repo-url: https://github.com/lemuscanovas/lemuscanovas.github.io
   search:
     location: navbar
