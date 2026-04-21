@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Marc Lemus-Canovas",
     "section": "",
-    "text": "About\nI am a Beatriu de Pinós Postdoctoral Fellow at the Barcelona Supercomputing Center (Earth Sciences Department). My research focuses on understanding the link between atmospheric dynamics and extreme meteorological events — compound heat and drought events, extreme precipitation, and their attribution to climate change — with a particular emphasis on mountain areas (Pyrenees, Alps)."
+    "text": "About\nI am a Beatriu de Pinós Postdoctoral Fellow at the Barcelona Supercomputing Center (Earth Sciences Department). My research focuses on understanding the link between atmospheric dynamics and extreme meteorological events — compound heat and drought events, extreme precipitation, and their attribution to climate change."
   },
   {
     "objectID": "research.html",
@@ -67,14 +67,14 @@
     "href": "research.html#software",
     "title": "Research",
     "section": "Software",
-    "text": "Software\nsynoptReg — R package for computing synoptic climate classifications and spatial regionalization of environmental data.\n\nDocumentation GitHub Paper CRAN\n\nRecognized with the Best Poster Award at the 7th International Conference on Meteorology and Climatology of the Mediterranean (MetMed, 2019). Extended to societal applications through a contract with the Civil Protection of the Aragon Government to define a new nivo-climatic regionalization for their avalanche bulletin. Since May 2025, coordinating an international network (KNMI, IPSL, SLF, Oxford) to develop an R/Python package for extreme weather attribution using the flow analogues technique."
+    "text": "Software\nsynoptReg — R package for computing synoptic climate classifications and spatial regionalization of environmental data.\n\nDocumentation GitHub Paper CRAN\n\nRecognized with the Best Poster Award at the 7th International Conference on Meteorology and Climatology of the Mediterranean (MetMed, 2019).\n\nclimattR — R package for climate change attribution of extreme weather events using the flow analogues technique.\n\nGitHub\n\nDeveloped in coordination with an international network of researchers (KNMI, IPSL, SLF, Oxford) since May 2025."
   },
   {
     "objectID": "research.html#media-coverage",
     "href": "research.html#media-coverage",
     "title": "Research",
     "section": "Media Coverage",
-    "text": "Media Coverage\nNo media coverage entries yet. This section will be updated as interviews, press articles, and outreach features become available."
+    "text": "Media Coverage\n\n2023\n\nLemus-Canovas, M. (2023). 2022, l’any més càlid: anomalia o tendència? Altaveu, 17-01-2023. Link\n\n\n\n2022\n\nLemus-Canovas, M. (2022). Marc Lemus i Cánovas: “És complicat atribuir els fenòmens de precipitació intensa aïllada al canvi climàtic”. elCugatenc, Sant Cugat del Vallès, 02-09-2022. Link\nLemus-Canovas, M. (2022). Marc Lemus-Cànovas, Doctor en Geografía. TV3. TV interview, 10-07-2022. Link\nLemus-Canovas, M. (2022). Les nevades a l’Observatori Fabra: quines situacions meteorològiques les produeixen? Barcelona Televisió (Beteve), 25-02-2022. Link\n\n\n\n2021\n\nLemus-Canovas, M. (2021). L’escalfament global farà augmentar les morts per calor a Catalunya. La Brúixola, Onda Cero. Radio interview, 08-07-2021. Link\nLemus-Canovas, M. (2021). Cinc dies més sense pluja i un augment de 6ºC en la temperatura, efectes del canvi climàtic al Pirineu a final de segle. La Vanguardia, 08-07-2021.\nLemus-Canovas, M. (2021). El 2100 el Pirineu pot ser 6ºC més càlid i tenir sequeres cinc dies més llargues. Món Planeta, 09-07-2021.\nLemus-Canovas, M. (2021). Analizan el impacto del cambio climático en los periodos secos y cálidos de los Pirineos. Agencia Iberoamericana para la difusión de la ciencia y la tecnología, 12-07-2021.\nLemus-Canovas, M. (2021). Com respondrà el Pirineu a les situacions d’extrema sequera i l’ambient caloós del futur? El Temps, CCMA, 25-07-2021.\n\n\n\n2019\n\nLemus-Canovas, M. (2019). Illes de calor a Barcelona: 2,5 graus més a les zones urbanitzades que a les verdes. CCMA (324), 18-09-2019. Link\nLemus-Canovas, M. (2019). Alguns episodis anticiclònics al Pirineu són quatre vegades més freqüents ara que fa 50 anys. METEOMAURI, CCMA. Radio interview, 21-02-2019.\nLemus-Canovas, M. (2019). Detecten un descens significatiu de la precipitació anual al vessant sud del Pirineu. El Temps, CCMA, 10-02-2019.\nLemus-Canovas, M. (2019). Les àrees urbanes s’escalfen fins a 2.5 ºC més que les zones amb verd urbà. Barcelona Televisió (Beteve), 12-09-2019. Link"
   },
   {
     "objectID": "teaching.html",
