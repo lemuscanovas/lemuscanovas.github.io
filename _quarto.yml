@@ -7,7 +7,6 @@ project:
     - "research.qmd"
     - "projects.qmd"
     - "teaching.qmd"
-    - "talks.qmd"
     - "blog/index.qmd"
     - "blog/**/*.qmd"
     - "404.qmd"
@@ -45,8 +44,6 @@ website:
         href: projects.qmd
       - text: "Teaching"
         href: teaching.qmd
-      - text: "Talks"
-        href: talks.qmd
       - text: "Blog"
         href: blog/index.qmd
 
