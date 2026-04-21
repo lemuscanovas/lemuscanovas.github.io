@@ -1,34 +1,34 @@
 - title: "synoptReg"
-  subtitle: "R package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data."
-  image: images/projects/synoptreg.png
+  description: "R package for computing synoptic climate classifications and spatial regionalization of environmental variables using gridded atmospheric data."
+  image: ../images/projects/synoptreg.png
   path: https://lemuscanovas.github.io/synoptreg/
   categories: [R, Software]
   date: 2019-04-06
 
 - title: "climaemet"
-  subtitle: "R package (rOpenSpain) to download and visualize climate data from the Spanish Meteorological Agency (AEMET) open data API."
-  image: images/projects/climaemet.png
+  description: "R package (rOpenSpain) to download and visualize climate data from the Spanish Meteorological Agency (AEMET) open data API."
+  image: ../images/projects/climaemet.png
   path: https://ropenspain.github.io/climaemet/
   categories: [R, Software]
   date: 2021-03-01
 
 - title: "HIPEAtMount"
-  subtitle: "Attribution of high-impact precipitation events to anthropogenic climate change in the European Alps. PI project funded by the Province of Bolzano (€172,750). Collaboration with ETH Zürich."
-  image: images/projects/hipeatmount.png
+  description: "Attribution of high-impact precipitation events to climate change in the European Alps. PI project funded by the Province of Bolzano (€172,750). Collaboration with ETH Zürich."
+  image: ../images/projects/hipeatmount.png
   path: https://www.eurac.edu/
   categories: [Research, PI]
   date: 2024-10-01
 
 - title: "ATOC"
-  subtitle: "Attribution of the unprecedented August 2023 Barcelona heatwave to observed and projected global warming. PI project funded by Barcelona City Council (€24,500)."
-  image: images/projects/atoc.png
+  description: "Attribution of the unprecedented August 2023 Barcelona heatwave to observed and projected global warming. PI project funded by Barcelona City Council (€24,500)."
+  image: ../images/projects/atoc.png
   path: https://doi.org/10.1016/j.uclim.2024.102019
   categories: [Research, PI]
   date: 2023-01-01
 
 - title: "Compound Events"
-  subtitle: "Research on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX data."
-  image: images/projects/compound.png
+  description: "Research on dry-hot compound events in the Pyrenees under current and future climate conditions, assessing changes in frequency, intensity, and duration using EURO-CORDEX data."
+  image: ../images/projects/compound.png
   path: https://doi.org/10.5194/nhess-21-1721-2021
   categories: [Research]
   date: 2021-06-01

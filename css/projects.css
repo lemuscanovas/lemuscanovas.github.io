@@ -46,8 +46,8 @@
   text-decoration: underline;
 }
 
-/* Card subtitle / description */
-.quarto-grid-item .listing-subtitle,
+/* Card description */
+.quarto-grid-item .listing-description,
 .quarto-grid-item .card-subtitle {
   font-size: 0.85rem;
   color: #555;

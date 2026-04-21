@@ -5,7 +5,7 @@ listing:
   contents:
     - "project-items/metadata.yml"
   type: grid
-  fields: [image, title, subtitle, categories]
+  fields: [image, title, description, categories]
   sort: "date desc"
   filter-ui: false
   sort-ui: false
