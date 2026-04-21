@@ -1,6 +1,6 @@
 ---
 title: "Research"
-description: "Publications, academic profile, and CV of Marc Lemus-Canovas — synoptic climatology, extreme events, attribution, mountain climate."
+description: "Publications and academic profile."
 format:
   html:
     toc: true
