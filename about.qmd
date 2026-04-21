@@ -14,19 +14,17 @@ source("_common.R")
 
 # Short Bio
 
-Marc Lemus-Canovas is a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcelona Supercomputing Center](https://www.bsc.es/) (Earth Sciences Department, Spain) since February 2026. His research focuses on understanding the link between **atmospheric dynamics** and **extreme meteorological events** — heatwaves, compound droughts, and extreme precipitation — with particular emphasis on the **European Alps** and the **Mediterranean** region. He develops synoptic classification and attribution methods to quantify the role of climate change in shaping these extremes.
+I am a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcelona Supercomputing Center](https://www.bsc.es/) (Earth Sciences Department, Spain) since February 2026. My research focuses on understanding the link between **atmospheric dynamics** and **extreme meteorological events** — heatwaves, compound droughts, and extreme precipitation — with particular emphasis on the **European Alps** and the **Mediterranean** region. I develop synoptic classification and attribution methods to quantify the role of climate change in shaping these extremes.
 
-He holds a **PhD in Geography** (Extraordinary Doctorate Prize) from the University of Barcelona, and has held postdoctoral positions at EURAC Research (Italy), Andorra Research+Innovation (Andorra), and the University of Santiago de Compostela (Spain). As Principal Investigator, he has secured competitive funding for the **Flash4CastImp** project (Marie Skłodowska-Curie Actions, Horizon Europe; 2027–2029), the **HIPEAtMount** project (Province of Bolzano; 2024–2026), and the **ATOC** project (Barcelona City Council; 2023–2024).
+I hold a **PhD in Geography** (Extraordinary Doctorate Prize) from the University of Barcelona, and have held postdoctoral positions at EURAC Research (Italy), Andorra Research+Innovation (Andorra), and the University of Santiago de Compostela (Spain). As Principal Investigator, I have secured competitive funding for the **Flash4CastImp** project (Marie Skłodowska-Curie Actions, Horizon Europe; 2027–2029), the **HIPEAtMount** project (Province of Bolzano; 2024–2026), and the **ATOC** project (Barcelona City Council; 2023–2024).
 
-He is the author of [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for synoptic climate classification widely used in climatological research. He also participated in the review process of the Sixth IPCC Assessment Report.
+I am the author of [**synoptReg**](https://lemuscanovas.github.io/synoptreg/), an R package for synoptic climate classification widely used in climatological research. I also participated in the review process of the Sixth IPCC Assessment Report.
 
 # Research Interests
 
 - Synoptic climatology and atmospheric circulation
 - Extreme weather events: heatwaves, compound droughts, extreme precipitation
 - Climate change attribution in mountain regions (Alps, Pyrenees)
-- Compound event analysis
-- Urban climatology
 - R programming and open-source tools for climate science
 
 # Current Position
@@ -47,7 +45,7 @@ Barcelona Supercomputing Center — Earth Sciences Department, Spain
 | Apr 2018 – Sep 2018 | Predoctoral Researcher APIF | University of Barcelona, Dept. of Geography |
 | Oct 2017 – Nov 2017 | JAE-Intro Fellow | Spanish National Research Council, Institute of Geosciences |
 
-*Research stays during PhD: University of Lisbon (3 mo), University of Porto (1 mo), University of Santiago de Compostela (1 mo). Scientific secondment: ETH Zurich — Hydrology & Climate Impacts in Mountain Regions Group (Sep–Dec 2025).*
+*Research stays during PhD: University of Lisbon (3 mo), University of Porto (1 mo), University of Santiago de Compostela (1 mo). Scientific secondment: ETH Zurich — Hydrology & Climate Impacts in Mountain Regions Group (3 mo, Sep–Dec 2025).*
 
 # Education
 
@@ -64,8 +62,8 @@ Three 25-hour courses on spatial data analysis with R, Faculty of Geography and 
 
 **Supervision:**
 
-- 1 Bachelor thesis (Inés Torres Batlló, UB, Spain)
-- 2 Master theses (Albert Salvadó Badia, UB, Spain; Bhumi Gagnani, TU Dresden, Germany — HIPEAtMount project)
+- 1 Bachelor thesis (Inés Torres Batlló, Universitat de Barcelona, Spain)
+- 2 Master theses (Albert Salvadó Badia, Universitat de Barcelona, Spain; Bhumi Gagnani, TU Dresden, Germany)
 - Co-supervising Dimitar Yanakiev (PhD student, Universidad de Salamanca)
 
 **Other academic activities:**

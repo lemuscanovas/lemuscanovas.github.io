@@ -49,16 +49,15 @@ website:
 
   page-footer:
     center:
-      - text: "<a href='https://lemuscanovas.github.io/research.html'>Research</a>
-        &nbsp;<a href='https://github.com/lemuscanovas' target='blank'><i class='bi bi-github'></i></a>
+      - text: "<a href='https://github.com/lemuscanovas' target='blank'><i class='bi bi-github'></i></a>
         &nbsp;<a href='https://bsky.app/profile/lemuscanovas.bsky.social' target='blank'><i class='fa fa-brands fa-bluesky'></i></a>
         &nbsp;<a href='https://www.linkedin.com/in/marc-lemus-canovas' target='blank'><i class='bi bi-linkedin'></i></a>
         &nbsp;<a href='https://scholar.google.com/citations?user=iOCaO7sAAAAJ' target='blank'><i class='ai ai-google-scholar fa-lg'></i></a>
         &nbsp;<a href='https://orcid.org/0000-0002-0925-3827' target='blank'><i class='ai ai-orcid fa-lg'></i></a>
         &nbsp;<a href='https://www.researchgate.net/profile/Marc-Lemus-Canovas' target='blank'><i class='ai ai-researchgate fa-lg'></i></a>
         <br>Site made with <i class='bi bi-heart-fill'></i> and
-        <a href='https://quarto.org/' target='_blank'><img src='https://quarto.org/favicon.png' width=12> quarto</a>
-        <br>© 2024 Marc Lemus-Canovas"
+        <img src='https://quarto.org/favicon.png' width=12> quarto
+        <br>&copy; 2026 Marc Lemus-Canovas"
 
 format:
   html:
