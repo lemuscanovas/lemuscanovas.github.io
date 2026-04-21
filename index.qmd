@@ -8,8 +8,6 @@ about:
   template: trestles
   image-shape: round
   links:
-    - text: '<i class="ai ai-cv fa-lg"></i>'
-      href: cv.qmd
     - icon: github
       href: https://github.com/lemuscanovas
     - text: '<i class="fa fa-brands fa-bluesky"></i>'
@@ -30,4 +28,4 @@ source("_common.R")
 
 ### About
 
-I am a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcelona Supercomputing Center](https://www.bsc.es/) (Earth Sciences Department). My research focuses on understanding the link between **atmospheric dynamics and extreme meteorological events** — compound heat and drought events, extreme precipitation, and their attribution to climate change — with a particular emphasis on mountain areas (Pyrenees, Alps).
+I am a **Beatriu de Pinós Postdoctoral Fellow** at the [Barcelona Supercomputing Center](https://www.bsc.es/) (Earth Sciences Department). My research focuses on understanding the link between **atmospheric dynamics and extreme meteorological events** — compound heat and drought events, extreme precipitation, and their attribution to climate change.
