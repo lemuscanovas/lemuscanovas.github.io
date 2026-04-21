@@ -16,6 +16,5 @@ format:
     page-layout: full
     css: css/projects.css
 title-block-banner: false
-
-
+---
 
