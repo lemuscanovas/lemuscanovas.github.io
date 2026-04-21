@@ -5,37 +5,112 @@ execute:
   warning: false
 ---
 
-Below is a selection of conference presentations and invited talks.
+<style>
+.badge-invited   { background:#5480a7; color:#fff; font-size:.72em; padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
+.badge-highlight { background:#56A754; color:#fff; font-size:.72em; padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
+.badge-award     { background:#c0762a; color:#fff; font-size:.72em; padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
+.badge-poster    { background:#888;    color:#fff; font-size:.72em; padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
+.talk-entry { margin-bottom: 1.1rem; }
+</style>
 
-## 2022
+## Invited Lectures & Seminars
 
-**Changes in compound monthly precipitation and temperature extremes and their relationship with teleconnection patterns in the Mediterranean**  
-*EGU General Assembly 2022*, Vienna / Online  
-[Abstract](https://doi.org/10.5194/egusphere-egu22-XXXX)
+::: {.talk-entry}
+**Circulation analogues for understanding changes in extreme heat events** <span class="badge-invited">Invited</span>  
+*Hydro-Climate Extremes Lab Seminar Series*, Ghent University, Belgium · Aug 2025
+:::
+
+::: {.talk-entry}
+**Climate change and extreme events: attribution methods and recent event review** <span class="badge-invited">Invited</span>  
+*Summer School: Mapping the Future*, Universidad de León, Spain · Jul 2025
+:::
+
+::: {.talk-entry}
+**How do we have to adapt urban spaces to the new climate?** <span class="badge-invited">Panel Discussion</span>  
+*II Palafrugell Conference on Meteorology and Climate Change*, Spain · Nov 2022
+:::
+
+::: {.talk-entry}
+**Combining atmospheric circulation types and daily precipitation to obtain pluviometric regions in mountain areas** <span class="badge-invited">Invited</span>  
+*Technical Conference of the Group of Experts on Climate Change in Catalonia*, Barcelona, Spain · Jan 2020
+:::
 
 ---
 
-## 2021
+## Conference Presentations
 
-**Characterisation of Extreme Precipitation Events in the Pyrenees. From the Local to the Synoptic Scale**  
-*10th International Conference on Climate and Water*, Tampere, Finland
+### 2025
 
-**Assessing internal changes in the future structure of dry–hot compound events in the Pyrenees**  
-*EGU General Assembly 2021*, Online  
+::: {.talk-entry}
+**A High-Impact Precipitation Event database for the Alps (1961–2023)**  
+Lemus-Canovas, M., Crespi, A., Pittore, M., Zebisch, M., & Brunner, M. · <span class="badge-invited">Oral</span>  
+*International Mountain Conference 2025*, Innsbruck, Austria · Sep 2025
+:::
 
----
-
-## 2019
-
-**synoptReg: An R package for computing a synoptic climate classification and spatial regionalization**  
-*Jornades Catalanes de Climatologia*, Barcelona, Spain
-
-**Combining circulation weather types and daily precipitation modelling to derive climatic precipitation regions in the Pyrenees**  
-*International Conference of Alpine Meteorology (ICAM) 2019*, Innsbruck, Austria
+::: {.talk-entry}
+**Observed and modelled changes in the drivers that trigger compound drought and heatwave events in the Adige River basin (Eastern Italian Alps) with a focus on May 2022**  
+Lemus-Canovas, M., Crespi, A., Maines, E., Pittore, M., & Terzi, S. · <span class="badge-invited">Oral</span>  
+*EGU General Assembly 2025*, Vienna, Austria · Apr–May 2025
+:::
 
 ---
 
-## 2018
+### 2024
 
-**A mixed application of an objective synoptic classification and spatial regression models for deriving winter precipitation regimes in the Eastern Pyrenees**  
-*13th Annual Meeting of the European Meteorological Society (EMS)*, Budapest, Hungary
+::: {.talk-entry}
+**Attribution of the unprecedented heat event of August 2023 in Barcelona (Spain) to observed and projected global warming**  
+Lemus-Canovas, M., Montesinos-Ciuró, E., Cearreta-Innocenti, T., Serrano-Notivoli, R., & Royé, D. · <span class="badge-invited">Oral</span>  
+*15th International Meeting on Statistical Climatology (IMSC)*, Météo-France, Toulouse, France · Jul 2024
+:::
+
+::: {.talk-entry}
+**Detection and characterisation of the compound drought and heatwave event of May 2022 in the Adige River catchment (north-eastern Italy)**  
+Lemus-Canovas, M., Crespi, A., & Maines, E.  
+*15th International Meeting on Statistical Climatology (IMSC)*, Météo-France, Toulouse, France · Jul 2024
+:::
+
+::: {.talk-entry}
+**Revealing the role of long-term drought in the record-shattering April 2023 heatwave in the Western Mediterranean** <span class="badge-highlight">Highlighted by Organisation</span>  
+Lemus-Canovas, M., Insua-Costa, D., Trigo, R. M., & Miralles, D. G. · <span class="badge-invited">Oral</span>  
+*EGU General Assembly 2024*, Vienna, Austria · Apr 2024
+:::
+
+---
+
+### 2023
+
+::: {.talk-entry}
+**Attributing heatwaves to climate change in mountainous areas. An analysis of the summer 2022 heatwaves in the Pyrenees**  
+Lemus-Canovas, M., Gonzalez-Herrero, S., Trapero, L., Albalat, A., Insua-Costa, D., Senande-Rivera, M., & Miguez-Macho, G. · <span class="badge-invited">Oral</span>  
+*9th International Conference on Meteorology and Climatology of the Mediterranean (MetMed 2023)*, Genova, Italy · May 2023
+:::
+
+---
+
+### 2022
+
+::: {.talk-entry}
+**Statistical downscaling at very high spatial resolution of snow cover climate projections for the Pyrenees** <span class="badge-award">Awarded</span>  
+Lemus-Cánovas, M., Trapero, L., Gascoin, S., & López-Moreno, J. I. · <span class="badge-invited">Oral</span>  
+*12th Congress of the Spanish Association of Climatology (AEC)*, Santiago de Compostela, Spain · Oct 2022
+:::
+
+---
+
+### 2020
+
+::: {.talk-entry}
+**Assessing several downscaling methods for daily minimum and maximum temperature in a mountainous area. Are we able to statistically simulate a warmer climate in the Pyrenees?** <span class="badge-highlight">Highlighted by Organisation</span>  
+Lemus-Canovas, M., & Brands, S.  
+*EGU General Assembly 2020*, Online · May 2020
+:::
+
+---
+
+### 2019
+
+::: {.talk-entry}
+**An R package for computing a synoptic classification and spatial regionalization of precipitation data** <span class="badge-award">Best Poster Award</span>  
+Lemus-Canovas, M., Lopez-Bustins, J. A., & Martin-Vide, J. · <span class="badge-poster">Poster</span>  
+*7th International Conference on Meteorology and Climatology of the Mediterranean (MetMed 2019)*, Palma de Mallorca, Spain · Mar 2019
+:::
