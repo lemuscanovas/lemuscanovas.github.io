@@ -98,4 +98,8 @@ ggplot() +
   theme(legend.position = "bottom")
 ```
 
+The result of running the code above looks like this:
+
+![Decadal trend of maximum temperature in the Balearic Islands (1971–2014). Dots indicate statistically significant trends (p < 0.01).](trend_map.png)
+
 If you have any questions, feel free to leave a comment or reach out!
